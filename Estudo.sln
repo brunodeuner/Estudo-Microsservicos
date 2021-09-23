@@ -10,9 +10,47 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestrutura", "Infraestrutura", "{D8DC82BF-7FAE-4426-943C-C2B4C7EABBDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Infraestrutura.Armazenamento.Abstrações", "src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Infraestrutura.Armazenamento.Abstrações.csproj", "{10782E60-D567-47F3-83DA-654E5CF489D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Armazenamento", "Armazenamento", "{509A774B-637F-4A18-B427-2AFA824DD557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Infraestrutura.Armazenamento.Ravendb", "src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Infraestrutura.Armazenamento.Ravendb.csproj", "{91BA7529-016F-43C5-9626-8A0E03F1A98F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E977028F-1D3B-4117-860B-1F96A31F88E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentação", "Documentação", "{5E2EF4BD-136B-46CD-8416-726B16891F4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DecisõesArquiteturais", "DecisõesArquiteturais", "{617ED938-5949-4C24-9A90-ACA1428D5DD1}"
+	ProjectSection(SolutionItems) = preProject
+		AbstraçõesDoArmazenamento.md = AbstraçõesDoArmazenamento.md
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10782E60-D567-47F3-83DA-654E5CF489D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10782E60-D567-47F3-83DA-654E5CF489D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10782E60-D567-47F3-83DA-654E5CF489D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10782E60-D567-47F3-83DA-654E5CF489D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91BA7529-016F-43C5-9626-8A0E03F1A98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91BA7529-016F-43C5-9626-8A0E03F1A98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91BA7529-016F-43C5-9626-8A0E03F1A98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91BA7529-016F-43C5-9626-8A0E03F1A98F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D8DC82BF-7FAE-4426-943C-C2B4C7EABBDA} = {E977028F-1D3B-4117-860B-1F96A31F88E8}
+		{10782E60-D567-47F3-83DA-654E5CF489D3} = {509A774B-637F-4A18-B427-2AFA824DD557}
+		{509A774B-637F-4A18-B427-2AFA824DD557} = {D8DC82BF-7FAE-4426-943C-C2B4C7EABBDA}
+		{91BA7529-016F-43C5-9626-8A0E03F1A98F} = {509A774B-637F-4A18-B427-2AFA824DD557}
+		{617ED938-5949-4C24-9A90-ACA1428D5DD1} = {5E2EF4BD-136B-46CD-8416-726B16891F4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2618158F-597B-4720-9288-5CACD7FAB9B0}
