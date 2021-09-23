@@ -1,3 +1,9 @@
-# IDE's
+# Sonar
+.sonarqube
 
+# IDE's
 .vs
+
+# .NET
+bin
+obj
