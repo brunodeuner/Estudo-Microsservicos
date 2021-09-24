@@ -20,6 +20,7 @@ criar um gerenciador, ou seja, criar uma classe concreta que implementa IDao que
 que também implementam IDao. Caso precise de algum cache bastaria colocar no gerenciador um lógica com um implementação
 de dao com cache.
 Todas essas vantagens já são utilizadas em outros projetos.
+O domínio não precisa trabalhar com a abstração do repositórios, já que quem abstrai o banco é o IDao.
 
 ## Desvantagens
 Necessitasse de um construtor vazio nos objetos.

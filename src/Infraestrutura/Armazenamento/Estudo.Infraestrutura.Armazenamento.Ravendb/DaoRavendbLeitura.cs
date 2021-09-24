@@ -13,11 +13,15 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
         public async IAsyncEnumerable<T> ToAsyncEnumerable<T>(IQueryable<T> query,
             [EnumeratorCancellation] CancellationToken cancellationToken) where T : class, new()
         {
-            var queryRaven = (RavenQueryInspector<T>)query;
-            var asyncDocumentSession = (IAsyncDocumentSession)queryRaven.Session;
-            await using var enumerator = await asyncDocumentSession.Advanced.StreamAsync(query, cancellationToken);
+            await using var enumerator = await ObterSessão(query).Advanced.StreamAsync(query, cancellationToken);
             while (await enumerator.MoveNextAsync())
                 yield return enumerator.Current.Document;
+        }
+
+        private static IAsyncDocumentSession ObterSessão<T>(IQueryable<T> query) where T : class, new()
+        {
+            var queryRaven = (RavenQueryInspector<T>)query;
+            return (IAsyncDocumentSession)queryRaven.Session;
         }
     }
 }

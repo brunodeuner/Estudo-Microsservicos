@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<ItemGroup>
+	  <PackageReference Include="DocsBrStandard" Version="2.0.1" />
+	  <PackageReference Include="MediatR" Version="9.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Domínio\Estudo.Domínio\Estudo.Domínio.csproj" />
+	</ItemGroup>
+
+</Project>

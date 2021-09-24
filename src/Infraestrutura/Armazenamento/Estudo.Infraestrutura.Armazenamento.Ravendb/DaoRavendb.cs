@@ -15,8 +15,8 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
 
         public DaoRavendb(FabricaDeSessões fabricaDeSessões) => this.fabricaDeSessões = fabricaDeSessões;
 
-        public Task Adicionar<T>(T objeto, CancellationToken cancellationToken) where T : class, new() =>
-            ObterSessão().StoreAsync(objeto, cancellationToken);
+        public async ValueTask Adicionar<T>(T objeto, CancellationToken cancellationToken) where T : class, new() =>
+            await ObterSessão().StoreAsync(objeto, cancellationToken);
 
         public async ValueTask Atualizar<T>(T objeto, CancellationToken cancellationToken) where T : class, new() =>
             await ObterSessão().StoreAsync(objeto, cancellationToken);

@@ -5,8 +5,8 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório
 {
     public interface IRepositório<T> where T : class, new()
     {
-        Task<T> ObterPeloId(string id, CancellationToken cancellationToken);
-        Task Salvar(T entidade, CancellationToken cancellationToken);
-        Task Remover(T objeto, CancellationToken cancellationToken);
+        ValueTask<T> ObterPeloId(string id, CancellationToken cancellationToken);
+        ValueTask Salvar(T entidade, CancellationToken cancellationToken);
+        ValueTask Remover(T objeto, CancellationToken cancellationToken);
     }
 }
