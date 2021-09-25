@@ -3,6 +3,8 @@
 
 # IDE's
 .vs
+*.user
+Properties
 
 # .NET
 bin

@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="10.3.3" />
-    <PackageReference Include="MediatR" Version="9.0.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Infraestrutura.Armazenamento.Abstrações.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="FluentValidation" Version="10.3.3" />
+		<PackageReference Include="MediatR" Version="9.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Infraestrutura.Armazenamento.Abstrações.csproj" />
+	</ItemGroup>
 </Project>

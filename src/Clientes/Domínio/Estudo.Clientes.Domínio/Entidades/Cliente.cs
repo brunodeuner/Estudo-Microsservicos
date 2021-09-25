@@ -2,7 +2,7 @@
 
 namespace Estudo.Clientes.Domínio.Entidades
 {
-    public class Cliente : Entidade
+    internal class Cliente : Entidade
     {
         public Cliente() { }
 
@@ -13,8 +13,8 @@ namespace Estudo.Clientes.Domínio.Entidades
             Cpf = cpf;
         }
 
-        public string Nome { get; private set; }
-        public string Estado { get; private set; }
-        public string Cpf { get; private set; }
+        public string Nome { get; init; }
+        public string Estado { get; init; }
+        public string Cpf { get; init; }
     }
 }

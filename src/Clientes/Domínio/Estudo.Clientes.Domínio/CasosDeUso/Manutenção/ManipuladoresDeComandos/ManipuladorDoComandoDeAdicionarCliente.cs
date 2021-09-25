@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Estudo.Clientes.Domínio.CasosDeUso.Manutenção.ManipuladoresDeComandos
 {
-    public class ManipuladorDoComandoDeAdicionarCliente : IRequestHandler<ComandoDeAdicionarCliente>
+    internal class ManipuladorDoComandoDeAdicionarCliente : IRequestHandler<ComandoDeAdicionarCliente>
     {
         private readonly IValidador validador;
         private readonly RepositórioDeCliente repositórioDeCliente;

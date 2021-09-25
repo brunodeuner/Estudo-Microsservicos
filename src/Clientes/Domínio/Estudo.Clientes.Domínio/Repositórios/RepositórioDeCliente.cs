@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Estudo.Clientes.Domínio.Repositórios
 {
-    public class RepositórioDeCliente : Repositório<Cliente>
+    internal class RepositórioDeCliente : Repositório<Cliente>
     {
         private static readonly string sufixoDoId = $"-{nameof(Cliente)}";
 

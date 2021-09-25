@@ -3,7 +3,7 @@ using static Raven.Client.Documents.Conventions.DocumentConventions;
 
 namespace Estudo.Infraestrutura.Armazenamento.Ravendb
 {
-    public class Configuração
+    public class ConfiguraçãoDoRavendb
     {
         public string[] UrlsConnection { get; set; }
         public string Database { get; set; }

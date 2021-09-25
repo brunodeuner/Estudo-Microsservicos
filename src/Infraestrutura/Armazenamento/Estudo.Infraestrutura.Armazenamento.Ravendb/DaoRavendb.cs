@@ -10,10 +10,10 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
 {
     internal sealed partial class DaoRavendb : IDao, IDisposable
     {
-        private readonly FabricaDeSessões fabricaDeSessões;
+        private readonly FabricaDoRavendb fabricaDeSessões;
         private IAsyncDocumentSession sessão;
 
-        public DaoRavendb(FabricaDeSessões fabricaDeSessões) => this.fabricaDeSessões = fabricaDeSessões;
+        public DaoRavendb(FabricaDoRavendb fabricaDeSessões) => this.fabricaDeSessões = fabricaDeSessões;
 
         public async ValueTask Adicionar<T>(T objeto, CancellationToken cancellationToken) where T : class, new() =>
             await ObterSessão().StoreAsync(objeto, cancellationToken);

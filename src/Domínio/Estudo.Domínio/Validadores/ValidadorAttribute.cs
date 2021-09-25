@@ -2,11 +2,11 @@
 
 namespace Estudo.Domínio.Validadores
 {
-    [AttributeUsage(AttributeTargets.Class)]
-    public class ValidadorAttribute : Attribute
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+    public class ValidadorAttribute<T> : Attribute
     {
-        public ValidadorAttribute(Type tipo) => Tipo = tipo;
+        public ValidadorAttribute() => Tipo = typeof(T);
 
-        public Type Tipo { get; private set; }
+        public Type Tipo { get; init; }
     }
 }

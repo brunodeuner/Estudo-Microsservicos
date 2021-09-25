@@ -1,9 +1,11 @@
-﻿namespace Estudo.Infraestrutura.Armazenamento.Abstrações
+﻿using Estudo.Infraestrutura.Geral;
+
+namespace Estudo.Infraestrutura.Armazenamento.Abstrações
 {
     public static class ExtensãoDeId
     {
         public static bool IdPreenchido(this object objeto) =>
-            objeto.ObterId() is not null;
+            objeto.ObterId().Preenchido();
 
         public static string ObterId(this object objeto)
         {
