@@ -12,7 +12,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
         public FabricaDoRavendb(ConfiguraçãoDoRavendb configuraçãoDoRavendb) =>
             this.configuraçãoDoRavendb = configuraçãoDoRavendb;
 
-        public IDocumentStore DocumentStore { get; init; }
+        public IDocumentStore DocumentStore { get; private set; }
 
         public IAsyncDocumentSession CriarSessaoAssincrona() => ObterDocumentStore().OpenAsyncSession();
 

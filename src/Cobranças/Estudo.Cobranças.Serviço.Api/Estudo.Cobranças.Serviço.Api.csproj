@@ -3,6 +3,7 @@
     <PackageReference Include="MediatR" Version="9.0.0" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Serviço\Api\Estudo.Serviço.Api\Estudo.Serviço.Api.csproj" />
     <ProjectReference Include="..\Estudo.Cobranças.Domínio\Estudo.Cobranças.Domínio.csproj" />
   </ItemGroup>
 </Project>

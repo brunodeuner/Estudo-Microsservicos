@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Estudo.Serviço.Api;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,7 +11,8 @@ namespace Estudo.Cobranças.Serviço.Api
 
         public Startup(IConfiguration configuração) => this.configuração = configuração;
 
-        public static void ConfigureServices(IServiceCollection serviços) => serviços.AddControllers();
+        public static void ConfigureServices(IServiceCollection serviços) =>
+            serviços.AddControllers(opções => opções.Filters.Add<AçãoDeNotificaçõesDoDomínio>());
 
         public static void Configure(IApplicationBuilder aplicação)
         {

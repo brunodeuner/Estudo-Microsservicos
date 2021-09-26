@@ -8,6 +8,8 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório
     {
         private readonly IDao dao;
 
+        public Repositório(IDao dao) => this.dao = dao;
+
         public virtual ValueTask<T> ObterPeloId(string id, CancellationToken cancellationToken) =>
             dao.ObterPeloId<T>(id, cancellationToken);
 

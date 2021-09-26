@@ -40,14 +40,16 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
                 }
                 catch (Exception e)
                 {
+                    if (cancellationToken.IsCancellationRequested)
+                        throw;
+
                     if (e is SubscriptionClosedException)
                         return;
 
                     if (e is SubscriptionDoesNotBelongToNodeException)
                         continue;
 
-                    if (!cancellationToken.IsCancellationRequested)
-                        await ProcessarExceção(e, cancellationToken);
+                    await ProcessarExceção(e, cancellationToken);
                 }
             }
         }
@@ -76,7 +78,11 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
                 configuraçãoWorker, database: configuraçãoDoRavendb.Database);
         }
 
-        private Task ProcessarExceção(Exception exceção, CancellationToken cancellationToken) =>
-            Exceção(new AgumentosDaExceção(exceção), cancellationToken);
+        private Task ProcessarExceção(Exception exceção, CancellationToken cancellationToken)
+        {
+            if (Exceção is not null)
+                return Exceção(new AgumentosDaExceção(exceção), cancellationToken);
+            return Task.CompletedTask;
+        }
     }
 }

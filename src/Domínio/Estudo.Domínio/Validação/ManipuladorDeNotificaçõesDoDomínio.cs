@@ -7,19 +7,20 @@ using System.Threading.Tasks;
 
 namespace Estudo.Domínio.Validação
 {
-    internal class ManipuladorDeNotificaçõesDoDomínio : INotificationHandler<NotificaçãoDoDomínio>
+    public class ManipuladorDeNotificaçõesDoDomínio : INotificationHandler<NotificaçãoDoDomínio>,
+        INotificaçõesDoDomínio
     {
-        private Collection<NotificaçãoDoDomínio> notificaçõesDoDomínio;
+        private ICollection<NotificaçãoDoDomínio> notificaçõesDoDomínio;
 
         public Task Handle(NotificaçãoDoDomínio notification, CancellationToken cancellationToken)
         {
-            notificaçõesDoDomínio ??= new();
+            notificaçõesDoDomínio ??= new Collection<NotificaçãoDoDomínio>();
             notificaçõesDoDomínio.Add(notification);
             return Task.CompletedTask;
         }
 
-        public IEnumerable<NotificaçãoDoDomínio> ObterNotificações() => notificaçõesDoDomínio;
+        public bool PossuiNotificações() => notificaçõesDoDomínio?.Any() ?? false;
 
-        public bool PossuiNotificações() => notificaçõesDoDomínio.Any();
+        public IEnumerable<NotificaçãoDoDomínio> ObterNotificações() => notificaçõesDoDomínio;
     }
 }

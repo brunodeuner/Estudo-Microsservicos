@@ -1,6 +1,7 @@
 ﻿using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Domínio.Validação;
 using Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório;
+using Estudo.Infraestrutura.Geral;
 using MediatR;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace Estudo.Cobranças.Domínio.Repositórios
 
             var query = Selecionar();
             if (cpf is not null)
-                query = query.Where(x => x.Cpf == cpf);
+                query = query.Where(x => x.Pessoa.Cpf == cpf);
             if (mês.HasValue)
                 query = query.Where(x => x.DataDeVencimento.Month == mês);
             return query.ToAsyncEnumerable(cancellationToken);

@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 
 namespace Estudo.Domínio.Validadores
 {
     public interface IValidador
     {
-        ValueTask<bool> Validar(object objetoAValidar);
+        ValueTask<bool> Validar<T>(T objetoAValidar, CancellationToken cancellationToken);
     }
 }
