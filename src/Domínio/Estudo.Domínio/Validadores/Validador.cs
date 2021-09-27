@@ -23,8 +23,8 @@ namespace Estudo.Domínio.Validadores
         public async ValueTask<bool> Validar<T>(T objetoAValidar, CancellationToken cancellationToken)
         {
             var atributosDeValidador = objetoAValidar.GetType()
-                .GetCustomAttributes(typeof(ValidadorAttribute<T>), true)
-                .Cast<ValidadorAttribute<T>>();
+                .GetCustomAttributes(typeof(ValidadorAttribute), true)
+                .Cast<ValidadorAttribute>();
             foreach (var atributoDeValidador in atributosDeValidador)
             {
                 var validador = serviceProvider.GetRequiredService(atributoDeValidador.Tipo);

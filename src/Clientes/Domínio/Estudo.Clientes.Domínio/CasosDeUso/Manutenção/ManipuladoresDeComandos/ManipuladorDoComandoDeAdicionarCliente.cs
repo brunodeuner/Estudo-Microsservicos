@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace Estudo.Clientes.Domínio.CasosDeUso.Manutenção.ManipuladoresDeComandos
 {
-    internal class ManipuladorDoComandoDeAdicionarCliente : IRequestHandler<ComandoDeAdicionarCliente>
+    internal class ManipuladorDoComandoDeAdicionarCliente :
+        IRequestHandler<ComandoDeAdicionarCliente>,
+        IRequestHandler<ComandoDeRemoverCliente>
     {
         private readonly IValidador validador;
         private readonly RepositórioDeCliente repositórioDeCliente;
@@ -21,11 +23,22 @@ namespace Estudo.Clientes.Domínio.CasosDeUso.Manutenção.ManipuladoresDeComand
 
         public async Task<Unit> Handle(ComandoDeAdicionarCliente request, CancellationToken cancellationToken)
         {
-            if (!await validador.Validar(request))
+            if (!await validador.Validar(request, cancellationToken))
                 return default;
 
             var novoCliente = new Cliente(request.Nome, request.Estado, request.Cpf);
             await repositórioDeCliente.Salvar(novoCliente, cancellationToken);
+            return default;
+        }
+
+        public async Task<Unit> Handle(ComandoDeRemoverCliente request, CancellationToken cancellationToken)
+        {
+            if (!await validador.Validar(request, cancellationToken))
+                return default;
+
+            var clienteARemover = await repositórioDeCliente.ObterPeloId(request.Id, cancellationToken);
+            if (clienteARemover is not null)
+                await repositórioDeCliente.Remover(clienteARemover, cancellationToken);
             return default;
         }
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Estudo.Infraestrutura.Armazenamento.Ravendb
 {
-    internal sealed partial class DaoRavendb : IDao, IDisposable
+    public sealed partial class DaoRavendb : IDao, IDisposable
     {
         private readonly FabricaDoRavendb fabricaDeSessões;
         private IAsyncDocumentSession sessão;
@@ -26,7 +26,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
 
         public ValueTask Remover<T>(T objeto, CancellationToken cancellationToken) where T : class, new()
         {
-            ObterSessão().Delete(objeto.ObterId());
+            ObterSessão().Delete(objeto);
             return ValueTask.CompletedTask;
         }
 

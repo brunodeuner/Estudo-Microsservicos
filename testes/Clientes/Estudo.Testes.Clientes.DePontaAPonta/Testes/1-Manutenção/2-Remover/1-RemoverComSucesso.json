@@ -1,0 +1,41 @@
+﻿{
+  "Nome": "Remover cliente com sucesso",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes/{{Cliente/1}}",
+        "Método": "Delete"
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes?cpf=57251010020",
+        "Método": "Get"
+      },
+      "Retorno": {
+        "Status": "NoContent"
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes/{{Cliente/2}}",
+        "Método": "Delete"
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes?cpf=67990528045",
+        "Método": "Get"
+      },
+      "Retorno": {
+        "Status": "NoContent"
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 namespace Estudo.Clientes.Domínio.Entidades
 {
-    internal class Cliente : Entidade
+    public class Cliente : Entidade
     {
         public Cliente() { }
 

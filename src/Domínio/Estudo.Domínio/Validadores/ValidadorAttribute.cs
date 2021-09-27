@@ -3,9 +3,9 @@
 namespace Estudo.Domínio.Validadores
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-    public class ValidadorAttribute<T> : Attribute
+    public class ValidadorAttribute : Attribute
     {
-        public ValidadorAttribute() => Tipo = typeof(T);
+        public ValidadorAttribute(Type tipo) => Tipo = tipo;
 
         public Type Tipo { get; init; }
     }

@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace Estudo.Infraestrutura.Armazenamento.Ravendb
 {
-    internal partial class DaoRavendb : IToAsyncEnumerable
+    public partial class DaoRavendb : IToAsyncEnumerable
     {
         public async IAsyncEnumerable<T> ToAsyncEnumerable<T>(IQueryable<T> query,
             [EnumeratorCancellation] CancellationToken cancellationToken) where T : class, new()

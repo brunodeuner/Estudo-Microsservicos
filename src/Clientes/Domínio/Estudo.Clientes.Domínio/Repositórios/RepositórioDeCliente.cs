@@ -1,13 +1,16 @@
 ﻿using Estudo.Clientes.Domínio.Entidades;
+using Estudo.Infraestrutura.Armazenamento.Abstrações;
 using Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Estudo.Clientes.Domínio.Repositórios
 {
-    internal class RepositórioDeCliente : Repositório<Cliente>
+    public class RepositórioDeCliente : Repositório<Cliente>
     {
         private static readonly string sufixoDoId = $"-{nameof(Cliente)}";
+
+        public RepositórioDeCliente(IDao dao) : base(dao) { }
 
         public override ValueTask Salvar(Cliente objeto, CancellationToken cancellationToken)
         {
@@ -15,8 +18,11 @@ namespace Estudo.Clientes.Domínio.Repositórios
             return base.Salvar(objeto, cancellationToken);
         }
 
-        public async ValueTask<bool> CpfCadastrado(string cpf, CancellationToken cancellationToken) =>
-            (await ObterPeloId(CriarIdAPartirDoCpf(cpf), cancellationToken)) is not null;
+        public ValueTask<Cliente> ObterAPartirDoCpf(string cpf, CancellationToken cancellationToken) =>
+            ObterPeloId(CriarIdAPartirDoCpf(cpf), cancellationToken);
+
+        public async ValueTask<bool> CpfNãoCadastrado(string cpf, CancellationToken cancellationToken) =>
+            (await ObterAPartirDoCpf(cpf, cancellationToken)) is null;
 
         private static string CriarIdAPartirDoCpf(string cpf) => string.Concat(cpf, sufixoDoId);
     }

@@ -8,42 +8,51 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
     public sealed class FabricaDoRavendb : IDisposable
     {
         private readonly ConfiguraçãoDoRavendb configuraçãoDoRavendb;
+        private IDocumentStore documentStore;
+        private IDisposable cacheAgresivo;
 
         public FabricaDoRavendb(ConfiguraçãoDoRavendb configuraçãoDoRavendb) =>
             this.configuraçãoDoRavendb = configuraçãoDoRavendb;
-
-        public IDocumentStore DocumentStore { get; private set; }
 
         public IAsyncDocumentSession CriarSessaoAssincrona() => ObterDocumentStore().OpenAsyncSession();
 
         public void Dispose()
         {
-            DocumentStore?.Dispose();
-            DocumentStore = default;
+            documentStore?.Dispose();
+            documentStore = default;
+            cacheAgresivo?.Dispose();
+            cacheAgresivo = default;
         }
 
-        private IDocumentStore ObterDocumentStore() => DocumentStore ??= CriarEIniciarDocumentStore();
+        private IDocumentStore ObterDocumentStore() => documentStore ??= CriarEIniciarDocumentStore();
 
         private IDocumentStore CriarEIniciarDocumentStore()
         {
             var novoDocumentStore = new DocumentStore
             {
-                Certificate = configuraçãoDoRavendb.Certificado,
+                Certificate = configuraçãoDoRavendb.ObterCertificado(),
                 Urls = configuraçãoDoRavendb.UrlsConnection,
                 Database = configuraçãoDoRavendb.Database,
                 Conventions = CriarConvenções()
             };
             novoDocumentStore.Initialize();
+            if (configuraçãoDoRavendb.TempoDeDuraçãoDoCache.HasValue)
+                cacheAgresivo = novoDocumentStore.AggressivelyCache();
             return novoDocumentStore;
         }
 
-        private DocumentConventions CriarConvenções() => new()
+        private DocumentConventions CriarConvenções()
         {
-            IdentityPartsSeparator = '-',
-            AggressiveCache = {
-               Duration = configuraçãoDoRavendb.CacheAgressivo.Duration,
-               Mode = configuraçãoDoRavendb.CacheAgressivo.Mode,
-            },
-        };
+            var convenções = new DocumentConventions()
+            {
+                IdentityPartsSeparator = '-',
+            };
+            if (configuraçãoDoRavendb.TempoDeDuraçãoDoCache.HasValue)
+            {
+                convenções.AggressiveCache.Duration = configuraçãoDoRavendb.TempoDeDuraçãoDoCache.Value;
+                convenções.AggressiveCache.Mode = Raven.Client.Http.AggressiveCacheMode.TrackChanges;
+            };
+            return convenções;
+        }
     }
 }

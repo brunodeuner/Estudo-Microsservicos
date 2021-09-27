@@ -6,5 +6,6 @@ namespace Estudo.Domínio.Validação
     {
         bool PossuiNotificações();
         IEnumerable<NotificaçãoDoDomínio> ObterNotificações();
+        void AdicionarNotificação(NotificaçãoDoDomínio notificaçãoDoDomínio);
     }
 }

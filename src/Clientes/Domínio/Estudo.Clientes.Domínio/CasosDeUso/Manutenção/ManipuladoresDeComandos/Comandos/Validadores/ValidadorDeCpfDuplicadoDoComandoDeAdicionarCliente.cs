@@ -17,6 +17,6 @@ namespace Estudo.Clientes.Domínio.CasosDeUso.Manutenção.ManipuladoresDeComand
 
         private static Func<string, CancellationToken, Task<bool>> CpfJáCadastrado(
             RepositórioDeCliente repositórioDeCliente) => async (string cpf, CancellationToken cancellationToken) =>
-                await repositórioDeCliente.CpfCadastrado(cpf, cancellationToken);
+                await repositórioDeCliente.CpfNãoCadastrado(cpf, cancellationToken);
     }
 }

@@ -5,8 +5,8 @@ using Estudo.Domínio.Validadores;
 
 namespace Estudo.Clientes.Domínio.CasosDeUso.Manutenção.ManipuladoresDeComandos.Comandos
 {
-    [Validador<ValidadorDeDadosDoComandoDeAdicionarCliente>()]
-    [Validador<ValidadorDeCpfDuplicadoDoComandoDeAdicionarCliente>()]
+    [Validador(typeof(ValidadorDeDadosDoComandoDeAdicionarCliente))]
+    [Validador(typeof(ValidadorDeCpfDuplicadoDoComandoDeAdicionarCliente))]
     public class ComandoDeAdicionarCliente : ComandoSemRetorno
     {
         private string cpf;
