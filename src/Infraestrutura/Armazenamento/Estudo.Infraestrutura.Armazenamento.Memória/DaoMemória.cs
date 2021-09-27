@@ -38,12 +38,6 @@ namespace Estudo.Infraestrutura.Armazenamento.Memória
             return default;
         }
 
-        public ValueTask Remover<T>(string id, CancellationToken cancellationToken) where T : class, new()
-        {
-            objetos.Remove(id);
-            return ValueTask.CompletedTask;
-        }
-
         public ValueTask SalvarAlterações(CancellationToken cancellationToken) => ValueTask.CompletedTask;
 
         public IQueryable<T> Selecionar<T>()

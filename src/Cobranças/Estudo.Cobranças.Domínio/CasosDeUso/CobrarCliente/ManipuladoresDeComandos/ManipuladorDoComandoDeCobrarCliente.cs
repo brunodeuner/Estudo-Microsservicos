@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 
 namespace Estudo.Cobranças.Domínio.CasosDeUso.CobrarCliente.ManipuladoresDeComandos
 {
-    public class ManipuladorDoComandoDeCobrarCliente :
-        IRequestHandler<ComandoDeCobrarCliente>,
-        IRequestHandler<ComandoDeRemoverCobrança>
+    public class ManipuladorDoComandoDeCobrarCliente : IRequestHandler<ComandoDeCobrarCliente>
     {
         private readonly IValidador validador;
         private readonly RepositórioDeCobrança repositórioDeCobrança;
@@ -32,15 +30,6 @@ namespace Estudo.Cobranças.Domínio.CasosDeUso.CobrarCliente.ManipuladoresDeCom
             var pessoa = await repositórioDePessoa.ObterAPartirDoCpf(request.Cpf, cancellationToken);
             var novaCobrança = new Cobrança(pessoa, request.DataDeVencimento, request.Valor);
             await repositórioDeCobrança.Salvar(novaCobrança, cancellationToken);
-            return default;
-        }
-
-        public async Task<Unit> Handle(ComandoDeRemoverCobrança request, CancellationToken cancellationToken)
-        {
-            if (!await validador.Validar(request, cancellationToken))
-                return default;
-
-            await repositórioDeCobrança.Remover(request.Id, cancellationToken);
             return default;
         }
     }

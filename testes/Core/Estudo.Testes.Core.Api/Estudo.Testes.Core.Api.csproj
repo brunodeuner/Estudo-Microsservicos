@@ -1,16 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="5.0.10" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
-    <PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.TestHost" Version="5.0.10" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+		<PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Cobranças\Estudo.Cobranças.Aplicação\Estudo.Cobranças.Aplicação.csproj" />
-    <ProjectReference Include="..\..\..\src\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória\Estudo.Infraestrutura.Bus.Memória.csproj" />
-    <ProjectReference Include="..\..\..\src\Infraestrutura\Geral\Estudo.Infraestrutura.Geral\Estudo.Infraestrutura.Geral.csproj" />
-    <ProjectReference Include="..\Estudo.Testes.Core.Http\Estudo.Testes.Core.Http.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\src\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória\Estudo.Infraestrutura.Bus.Memória.csproj" />
+		<ProjectReference Include="..\..\..\src\Infraestrutura\Geral\Estudo.Infraestrutura.Geral\Estudo.Infraestrutura.Geral.csproj" />
+		<ProjectReference Include="..\Estudo.Testes.Core.Http\Estudo.Testes.Core.Http.csproj" />
+	</ItemGroup>
 
 </Project>

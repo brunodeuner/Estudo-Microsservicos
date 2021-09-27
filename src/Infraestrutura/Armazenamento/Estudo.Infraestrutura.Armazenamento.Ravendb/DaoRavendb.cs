@@ -24,12 +24,6 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
         public async ValueTask<T> ObterPeloId<T>(string id, CancellationToken cancellationToken) =>
             await ObterSessão().LoadAsync<T>(id, cancellationToken);
 
-        public ValueTask Remover<T>(string id, CancellationToken cancellationToken) where T : class, new()
-        {
-            ObterSessão().Delete(id);
-            return ValueTask.CompletedTask;
-        }
-
         public IQueryable<T> Selecionar<T>()
         {
             var query = ObterSessão().Query<T>();
