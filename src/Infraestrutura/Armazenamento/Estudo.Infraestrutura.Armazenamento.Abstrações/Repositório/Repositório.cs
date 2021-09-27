@@ -13,8 +13,8 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório
         public virtual ValueTask<T> ObterPeloId(string id, CancellationToken cancellationToken) =>
             dao.ObterPeloId<T>(id, cancellationToken);
 
-        public virtual ValueTask Remover(T objeto, CancellationToken cancellationToken) =>
-            dao.Remover(objeto, cancellationToken);
+        public virtual ValueTask Remover(string id, CancellationToken cancellationToken) =>
+            dao.Remover<T>(id, cancellationToken);
 
         public virtual ValueTask Salvar(T objeto, CancellationToken cancellationToken)
         {

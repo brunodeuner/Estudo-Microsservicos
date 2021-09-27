@@ -10,20 +10,24 @@ using System.Threading.Tasks;
 namespace Estudo.Cobranças.Serviço.Api.Controllers
 {
     [Route("[controller]")]
-    public class CobrarClienteController
+    public class CobrançasController
     {
         private readonly IMediator mediator;
         private readonly RepositórioDeCobrança repositórioDeCobrança;
 
-        public CobrarClienteController(IMediator mediator, RepositórioDeCobrança repositórioDeCobrança)
+        public CobrançasController(IMediator mediator, RepositórioDeCobrança repositórioDeCobrança)
         {
             this.mediator = mediator;
             this.repositórioDeCobrança = repositórioDeCobrança;
         }
 
         [HttpPost]
-        public Task CobrarCliente(ComandoDeCobrarCliente comandoDeCobrarCliente, CancellationToken cancellationToken)
-            => mediator.Send(comandoDeCobrarCliente, cancellationToken);
+        public Task CobrarCliente([FromBody] ComandoDeCobrarCliente comandoDeCobrarCliente,
+            CancellationToken cancellationToken) => mediator.Send(comandoDeCobrarCliente, cancellationToken);
+
+        [HttpDelete("{id}")]
+        public Task RemoverCobrança(string id, CancellationToken cancellationToken) =>
+            mediator.Send(new ComandoDeRemoverCobrança(id), cancellationToken);
 
         [HttpGet]
         public IAsyncEnumerable<Cobrança> ObterCobranças([FromQuery] string cpf, [FromQuery] int? mês,

@@ -1,4 +1,5 @@
 ﻿using Estudo.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Infraestrutura.Bus.Abstrações;
 using Estudo.Infraestrutura.Bus.Abstrações.Consumidor;
 using Estudo.Infraestrutura.Bus.Abstrações.Consumidor.Dtos;
 using Raven.Client.Documents;
@@ -21,7 +22,7 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
             this.configuraçãoDoRavendb = configuraçãoDoRavendb;
         }
 
-        public event EventoAssíncrono<ArgumentosDoConsumo<T>> Consumir;
+        public event EventoAssíncrono<Argumentos<T>> Consumir;
         public event EventoAssíncrono<AgumentosDaExceção> Exceção;
 
         public async Task Iniciar(string identificador, CancellationToken cancellationToken)
@@ -60,7 +61,7 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
             {
                 try
                 {
-                    await Consumir(new ArgumentosDoConsumo<T>(itens.Result), cancellationToken);
+                    await Consumir(new Argumentos<T>(itens.Result), cancellationToken);
                 }
                 catch (Exception e)
                 {

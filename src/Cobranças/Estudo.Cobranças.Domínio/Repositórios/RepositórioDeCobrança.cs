@@ -1,5 +1,6 @@
 ﻿using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Domínio.Validação;
+using Estudo.Infraestrutura.Armazenamento.Abstrações;
 using Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório;
 using Estudo.Infraestrutura.Geral;
 using MediatR;
@@ -13,12 +14,12 @@ namespace Estudo.Cobranças.Domínio.Repositórios
     {
         private readonly IMediator mediator;
 
-        public RepositórioDeCobrança(IMediator mediator) => this.mediator = mediator;
+        public RepositórioDeCobrança(IDao dao, IMediator mediator) : base(dao) => this.mediator = mediator;
 
         public IAsyncEnumerable<Cobrança> ObterCobrançasDoClienteAPartirDoMês(CancellationToken cancellationToken,
             string cpf = default, int? mês = default)
         {
-            if (cpf.Preenchido() && !mês.HasValue)
+            if (!cpf.Preenchido() && !mês.HasValue)
             {
                 mediator.Publish(new NotificaçãoDoDomínio($"Informe um {nameof(cpf)} ou um " +
                     $"{nameof(mês)}"));

@@ -57,8 +57,17 @@ namespace Estudo.Aplicação
 
         private static void ConfigurarArmazenamento(this IServiceCollection serviços, IConfiguration configuração)
         {
+            ConfigurarRavendbCasoPossuiaConfiguração(serviços, configuração);
+        }
+
+        private static void ConfigurarRavendbCasoPossuiaConfiguração(IServiceCollection serviços, IConfiguration configuração)
+        {
+            var configuraçãoDoRavendb = configuração.ObterConfiguracao<ConfiguraçãoDoRavendb>();
+            if (configuraçãoDoRavendb is null)
+                return;
+
             serviços.AddSingleton<FabricaDoRavendb>();
-            serviços.AddSingleton(configuração.ObterConfiguracao<ConfiguraçãoDoRavendb>());
+            serviços.AddSingleton(configuraçãoDoRavendb);
             serviços.AddScoped<IDao, DaoRavendb>();
         }
 

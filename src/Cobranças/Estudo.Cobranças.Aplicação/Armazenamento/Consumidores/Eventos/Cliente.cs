@@ -1,4 +1,4 @@
-﻿namespace Estudo.Cobranças.Aplicação.Armazenamento.Clientes.Dtos
+﻿namespace Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos
 {
     public class Cliente
     {

@@ -5,8 +5,8 @@ using System;
 
 namespace Estudo.Cobranças.Domínio.CasosDeUso.CobrarCliente.ManipuladoresDeComandos.Comandos
 {
-    [Validador<ValidadorDoComandoDeCobrarCliente>]
-    [Validador<ValidadorDeCpfCadastrado>]
+    [Validador(typeof(ValidadorDoComandoDeCobrarCliente))]
+    [Validador(typeof(ValidadorDeCpfCadastrado))]
     public class ComandoDeCobrarCliente : ComandoSemRetorno
     {
         public string Cpf { get; init; }

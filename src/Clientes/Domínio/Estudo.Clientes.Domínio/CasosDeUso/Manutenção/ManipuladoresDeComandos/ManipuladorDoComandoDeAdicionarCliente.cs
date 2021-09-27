@@ -36,9 +36,7 @@ namespace Estudo.Clientes.Domínio.CasosDeUso.Manutenção.ManipuladoresDeComand
             if (!await validador.Validar(request, cancellationToken))
                 return default;
 
-            var clienteARemover = await repositórioDeCliente.ObterPeloId(request.Id, cancellationToken);
-            if (clienteARemover is not null)
-                await repositórioDeCliente.Remover(clienteARemover, cancellationToken);
+            await repositórioDeCliente.Remover(request.Id, cancellationToken);
             return default;
         }
     }

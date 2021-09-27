@@ -7,14 +7,16 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
 {
     public sealed class FabricaDoRavendb : IDisposable
     {
-        private readonly ConfiguraçãoDoRavendb configuraçãoDoRavendb;
         private IDocumentStore documentStore;
         private IDisposable cacheAgresivo;
 
         public FabricaDoRavendb(ConfiguraçãoDoRavendb configuraçãoDoRavendb) =>
-            this.configuraçãoDoRavendb = configuraçãoDoRavendb;
+            ConfiguraçãoDoRavendb = configuraçãoDoRavendb;
 
-        public IAsyncDocumentSession CriarSessaoAssincrona() => ObterDocumentStore().OpenAsyncSession();
+        public ConfiguraçãoDoRavendb ConfiguraçãoDoRavendb { get; init; }
+        public IDocumentStore DocumentStore { get => documentStore ??= CriarEIniciarDocumentStore(); }
+
+        public IAsyncDocumentSession CriarSessaoAssincrona() => DocumentStore.OpenAsyncSession();
 
         public void Dispose()
         {
@@ -24,19 +26,17 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
             cacheAgresivo = default;
         }
 
-        private IDocumentStore ObterDocumentStore() => documentStore ??= CriarEIniciarDocumentStore();
-
         private IDocumentStore CriarEIniciarDocumentStore()
         {
             var novoDocumentStore = new DocumentStore
             {
-                Certificate = configuraçãoDoRavendb.ObterCertificado(),
-                Urls = configuraçãoDoRavendb.UrlsConnection,
-                Database = configuraçãoDoRavendb.Database,
+                Certificate = ConfiguraçãoDoRavendb.ObterCertificado(),
+                Urls = ConfiguraçãoDoRavendb.UrlsConnection,
+                Database = ConfiguraçãoDoRavendb.Database,
                 Conventions = CriarConvenções()
             };
             novoDocumentStore.Initialize();
-            if (configuraçãoDoRavendb.TempoDeDuraçãoDoCache.HasValue)
+            if (ConfiguraçãoDoRavendb.TempoDeDuraçãoDoCache.HasValue)
                 cacheAgresivo = novoDocumentStore.AggressivelyCache();
             return novoDocumentStore;
         }
@@ -47,9 +47,9 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
             {
                 IdentityPartsSeparator = '-',
             };
-            if (configuraçãoDoRavendb.TempoDeDuraçãoDoCache.HasValue)
+            if (ConfiguraçãoDoRavendb.TempoDeDuraçãoDoCache.HasValue)
             {
-                convenções.AggressiveCache.Duration = configuraçãoDoRavendb.TempoDeDuraçãoDoCache.Value;
+                convenções.AggressiveCache.Duration = ConfiguraçãoDoRavendb.TempoDeDuraçãoDoCache.Value;
                 convenções.AggressiveCache.Mode = Raven.Client.Http.AggressiveCacheMode.TrackChanges;
             };
             return convenções;

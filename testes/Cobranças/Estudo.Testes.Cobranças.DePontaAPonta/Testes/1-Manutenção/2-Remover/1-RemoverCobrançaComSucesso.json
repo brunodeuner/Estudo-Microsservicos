@@ -1,0 +1,24 @@
+﻿{
+  "Nome": "Remover cobrança com sucesso",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças/{{Cobrança/1}}",
+        "Método": "Delete"
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças?cpf=67990528045",
+        "Método": "Get"
+      },
+      "Retorno": {
+        "Status": "OK",
+        "Corpo": []
+      }
+    }
+  ]
+}

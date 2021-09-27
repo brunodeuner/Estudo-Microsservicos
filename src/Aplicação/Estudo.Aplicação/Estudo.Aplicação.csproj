@@ -12,10 +12,4 @@
 		<ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Infraestrutura.Armazenamento.Ravendb.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <None Update="Armazenamento\Estudo.Clientes.Serviço.Api.pfx">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </None>
-	</ItemGroup>
-
 </Project>

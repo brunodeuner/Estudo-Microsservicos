@@ -28,9 +28,9 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient
             await ExecutorDeRequisições.ExecutarRequisição<T, T>(
                 new DadosDaRequisição<T>(HttpMethod.Get, id), cancellationToken);
 
-        public async ValueTask Remover<T>(T objeto, CancellationToken cancellationToken) where T : class, new() =>
+        public async ValueTask Remover<T>(string id, CancellationToken cancellationToken) where T : class, new() =>
             await ExecutorDeRequisições.ExecutarRequisição(
-                new DadosDaRequisição<T>(HttpMethod.Delete, objeto), cancellationToken);
+                new DadosDaRequisição<T>(HttpMethod.Delete, id), cancellationToken);
 
         public ValueTask SalvarAlterações(CancellationToken cancellationToken) => ValueTask.CompletedTask;
 

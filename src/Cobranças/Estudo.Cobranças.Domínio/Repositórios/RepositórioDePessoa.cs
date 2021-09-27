@@ -1,4 +1,5 @@
 ﻿using Estudo.Cobranças.Domínio.Entidades;
+using Estudo.Infraestrutura.Armazenamento.Abstrações;
 using Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace Estudo.Cobranças.Domínio.Repositórios
     public class RepositórioDePessoa : Repositório<Pessoa>
     {
         private static readonly string sufixoDoId = $"-{nameof(Pessoa)}";
+
+        public RepositórioDePessoa(IDao dao) : base(dao) { }
 
         public override ValueTask Salvar(Pessoa objeto, CancellationToken cancellationToken)
         {

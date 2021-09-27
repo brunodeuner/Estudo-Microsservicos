@@ -1,0 +1,6 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="..\..\Serviço\Api\Estudo.Serviço.Api\Estudo.Serviço.Api.csproj" />
+    <ProjectReference Include="..\Estudo.CálculoDeConsumo.Domínio\Estudo.CálculoDeConsumo.Domínio.csproj" />
+  </ItemGroup>
+</Project>

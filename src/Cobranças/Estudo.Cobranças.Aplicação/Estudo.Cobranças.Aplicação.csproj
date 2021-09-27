@@ -5,6 +5,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Infraestrutura.Armazenamento.Ravendb.csproj" />
 	  <ProjectReference Include="..\..\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Infraestrutura.Bus.Abstrações.csproj" />
 	  <ProjectReference Include="..\Estudo.Cobranças.Domínio.Consultas\Estudo.Cobranças.Domínio.Consultas.csproj" />
 	  <ProjectReference Include="..\Estudo.Cobranças.Domínio\Estudo.Cobranças.Domínio.csproj" />

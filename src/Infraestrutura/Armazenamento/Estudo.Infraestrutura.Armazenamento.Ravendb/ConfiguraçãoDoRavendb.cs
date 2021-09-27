@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
-using static Raven.Client.Documents.Conventions.DocumentConventions;
 
 namespace Estudo.Infraestrutura.Armazenamento.Ravendb
 {

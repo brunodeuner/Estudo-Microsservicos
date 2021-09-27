@@ -1,4 +1,4 @@
-﻿using Estudo.Cobranças.Aplicação.Armazenamento.Clientes.Dtos;
+﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
 using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
 using Estudo.Infraestrutura.Armazenamento.Abstrações;
@@ -8,7 +8,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Cobranças.Aplicação.Armazenamento.Clientes
+namespace Estudo.Cobranças.Aplicação.Armazenamento.Consumidores
 {
     public class ConsumidorDeClientes
     {

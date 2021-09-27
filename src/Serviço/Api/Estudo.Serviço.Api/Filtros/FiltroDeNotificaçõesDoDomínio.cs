@@ -24,7 +24,9 @@ namespace Estudo.Serviço.Api
             {
                 var notificações = notificaçõesDoDomínio.ObterNotificações();
                 var mensagens = notificações.Where(x => x.Descrição.Preenchido()).Select(x => x.Descrição)
-                    .Concat(notificações.SelectMany(x => x.ResultadoDaValidação.Errors.Select(x=> x.ErrorMessage)));
+                    .Concat(notificações
+                        .Where(x => x.ResultadoDaValidação is not null)
+                        .SelectMany(x => x.ResultadoDaValidação.Errors.Select(x => x.ErrorMessage)));
 
                 context.Result = new JsonResult(mensagens);
                 context.HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
