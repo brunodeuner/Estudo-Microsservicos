@@ -1,6 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -30,21 +32,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Clientes\Estudo.Clientes.Serviço.Api\Estudo.Clientes.Serviço.Api.csproj" />
+    <ProjectReference Include="..\..\..\src\CálculoDeConsumo\Estudo.CálculoDeConsumo.Serviço.Api\Estudo.CálculoDeConsumo.Serviço.Api.csproj" />
     <ProjectReference Include="..\..\Core\Estudo.Testes.Core.Api\Estudo.Testes.Core.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Testes\1-Manutenção\1-Adicionar\2-AdicionarClienteComCpfComMascaraComSucesso.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Testes\1-Manutenção\1-Adicionar\3-AdicionarClienteComFalhaNaValidação.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Testes\1-Manutenção\1-Adicionar\1-AdicionarClienteComSucesso.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Testes\1-Manutenção\2-Remover\1-RemoverComSucesso.json">
+    <None Update="Testes\1-CobrarTodosOsClientes\1-CobrarTodosOsClientesComSucesso.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

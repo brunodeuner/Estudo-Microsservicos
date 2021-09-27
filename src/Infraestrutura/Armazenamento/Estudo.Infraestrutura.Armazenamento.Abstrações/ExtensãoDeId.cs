@@ -1,4 +1,5 @@
 ﻿using Estudo.Infraestrutura.Geral;
+using System;
 
 namespace Estudo.Infraestrutura.Armazenamento.Abstrações
 {
@@ -9,10 +10,27 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações
 
         public static string ObterId(this object objeto)
         {
-            var propriedadeComONomeId = objeto?.GetType().GetProperty(nameof(IId.Id));
-            return propriedadeComONomeId?.CanRead ?? false
-                ? propriedadeComONomeId.GetValue(objeto)?.ToString()
-                : default;
+            System.Reflection.PropertyInfo propriedadeComONomeId = ObterPropriedadeComONomeId(objeto);
+            if (propriedadeComONomeId?.CanRead ?? false)
+                return propriedadeComONomeId.GetValue(objeto)?.ToString();
+            throw new ArgumentException($"{objeto.GetType().Name} não possui propriedade {nameof(IId.Id)} " +
+                                        $"que possa ser lida");
         }
+
+        public static string AtribuirNovoId(this object objeto)
+        {
+            var propriedadeComONomeId = objeto?.GetType().GetProperty(nameof(IId.Id));
+            if (propriedadeComONomeId.CanWrite)
+            {
+                var id = Guid.NewGuid().ToString();
+                propriedadeComONomeId.SetValue(objeto, id);
+                return id;
+            }
+            throw new ArgumentException($"{objeto.GetType().Name} não possui propriedade {nameof(IId.Id)} " +
+                                        $"que possa ser atribuida");
+        }
+
+        private static System.Reflection.PropertyInfo ObterPropriedadeComONomeId(object objeto) =>
+           objeto?.GetType().GetProperty(nameof(IId.Id));
     }
 }

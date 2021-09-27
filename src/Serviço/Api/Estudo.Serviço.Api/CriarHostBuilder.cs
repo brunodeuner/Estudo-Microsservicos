@@ -6,7 +6,7 @@ namespace Estudo.Serviço.Api
 {
     public static class CriarHostBuilder
     {
-        public static void CriarERodar<TStartup>() where TStartup : class => 
+        public static void CriarERodar<TStartup>() where TStartup : class =>
             CreateHostBuilder<TStartup>().Build().Run();
 
         private static IHostBuilder CreateHostBuilder<TStartup>() where TStartup : class =>

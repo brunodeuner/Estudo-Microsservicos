@@ -11,8 +11,10 @@ namespace Estudo.CálculoDeConsumo.Serviço.Api.Controllers
     {
         private readonly IMediator mediator;
 
+        public CobrarTodosOsClientesController(IMediator mediator) => this.mediator = mediator;
+
         [HttpPost]
-        public Task CobrarCliente([FromBody] ComandoDeCobrarTodosOsClientes comandoDeCobrarTodosOsClientes,
-            CancellationToken cancellationToken) => mediator.Send(comandoDeCobrarTodosOsClientes, cancellationToken);
+        public Task CobrarCliente(CancellationToken cancellationToken) =>
+            mediator.Send(new ComandoDeCobrarTodosOsClientes(), cancellationToken);
     }
 }

@@ -9,6 +9,8 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\Domínio\Estudo.Domínio\Estudo.Domínio.csproj" />
+		<ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.HttpClient\Estudo.Infraestrutura.Armazenamento.HttpClient.csproj" />
+		<ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória\Estudo.Infraestrutura.Armazenamento.Memória.csproj" />
 		<ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Infraestrutura.Armazenamento.Ravendb.csproj" />
 	</ItemGroup>
 

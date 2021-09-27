@@ -2,6 +2,7 @@
 using Estudo.Domínio.Validação;
 using Estudo.Domínio.Validadores;
 using Estudo.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Infraestrutura.Armazenamento.Memória;
 using Estudo.Infraestrutura.Armazenamento.Ravendb;
 using FluentValidation;
 using MediatR;
@@ -57,18 +58,28 @@ namespace Estudo.Aplicação
 
         private static void ConfigurarArmazenamento(this IServiceCollection serviços, IConfiguration configuração)
         {
-            ConfigurarRavendbCasoPossuiaConfiguração(serviços, configuração);
+            var configuraçãoDaConexão = configuração.ObterConfiguracao<ConfiguraçãoDaConexão>();
+
+            ConfigurarDaoRavendb(serviços, configuraçãoDaConexão);
+            ConfigurarDaoMemória(serviços, configuraçãoDaConexão);
         }
 
-        private static void ConfigurarRavendbCasoPossuiaConfiguração(IServiceCollection serviços, IConfiguration configuração)
+        private static void ConfigurarDaoRavendb(IServiceCollection serviços,
+            ConfiguraçãoDaConexão configuraçãoDaConexão)
         {
-            var configuraçãoDoRavendb = configuração.ObterConfiguracao<ConfiguraçãoDoRavendb>();
-            if (configuraçãoDoRavendb is null)
+            if (configuraçãoDaConexão?.ConfiguraçãoDoRavendb is null)
                 return;
 
             serviços.AddSingleton<FabricaDoRavendb>();
-            serviços.AddSingleton(configuraçãoDoRavendb);
+            serviços.AddSingleton(configuraçãoDaConexão.ConfiguraçãoDoRavendb);
             serviços.AddScoped<IDao, DaoRavendb>();
+        }
+
+        private static void ConfigurarDaoMemória(IServiceCollection serviços,
+            ConfiguraçãoDaConexão configuraçãoDaConexão)
+        {
+            if (configuraçãoDaConexão.ObterTipo() == typeof(DaoMemória))
+                serviços.AddScoped<IDao, DaoMemória>();
         }
 
         private static T ObterConfiguracao<T>(this IConfiguration configuração) =>

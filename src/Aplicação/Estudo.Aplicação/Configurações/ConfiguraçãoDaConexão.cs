@@ -1,0 +1,14 @@
+﻿using Estudo.Infraestrutura.Armazenamento.HttpClient;
+using Estudo.Infraestrutura.Armazenamento.Ravendb;
+using System;
+
+namespace Estudo.Aplicação.Configurações
+{
+    public class ConfiguraçãoDaConexão
+    {
+        public string TipoDoDao { get; set; }
+        public ConfiguraçãoDoRavendb ConfiguraçãoDoRavendb { get; set; }
+        public ConfiguraçãoDoDaoHttpClient ConfiguraçãoDoDaoHttpClient { get; set; }
+        public Type ObterTipo() => Type.GetType(TipoDoDao);
+    }
+}

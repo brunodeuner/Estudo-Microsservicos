@@ -1,0 +1,14 @@
+﻿{
+  "Nome": "Cobrar todos os clientes",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/CobrarTodosOsClientes/",
+        "Método": "Post"
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    }
+  ]
+}

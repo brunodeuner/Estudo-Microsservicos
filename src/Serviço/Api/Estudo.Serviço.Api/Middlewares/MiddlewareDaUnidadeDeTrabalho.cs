@@ -1,6 +1,5 @@
 ﻿using Estudo.Infraestrutura.Armazenamento.Abstrações;
 using Microsoft.AspNetCore.Http;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Estudo.Serviço.Api.Middlewares

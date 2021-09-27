@@ -6,7 +6,7 @@ namespace Estudo.Infraestrutura.Geral
     {
         private const string AppSettingsJson = "appsettings.json";
 
-        public static IConfiguration CriarConfiguraçãoLendoOAppsettings() => 
+        public static IConfiguration CriarConfiguraçãoLendoOAppsettings() =>
             new ConfigurationBuilder().AddJsonFile(AppSettingsJson).Build();
     }
 }

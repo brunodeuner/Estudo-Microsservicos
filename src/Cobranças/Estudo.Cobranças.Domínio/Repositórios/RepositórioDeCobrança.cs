@@ -19,7 +19,7 @@ namespace Estudo.Cobranças.Domínio.Repositórios
         public IAsyncEnumerable<Cobrança> ObterCobrançasDoClienteAPartirDoMês(CancellationToken cancellationToken,
             string cpf = default, int? mês = default)
         {
-            if (!cpf.Preenchido() && !mês.HasValue)
+            if (cpf.NãoPreenchido() && !mês.HasValue)
             {
                 mediator.Publish(new NotificaçãoDoDomínio($"Informe um {nameof(cpf)} ou um " +
                     $"{nameof(mês)}"));

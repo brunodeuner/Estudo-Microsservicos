@@ -5,7 +5,12 @@ namespace Estudo.Testes.Core.Api
 {
     public static class ExecutarTodosOsCenários
     {
-        public static Task Executar<TStartup>(this TestFixture<TStartup> testFixture) where TStartup : class =>
-            ExecutorDeTestes.ExecutarTodosOsTestes(new ConfiguraçãoDosTestes("Testes", (_) => testFixture.Cliente));
+        public static Task Executar<TStartup>(this WebHostFixture<TStartup> testFixture, string diretório = "Testes")
+            where TStartup : class
+        {
+            testFixture.Iniciar();
+            return ExecutorDeTestes.ExecutarTodosOsTestes(
+                new ConfiguraçãoDosTestes(diretório, (_) => testFixture.Cliente));
+        }
     }
 }
