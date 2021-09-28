@@ -2,9 +2,9 @@
 
 namespace Estudo.Infraestrutura.Bus.Abstrações
 {
-    public class Argumentos<T> : EventArgs
+    public class EventoEventArgs<T> : EventArgs
     {
-        public Argumentos(T corpo) => Corpo = corpo;
+        public EventoEventArgs(T corpo) => Corpo = corpo;
 
         public T Corpo { get; }
     }

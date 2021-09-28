@@ -22,8 +22,8 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
             this.configuraçãoDoRavendb = configuraçãoDoRavendb;
         }
 
-        public event EventoAssíncrono<Argumentos<T>> Consumir;
-        public event EventoAssíncrono<AgumentosDaExceção> Exceção;
+        public event EventoAssíncrono<EventoEventArgs<T>> Consumir;
+        public event EventoAssíncrono<ExceçãoEventArgs> Exceção;
 
         public async Task Iniciar(string identificador, CancellationToken cancellationToken)
         {
@@ -34,7 +34,7 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
                 try
                 {
                     subscription.OnSubscriptionConnectionRetry += async exception =>
-                        await Exceção(new AgumentosDaExceção(exception), cancellationToken);
+                        await Exceção(new ExceçãoEventArgs(exception), cancellationToken);
 
                     await subscription.Run(loteDeProcessamento => ConsumirLote(loteDeProcessamento, cancellationToken),
                         cancellationToken);
@@ -61,7 +61,7 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
             {
                 try
                 {
-                    await Consumir(new Argumentos<T>(itens.Result), cancellationToken);
+                    await Consumir(new EventoEventArgs<T>(itens.Result), cancellationToken);
                 }
                 catch (Exception e)
                 {
@@ -82,7 +82,7 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
         private Task ProcessarExceção(Exception exceção, CancellationToken cancellationToken)
         {
             if (Exceção is not null)
-                return Exceção(new AgumentosDaExceção(exceção), cancellationToken);
+                return Exceção(new ExceçãoEventArgs(exceção), cancellationToken);
             return Task.CompletedTask;
         }
     }

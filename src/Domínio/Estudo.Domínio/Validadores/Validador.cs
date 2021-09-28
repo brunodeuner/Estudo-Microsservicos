@@ -30,15 +30,22 @@ namespace Estudo.Domínio.Validadores
                 var validador = serviceProvider.GetRequiredService(atributoDeValidador.Tipo);
                 if (validador is not IValidator<T> validadorFluentValidation)
                     throw new ArgumentException($"{validador.GetType().Name} não suportado!");
-                var resultadoDaValidação = await validadorFluentValidation
-                    .ValidateAsync(objetoAValidar, cancellationToken);
-                if (!resultadoDaValidação.IsValid)
-                {
-                    await mediator.Publish(new NotificaçãoDoDomínio(resultadoDaValidação), cancellationToken);
+                if (!await ValidarObjeto(validadorFluentValidation, objetoAValidar, cancellationToken))
                     return false;
-                }
             }
             return true;
+        }
+
+        private async ValueTask<bool> ValidarObjeto<T>(IValidator<T> validadorFluentValidation,
+            T objetoAValidar, CancellationToken cancellationToken)
+        {
+            var resultadoDaValidação = await validadorFluentValidation
+                .ValidateAsync(objetoAValidar, cancellationToken);
+            if (resultadoDaValidação.IsValid)
+                return true;
+
+            await mediator.Publish(new NotificaçãoDoDomínio(resultadoDaValidação), cancellationToken);
+            return false;
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Estudo.CálculoDeConsumo.Serviço.Api
 {
-    public class Program
+    public static class Program
     {
         public static void Main() => CriarHostBuilder.CriarERodar<Startup>();
     }

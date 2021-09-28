@@ -51,7 +51,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
             {
                 convenções.AggressiveCache.Duration = ConfiguraçãoDoRavendb.TempoDeDuraçãoDoCache.Value;
                 convenções.AggressiveCache.Mode = Raven.Client.Http.AggressiveCacheMode.TrackChanges;
-            };
+            }
             return convenções;
         }
     }

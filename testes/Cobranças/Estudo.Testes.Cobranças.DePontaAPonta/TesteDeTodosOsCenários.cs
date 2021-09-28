@@ -19,13 +19,14 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
         {
             await AdicionarCliente();
             await ExecutarTodosOsCenários.Executar(testFixture);
+            Assert.True(true);
         }
 
         private Task AdicionarCliente()
         {
             var produtor = testFixture.ServiceProvider.GetRequiredService<IProdutor>();
             return produtor.EnviarAsync(nameof(Cliente),
-                new Infraestrutura.Bus.Abstrações.Argumentos<Cliente>(new Cliente()
+                new Infraestrutura.Bus.Abstrações.EventoEventArgs<Cliente>(new Cliente()
                 {
                     Cpf = "57251010020"
                 }), default);

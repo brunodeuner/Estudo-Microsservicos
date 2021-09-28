@@ -3,7 +3,7 @@ using Estudo.Testes.Consumo.Performance.Benchmarks;
 
 namespace Estudo.Testes.Consumo.Performance
 {
-    internal class Program
+    internal static class Program
     {
         public static void Main()
         {

@@ -5,21 +5,21 @@ namespace Estudo.Infraestrutura.Bus.Memória.Consumidor
 {
     public class EventosPorTipo
     {
-        private readonly ConcurrentDictionary<string, ConcurrentQueue<Argumentos<object>>> eventosPorTipo = new();
+        private readonly ConcurrentDictionary<string, ConcurrentQueue<EventoEventArgs<object>>> eventosPorTipo = new();
 
-        public void AdicionarEvento<T>(string identificador, Argumentos<T> requisicao)
+        public void AdicionarEvento<T>(string identificador, EventoEventArgs<T> requisicao)
         {
             var eventosDoTipo = ObterOuCriarNovosEventosDoTipo(identificador);
-            eventosDoTipo.Enqueue(new Argumentos<object>(requisicao.Corpo));
+            eventosDoTipo.Enqueue(new EventoEventArgs<object>(requisicao.Corpo));
         }
 
-        public Argumentos<T> ConsumirPróximoEvento<T>(string identificador)
+        public EventoEventArgs<T> ConsumirPróximoEvento<T>(string identificador)
         {
             var eventosDoTipo = ObterOuCriarNovosEventosDoTipo(identificador);
             eventosDoTipo.TryDequeue(out var evento);
             if (evento is null)
                 return default;
-            return new Argumentos<T>((T)evento.Corpo);
+            return new EventoEventArgs<T>((T)evento.Corpo);
         }
 
         public void LimparEventos(string identificador)
@@ -28,12 +28,12 @@ namespace Estudo.Infraestrutura.Bus.Memória.Consumidor
                 eventosDoTipo.Clear();
         }
 
-        private ConcurrentQueue<Argumentos<object>> ObterOuCriarNovosEventosDoTipo(string identificador)
+        private ConcurrentQueue<EventoEventArgs<object>> ObterOuCriarNovosEventosDoTipo(string identificador)
         {
             if (eventosPorTipo.TryGetValue(identificador, out var eventosDoTipo))
                 return eventosDoTipo;
 
-            eventosDoTipo = new ConcurrentQueue<Argumentos<object>>();
+            eventosDoTipo = new ConcurrentQueue<EventoEventArgs<object>>();
             return eventosPorTipo[identificador] = eventosDoTipo;
         }
     }

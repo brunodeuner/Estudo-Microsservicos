@@ -2,9 +2,9 @@
 
 namespace Estudo.Infraestrutura.Bus.Abstrações.Consumidor.Dtos
 {
-    public class AgumentosDaExceção : EventArgs
+    public class ExceçãoEventArgs : EventArgs
     {
-        public AgumentosDaExceção(Exception exception) => Exceção = exception;
+        public ExceçãoEventArgs(Exception exception) => Exceção = exception;
 
         public Exception Exceção { get; }
     }

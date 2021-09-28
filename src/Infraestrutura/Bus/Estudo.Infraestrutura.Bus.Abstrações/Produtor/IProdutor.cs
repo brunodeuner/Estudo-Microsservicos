@@ -5,6 +5,6 @@ namespace Estudo.Infraestrutura.Bus.Abstrações.Produtor
 {
     public interface IProdutor
     {
-        Task EnviarAsync<T>(string identificador, Argumentos<T> requisicao, CancellationToken cancellationToken);
+        Task EnviarAsync<T>(string identificador, EventoEventArgs<T> requisicao, CancellationToken cancellationToken);
     }
 }

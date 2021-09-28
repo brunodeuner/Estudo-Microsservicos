@@ -37,6 +37,7 @@ namespace Estudo.Testes.Core.Api
         {
             Cliente.Dispose();
             servidor.Dispose();
+            GC.SuppressFinalize(this);
         }
 
         protected virtual void ConfigurarServiços(IServiceCollection serviceCollection) { }

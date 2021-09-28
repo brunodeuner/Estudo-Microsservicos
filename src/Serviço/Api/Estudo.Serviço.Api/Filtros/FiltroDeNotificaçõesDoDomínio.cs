@@ -32,6 +32,9 @@ namespace Estudo.Serviço.Api
             }
         }
 
-        public void OnActionExecuting(ActionExecutingContext context) { }
+        public void OnActionExecuting(ActionExecutingContext context)
+        {
+            // nada a executar
+        }
     }
 }

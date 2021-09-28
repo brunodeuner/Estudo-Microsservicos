@@ -18,8 +18,8 @@ namespace Estudo.Infraestrutura.Bus.Memória.Consumidor
             this.pararAoConsumirTodosOsEventos = pararAoConsumirTodosOsEventos;
         }
 
-        public event EventoAssíncrono<Argumentos<T>> Consumir;
-        public event EventoAssíncrono<AgumentosDaExceção> Exceção;
+        public event EventoAssíncrono<EventoEventArgs<T>> Consumir;
+        public event EventoAssíncrono<ExceçãoEventArgs> Exceção;
 
         public async Task Iniciar(string identificador, CancellationToken cancellationToken)
         {
@@ -30,11 +30,11 @@ namespace Estudo.Infraestrutura.Bus.Memória.Consumidor
                 {
                     try
                     {
-                        await Consumir(new Argumentos<T>(evento.Corpo), cancellationToken);
+                        await Consumir(new EventoEventArgs<T>(evento.Corpo), cancellationToken);
                     }
                     catch (Exception e)
                     {
-                        await Exceção(new AgumentosDaExceção(e), cancellationToken);
+                        await Exceção(new ExceçãoEventArgs(e), cancellationToken);
                     }
                     continue;
                 }

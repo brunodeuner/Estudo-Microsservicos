@@ -12,7 +12,7 @@ namespace Estudo.Infraestrutura.Bus.Memória.Produtor
 
         public ProdutorEmMemória(EventosPorTipo eventosPorTipo) => this.eventosPorTipo = eventosPorTipo;
 
-        public Task EnviarAsync<TMensagem>(string identificador, Argumentos<TMensagem> requisicao,
+        public Task EnviarAsync<TMensagem>(string identificador, EventoEventArgs<TMensagem> requisicao,
             CancellationToken cancellationToken)
         {
             eventosPorTipo.AdicionarEvento(identificador, requisicao);

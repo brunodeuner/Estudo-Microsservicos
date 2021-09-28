@@ -20,7 +20,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações
         public static string AtribuirNovoId(this object objeto)
         {
             var propriedadeComONomeId = objeto?.GetType().GetProperty(nameof(IId.Id));
-            if (propriedadeComONomeId.CanWrite)
+            if (propriedadeComONomeId?.CanWrite ?? false)
             {
                 var id = Guid.NewGuid().ToString();
                 propriedadeComONomeId.SetValue(objeto, id);
