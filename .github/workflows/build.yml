@@ -35,7 +35,7 @@ jobs:
         run: |
           New-Item -Path .\.sonar\scanner -ItemType Directory
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
-          dotnet tool update dotnet-reportgenerator-globaltool -g --tool-path .\.sonar\scanner
+          dotnet tool update dotnet-reportgenerator-globaltool -g --tool-path .\.sonar\reportgenerator
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
@@ -50,5 +50,5 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           dotnet test --no-build --collect:"XPlat Code Coverage"
-          reportgenerator "-reports:**\TestResults\*\coverage.cobertura.xml" "-targetdir:sonarqubecoverage" "-reporttypes:SonarQube"
+          .\.sonar\reportgenerator\reportgenerator "-reports:**\TestResults\*\coverage.cobertura.xml" "-targetdir:sonarqubecoverage" "-reporttypes:SonarQube"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}" 
