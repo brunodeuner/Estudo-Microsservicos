@@ -53,7 +53,7 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Queryable
                     if (ObterValorInteiroDaExpressao(node, out var valorSkip))
                     {
                         Skip = valorSkip;
-                        return Visit(node.Arguments[0]);
+                        return node;
                     }
                     break;
                 case "OrderBy":

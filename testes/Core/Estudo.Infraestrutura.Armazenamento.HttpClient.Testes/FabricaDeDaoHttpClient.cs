@@ -1,8 +1,7 @@
 ﻿using Estudo.Infraestrutura.Armazenamento.Abstrações;
-using Estudo.Infraestrutura.Armazenamento.HttpClient;
 using Estudo.Infraestrutura.Armazenamento.HttpClient.Queryable;
 
-namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes
+namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
 {
     internal class FabricaDeDaoHttpClient
     {

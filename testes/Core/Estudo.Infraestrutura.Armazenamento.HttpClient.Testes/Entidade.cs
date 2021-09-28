@@ -1,6 +1,6 @@
 ﻿using Estudo.Infraestrutura.Armazenamento.Abstrações;
 
-namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes
+namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
 {
     internal class EntidadeDeTeste : IId
     {

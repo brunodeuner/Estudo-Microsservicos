@@ -1,5 +1,4 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable;
-using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
+﻿using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -12,9 +11,8 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient
         public async IAsyncEnumerable<T> ToAsyncEnumerable<T>(IQueryable<T> query,
             [EnumeratorCancellation] CancellationToken cancellationToken) where T : class, new()
         {
-            var daoHttpClient = (DaoHttpClient)((QueryProviderDao)query.Provider).Dao;
-            var quantidadeDeRegistrosPorPaginação = daoHttpClient
-                .executorDeRequisições.ConfiguraçãoDoDaoHttpClient.QuantidadeDeRegistrosPorPaginação;
+            var quantidadeDeRegistrosPorPaginação =
+                executorDeRequisições.ConfiguraçãoDoDaoHttpClient.QuantidadeDeRegistrosPorPaginação;
 
             var registrosAPular = 0;
             while (!cancellationToken.IsCancellationRequested)

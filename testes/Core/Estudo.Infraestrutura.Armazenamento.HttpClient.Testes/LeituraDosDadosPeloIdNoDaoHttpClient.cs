@@ -1,7 +1,7 @@
-using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes;
 using RichardSzalay.MockHttp;
 using RichardSzalay.MockHttp.Matchers;
 using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Mime;
@@ -58,6 +58,38 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
             Assert.Null(entidade);
         }
 
+        [Fact]
+        public async Task ToAsyncEnumerable_SemFiltro_RetornarPaginando()
+        {
+            var mockDeHttp = new MockHttpMessageHandler();
+            mockDeHttp
+                .When(HttpMethod.Get, urlDeTeste.AbsoluteUri)
+                .WithQueryString("?$top=1&$skip=0")
+                .Respond(MediaTypeNames.Application.Json,
+                "[{\"Id\":\"0\", \"Descrição\":\"" + descriçãoDeTeste + "\"}]");
+
+            mockDeHttp
+                .When(HttpMethod.Get, urlDeTeste.AbsoluteUri)
+                .WithQueryString("?$top=1&$skip=1")
+                .Respond(MediaTypeNames.Application.Json,
+                "[{\"Id\":\"1\", \"Descrição\":\"" + descriçãoDeTeste + "\"}]");
+
+            mockDeHttp
+                .When(HttpMethod.Get, urlDeTeste.AbsoluteUri)
+                .WithQueryString("?$top=1&$skip=2")
+                .Respond(MediaTypeNames.Application.Json, "[]");
+
+            var dao = ObterDao(mockDeHttp.ToHttpClient());
+            var quantidadeDeRegistrosLidos = 0;
+            await foreach (var entidade in dao.Selecionar<EntidadeDeTeste>().ToAsyncEnumerable(default))
+            {
+                Assert.Equal(quantidadeDeRegistrosLidos.ToString(), entidade.Id);
+                Assert.Equal(descriçãoDeTeste, entidade.Descrição);
+                quantidadeDeRegistrosLidos++;
+            }
+            Assert.Equal(2, quantidadeDeRegistrosLidos);
+        }
+
         private static ValueTask<EntidadeDeTeste> ObterRegistro(System.Net.Http.HttpClient httpClient, string id)
         {
             var dao = ObterDao(httpClient);
@@ -68,7 +100,8 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
         {
             var configuraçãoDoDaoHttpClient = new ConfiguraçãoDoDaoHttpClient()
             {
-                ObterRotaAPartirDoTipo = tipo => urlDeTeste
+                ObterRotaAPartirDoTipo = tipo => urlDeTeste,
+                QuantidadeDeRegistrosPorPaginação = 1
             };
 
             return FabricaDeDaoHttpClient.ObterDao(httpClient, configuraçãoDoDaoHttpClient);

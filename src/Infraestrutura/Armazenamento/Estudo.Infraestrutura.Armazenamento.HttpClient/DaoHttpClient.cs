@@ -2,6 +2,7 @@
 using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable;
 using Estudo.Infraestrutura.Armazenamento.HttpClient.Dtos;
 using Estudo.Infraestrutura.Armazenamento.HttpClient.Queryable;
+using System;
 using System.Linq;
 using System.Net.Http;
 using System.Threading;
@@ -32,7 +33,7 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient
 
         public IQueryable<T> Selecionar<T>()
         {
-            var query = new QueryableEmBranco<T>();
+            var query = Array.Empty<T>().AsQueryable();
             return new QueryableDao<T>(query, new QueryProviderDao(query.Provider, this));
         }
     }
