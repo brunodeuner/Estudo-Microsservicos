@@ -4,10 +4,10 @@ using System.Linq;
 
 namespace Estudo.Cobranças.Aplicação.Armazenamento.Ravendb.MapReduces
 {
-    public class CobrançasPorMêsEEstado : AbstractIndexCreationTask<
+    public class MapReduceDeCobrançasPorMêsEEstado : AbstractIndexCreationTask<
         Cobrança, Domínio.Consultas.Entidades.CobrançasPorMêsEEstado>
     {
-        public CobrançasPorMêsEEstado()
+        public MapReduceDeCobrançasPorMêsEEstado()
         {
             DefinirMapeamento();
             DefinirRedução();

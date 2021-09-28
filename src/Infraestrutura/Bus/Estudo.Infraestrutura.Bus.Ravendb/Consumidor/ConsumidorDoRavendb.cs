@@ -15,11 +15,14 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
     {
         private readonly IDocumentStore documentStore;
         private readonly ConfiguraçãoDoRavendb configuraçãoDoRavendb;
+        private readonly bool pararAoConsumirTodosOsEventos;
 
-        public ConsumidorDoRavendb(IDocumentStore documentStore, ConfiguraçãoDoRavendb configuraçãoDoRavendb)
+        public ConsumidorDoRavendb(IDocumentStore documentStore, ConfiguraçãoDoRavendb configuraçãoDoRavendb,
+            bool pararAoConsumirTodosOsEventos = false)
         {
             this.documentStore = documentStore;
             this.configuraçãoDoRavendb = configuraçãoDoRavendb;
+            this.pararAoConsumirTodosOsEventos = pararAoConsumirTodosOsEventos;
         }
 
         public event EventoAssíncrono<EventoEventArgs<T>> Consumir;
@@ -74,7 +77,10 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
 
         private SubscriptionWorker<T> ObterSubscription(string identificador)
         {
-            var configuraçãoWorker = new SubscriptionWorkerOptions(identificador);
+            var configuraçãoWorker = new SubscriptionWorkerOptions(identificador)
+            {
+                CloseWhenNoDocsLeft = pararAoConsumirTodosOsEventos
+            };
             return documentStore.Subscriptions.GetSubscriptionWorker<T>(
                 configuraçãoWorker, database: configuraçãoDoRavendb.Database);
         }

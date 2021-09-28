@@ -7,7 +7,7 @@ namespace Estudo.Cobranças.Aplicação.Armazenamento.Ravendb.MapReduces
     public static class CriarMapReduces
     {
         public static Task CriarTodosOsMapReduce(this IDocumentStore documentStore,
-            CancellationToken cancellationToken) => new CobrançasPorMêsEEstado().ExecuteAsync(documentStore,
+            CancellationToken cancellationToken) => new MapReduceDeCobrançasPorMêsEEstado().ExecuteAsync(documentStore,
                 token: cancellationToken);
     }
 }
