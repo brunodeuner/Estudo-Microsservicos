@@ -19,15 +19,7 @@ namespace Estudo.Testes.Consumo.DePontaAPonta
         public TesteDeTodosOsCenários(WebHostFixture<Startup> testFixture) => this.testFixture = testFixture;
 
         [Fact]
-        public async Task CobrarTodosOsClientes_NenhumClienteCadastrado_NenhumaCobrançaAdicionada()
-        {
-            await ExecutarTodosOsCenários.Executar(testFixture);
-            var dao = testFixture.ServiceProvider.GetRequiredService<IDao>();
-            Assert.True(!dao.Selecionar<Cobrança>().Any());
-        }
-
-        [Fact]
-        public async Task CobrarTodosOsClientes_ClienteExistente_CobrançaAdicionadaParaOCliente()
+        public async Task CobrarTodosOsClientes_UmClienteCadastrado_CobrançaAdicionadaParaOCliente()
         {
             var serviceProvider = testFixture.ServiceProvider;
             await AdicionarNovoCLiente(serviceProvider);

@@ -1,5 +1,6 @@
 ﻿using Estudo.Serviço.Api.Middlewares;
 using Microsoft.AspNetCore.Builder;
+using System.Reflection;
 
 namespace Estudo.Serviço.Api
 {
@@ -9,8 +10,17 @@ namespace Estudo.Serviço.Api
         {
             aplicação.UseMiddleware<MiddlewareDaUnidadeDeTrabalho>();
             aplicação.UseHttpsRedirection();
+            aplicação.AdicionarSwagger();
             aplicação.UseRouting();
             aplicação.UseEndpoints(endpoints => endpoints.MapControllers());
+        }
+
+        private static void AdicionarSwagger(this IApplicationBuilder aplicação)
+        {
+            aplicação.UseSwagger();
+            aplicação.UseSwaggerUI(c =>
+            c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                Assembly.GetExecutingAssembly().GetName().Name));
         }
     }
 }

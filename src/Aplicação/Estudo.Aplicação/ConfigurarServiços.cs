@@ -2,6 +2,8 @@
 using Estudo.Domínio.Validação;
 using Estudo.Domínio.Validadores;
 using Estudo.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Infraestrutura.Armazenamento.HttpClient;
+using Estudo.Infraestrutura.Armazenamento.HttpClient.Queryable;
 using Estudo.Infraestrutura.Armazenamento.Memória;
 using Estudo.Infraestrutura.Armazenamento.Ravendb;
 using FluentValidation;
@@ -28,6 +30,9 @@ namespace Estudo.Aplicação
             serviços.ConfigurarTransitórios(assemblies);
         }
 
+        public static T ObterConfiguracao<T>(this IConfiguration configuração) =>
+            configuração.GetSection(typeof(T).Name).Get<T>();
+
         private static void ConfigurarTransitórios(this IServiceCollection serviços, Assembly[] assemblies)
         {
             foreach (var repositorioASerInjetado in ObterTipoConcretosQueComeçamCom(assemblies, "ValidadorD"))
@@ -51,26 +56,32 @@ namespace Estudo.Aplicação
                 serviços.AddScoped(repositorioASerInjetado);
         }
 
-        private static IEnumerable<Type> ObterTipoConcretosQueComeçamCom(Assembly[] assemblies, string começoDoNomeDoTipo) =>
+        private static IEnumerable<Type> ObterTipoConcretosQueComeçamCom(Assembly[] assemblies,
+            string começoDoNomeDoTipo) =>
             assemblies.SelectMany(x => x.GetTypes())
-            .Where(x => !x.IsInterface && !x.IsAbstract && !x.IsNestedPrivate && x.FullName.Contains(começoDoNomeDoTipo,
-                StringComparison.InvariantCultureIgnoreCase));
+            .Where(x => !x.IsInterface && !x.IsAbstract && !x.IsNestedPrivate &&
+                   x.FullName.Contains(começoDoNomeDoTipo, StringComparison.InvariantCultureIgnoreCase));
 
         private static void ConfigurarArmazenamento(this IServiceCollection serviços, IConfiguration configuração)
         {
             var configuraçãoDaConexão = configuração.ObterConfiguracao<ConfiguraçãoDaConexão>();
+            if (configuraçãoDaConexão is null)
+                return;
 
             ConfigurarDaoRavendb(serviços, configuraçãoDaConexão);
             ConfigurarDaoMemória(serviços, configuraçãoDaConexão);
+            ConfigurarDaoHttpClient(serviços, configuraçãoDaConexão);
         }
 
         private static void ConfigurarDaoRavendb(IServiceCollection serviços,
             ConfiguraçãoDaConexão configuraçãoDaConexão)
         {
-            if (configuraçãoDaConexão?.ConfiguraçãoDoRavendb is null)
+            if (configuraçãoDaConexão.ObterTipo() != typeof(DaoRavendb))
                 return;
 
             serviços.AddSingleton<FabricaDoRavendb>();
+            serviços.AddSingleton(serviceProvider =>
+                serviceProvider.GetRequiredService<FabricaDoRavendb>().DocumentStore);
             serviços.AddSingleton(configuraçãoDaConexão.ConfiguraçãoDoRavendb);
             serviços.AddScoped<IDao, DaoRavendb>();
         }
@@ -82,7 +93,17 @@ namespace Estudo.Aplicação
                 serviços.AddScoped<IDao, DaoMemória>();
         }
 
-        private static T ObterConfiguracao<T>(this IConfiguration configuração) =>
-            configuração.GetSection(typeof(T).Name).Get<T>();
+        private static void ConfigurarDaoHttpClient(IServiceCollection serviços,
+            ConfiguraçãoDaConexão configuraçãoDaConexão)
+        {
+            if (configuraçãoDaConexão.ObterTipo() != typeof(DaoHttpClient))
+                return;
+
+            serviços.AddHttpClient();
+            serviços.AddSingleton(configuraçãoDaConexão.ConfiguraçãoDoDaoHttpClient);
+            serviços.AddTransient<ExecutorDeRequisições>();
+            serviços.AddTransient<ExecutorExpressao>();
+            serviços.AddScoped<IDao, DaoHttpClient>();
+        }
     }
 }

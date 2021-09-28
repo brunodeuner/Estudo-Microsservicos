@@ -10,6 +10,7 @@ namespace Estudo.Serviço.Api
         {
             serviços.AddControllers(opções => opções.Filters.Add<FiltroDeNotificaçõesDoDomínio>());
             serviços.ConfigurarAplicação(configuração);
+            serviços.AddSwaggerGen();
         }
     }
 }

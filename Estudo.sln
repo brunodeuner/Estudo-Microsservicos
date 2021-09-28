@@ -69,7 +69,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Geral", "Geral", "{0FC166C2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Armazenamento.HttpClient", "src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.HttpClient\Estudo.Infraestrutura.Armazenamento.HttpClient.csproj", "{CB4C0EBF-6053-494F-B5AA-456B56F3D29A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumo", "Consumo", "{8535118E-4ACB-4922-A817-5A000958B933}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CálculoDeConsumo", "CálculoDeConsumo", "{8535118E-4ACB-4922-A817-5A000958B933}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.CálculoDeConsumo.Domínio", "src\CálculoDeConsumo\Estudo.CálculoDeConsumo.Domínio\Estudo.CálculoDeConsumo.Domínio.csproj", "{C0B81918-6111-4418-A4B9-A73B853D37DD}"
 EndProject
@@ -87,9 +87,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicação", "Aplicação"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Aplicação", "src\Aplicação\Estudo.Aplicação\Estudo.Aplicação.csproj", "{C99AF900-D35C-4F8F-BFE9-F1EC058D7926}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumo", "Consumo", "{27B6C92B-EB68-46AC-8CEF-1B367306A2E9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CálculoDeConsumo", "CálculoDeConsumo", "{27B6C92B-EB68-46AC-8CEF-1B367306A2E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Testes.Consumo.Performance", "testes\Consumo\Estudo.Testes.Consumo.Performance\Estudo.Testes.Consumo.Performance.csproj", "{D001A131-86F5-4CA8-B87F-42DFA26D64B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Testes.CálculoDeConsumo.Performance", "testes\Consumo\Estudo.Testes.Consumo.Performance\Estudo.Testes.CálculoDeConsumo.Performance.csproj", "{D001A131-86F5-4CA8-B87F-42DFA26D64B7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cobranças", "Cobranças", "{E82C7E9E-931F-4B7E-B589-868024E79F5A}"
 EndProject
@@ -103,7 +103,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.CálculoDeConsumo.Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Armazenamento.Memória", "src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória\Estudo.Infraestrutura.Armazenamento.Memória.csproj", "{2BFC4868-AAF1-42D9-A23D-D7417512AD9A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Testes.Consumo.DePontaAPonta", "testes\Consumo\Estudo.Testes.Consumo.DePontaAPonta\Estudo.Testes.Consumo.DePontaAPonta.csproj", "{9FE0CE86-6AE1-4E7F-A763-A1ED1CCC5D5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Testes.CálculoDeConsumo.DePontaAPonta", "testes\Consumo\Estudo.Testes.Consumo.DePontaAPonta\Estudo.Testes.CálculoDeConsumo.DePontaAPonta.csproj", "{9FE0CE86-6AE1-4E7F-A763-A1ED1CCC5D5A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestrutura", "Infraestrutura", "{BA2DB300-2CE1-431C-8311-BB5C652F3E0B}"
 EndProject
@@ -120,6 +120,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Cobranças.Aplicação.Testes", "testes\Cobranças\Estudo.Cobranças.Aplicação.Testes\Estudo.Cobranças.Aplicação.Testes.csproj", "{400F974A-9883-4609-9C1B-F3AC34737A4A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Testes.Cobranças.DePontaAPonta.Ravendb", "testes\Cobranças\Estudo.Testes.Cobranças.DePontaAPonta.Ravendb\Estudo.Testes.Cobranças.DePontaAPonta.Ravendb.csproj", "{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Testes.Clientes.Serviço.Api", "testes\Clientes\Estudo.Testes.Clientes.Serviço.Api\Estudo.Testes.Clientes.Serviço.Api.csproj", "{FDE4F098-3693-4F76-8E55-627F59764B57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Testes.Cobranças.Serviço.Api", "testes\Cobranças\Estudo.Testes.Cobranças.Serviço.Api\Estudo.Testes.Cobranças.Serviço.Api.csproj", "{BB2503E1-F23E-447F-8F3B-F1AA4F0839DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Testes.CálculoDeConsumo.Serviço.Api", "testes\Consumo\Estudo.Testes.Consumo.Serviço.Api\Estudo.Testes.CálculoDeConsumo.Serviço.Api.csproj", "{4A293DD1-5A24-4F78-B09A-BAFFD281FC14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.CálculoDeConsumo.Aplicação", "src\CálculoDeConsumo\Estudo.CálculoDeConsumo.Aplicação\Estudo.CálculoDeConsumo.Aplicação.csproj", "{1AD0399B-DDEA-40DE-AE7D-F61CC7B03D45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -251,6 +259,22 @@ Global
 		{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE4F098-3693-4F76-8E55-627F59764B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE4F098-3693-4F76-8E55-627F59764B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE4F098-3693-4F76-8E55-627F59764B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE4F098-3693-4F76-8E55-627F59764B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB2503E1-F23E-447F-8F3B-F1AA4F0839DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2503E1-F23E-447F-8F3B-F1AA4F0839DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2503E1-F23E-447F-8F3B-F1AA4F0839DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2503E1-F23E-447F-8F3B-F1AA4F0839DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A293DD1-5A24-4F78-B09A-BAFFD281FC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A293DD1-5A24-4F78-B09A-BAFFD281FC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A293DD1-5A24-4F78-B09A-BAFFD281FC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A293DD1-5A24-4F78-B09A-BAFFD281FC14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD0399B-DDEA-40DE-AE7D-F61CC7B03D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD0399B-DDEA-40DE-AE7D-F61CC7B03D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD0399B-DDEA-40DE-AE7D-F61CC7B03D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD0399B-DDEA-40DE-AE7D-F61CC7B03D45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -306,6 +330,10 @@ Global
 		{799477AC-3144-4F2E-914C-24330025C55F} = {E0167A21-9E19-4C72-9786-8EB6BCA0EF19}
 		{400F974A-9883-4609-9C1B-F3AC34737A4A} = {E82C7E9E-931F-4B7E-B589-868024E79F5A}
 		{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB} = {E82C7E9E-931F-4B7E-B589-868024E79F5A}
+		{FDE4F098-3693-4F76-8E55-627F59764B57} = {6A4CE323-FD7A-4041-970C-7D99C9B926D1}
+		{BB2503E1-F23E-447F-8F3B-F1AA4F0839DD} = {E82C7E9E-931F-4B7E-B589-868024E79F5A}
+		{4A293DD1-5A24-4F78-B09A-BAFFD281FC14} = {27B6C92B-EB68-46AC-8CEF-1B367306A2E9}
+		{1AD0399B-DDEA-40DE-AE7D-F61CC7B03D45} = {8535118E-4ACB-4922-A817-5A000958B933}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2618158F-597B-4720-9288-5CACD7FAB9B0}

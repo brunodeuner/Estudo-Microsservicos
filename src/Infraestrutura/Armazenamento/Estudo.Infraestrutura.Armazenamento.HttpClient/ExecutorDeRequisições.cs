@@ -21,7 +21,7 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient
         {
             this.httpClient = httpClient;
             ConfiguraçãoDoDaoHttpClient = configuraçãoDoDaoHttpClient;
-            jsonSerializer = JsonSerializer.Create(configuraçãoDoDaoHttpClient.JsonDeserializerSettings);
+            jsonSerializer = JsonSerializer.CreateDefault();
         }
 
         public ConfiguraçãoDoDaoHttpClient ConfiguraçãoDoDaoHttpClient { get; set; }
@@ -71,12 +71,12 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient
             return jsonSerializer.Deserialize<Resposta>(reader);
         }
 
-        private HttpRequestMessage ObterRequisição<Envio>(DadosDaRequisição<Envio> dadosDaRequisição, Uri rota)
+        private static HttpRequestMessage ObterRequisição<Envio>(DadosDaRequisição<Envio> dadosDaRequisição, Uri rota)
         {
             var requisição = new HttpRequestMessage(dadosDaRequisição.HttpMethod, rota);
             if (dadosDaRequisição.Corpo is not null)
-                requisição.Content = new StringContent(JsonConvert.SerializeObject(dadosDaRequisição.Corpo,
-                    ConfiguraçãoDoDaoHttpClient.JsonSerializerSettings), Encoding.UTF8, MediaTypeNames.Application.Json);
+                requisição.Content = new StringContent(JsonConvert.SerializeObject(dadosDaRequisição.Corpo),
+                    Encoding.UTF8, MediaTypeNames.Application.Json);
             return requisição;
         }
 

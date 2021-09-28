@@ -1,13 +1,15 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Estudo.Serviço.Api
 {
     public static class CriarHostBuilder
     {
-        public static void CriarERodar<TStartup>() where TStartup : class =>
-            CreateHostBuilder<TStartup>().Build().Run();
+        public static Task CriarERodar<TStartup>(CancellationToken cancellationToken = default)
+            where TStartup : class => CreateHostBuilder<TStartup>().Build().RunAsync(cancellationToken);
 
         private static IHostBuilder CreateHostBuilder<TStartup>() where TStartup : class =>
             Host.CreateDefaultBuilder()

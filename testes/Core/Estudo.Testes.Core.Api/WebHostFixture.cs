@@ -2,6 +2,7 @@
 using Estudo.Testes.Core.Http.Variáveis;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.IO;
@@ -18,7 +19,8 @@ namespace Estudo.Testes.Core.Api
             var builder = new WebHostBuilder()
                 .UseConfiguration(Configuração.CriarConfiguraçãoLendoOAppsettings())
                 .UseContentRoot(Directory.GetCurrentDirectory())
-                .ConfigureServices(serviceCollection => ConfigurarServiços(serviceCollection))
+                .ConfigureServices((hostBuilder, serviços) =>
+                    ConfigurarServiços(hostBuilder.Configuration, serviços))
                 .UseStartup<TStartup>();
             servidor = new TestServer(builder);
 
@@ -33,7 +35,7 @@ namespace Estudo.Testes.Core.Api
 
         public void Iniciar() => servidor.Host.Start();
 
-        protected virtual void ConfigurarServiços(IServiceCollection serviceCollection) { }
+        protected virtual void ConfigurarServiços(IConfiguration configuração, IServiceCollection serviços) { }
 
         public void Dispose()
         {
