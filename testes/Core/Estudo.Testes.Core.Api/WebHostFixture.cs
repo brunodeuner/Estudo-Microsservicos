@@ -19,9 +19,9 @@ namespace Estudo.Testes.Core.Api
             var builder = new WebHostBuilder()
                 .UseConfiguration(Configuração.CriarConfiguraçãoLendoOAppsettings())
                 .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseStartup<TStartup>()
                 .ConfigureServices((hostBuilder, serviços) =>
-                    ConfigurarServiços(hostBuilder.Configuration, serviços))
-                .UseStartup<TStartup>();
+                    ConfigurarServiços(hostBuilder.Configuration, serviços));
             servidor = new TestServer(builder);
 
             Cliente = servidor.CreateClient();

@@ -5,16 +5,14 @@ using System.Threading.Tasks;
 
 namespace Estudo.Cobranças.Serviço.Api.Consumidores
 {
-    public class ServiçoDeConsumidorDeClientes : IHostedService
+    public class ServiçoDeConsumidorDeClientes : BackgroundService
     {
         private readonly ConsumidorDeClientes consumidorDeClientes;
 
         public ServiçoDeConsumidorDeClientes(ConsumidorDeClientes consumidorDeClientes) =>
             this.consumidorDeClientes = consumidorDeClientes;
 
-        public Task StartAsync(CancellationToken cancellationToken) =>
-            consumidorDeClientes.Iniciar(cancellationToken);
-
-        public Task StopAsync(CancellationToken cancellationToken) => Task.CompletedTask;
+        protected override Task ExecuteAsync(CancellationToken stoppingToken) =>
+              consumidorDeClientes.Iniciar(stoppingToken);
     }
 }

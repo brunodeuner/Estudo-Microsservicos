@@ -15,9 +15,6 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
         protected override void ConfigurarServiços(IConfiguration configuração, IServiceCollection serviços)
         {
             base.ConfigurarServiços(configuração, serviços);
-
-            Program.ConfigurarConsumidorDeClientes(configuração, serviços);
-
             serviços.AddTransient<IProdutor, ProdutorEmMemória>();
             serviços.AddSingleton<EventosPorTipo>();
             serviços.AddSingleton<IConsumidor<Cliente>>(serviceProvider =>

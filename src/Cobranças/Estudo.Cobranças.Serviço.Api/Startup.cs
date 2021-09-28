@@ -1,4 +1,6 @@
-﻿using Estudo.Serviço.Api;
+﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores;
+using Estudo.Cobranças.Serviço.Api.Consumidores;
+using Estudo.Serviço.Api;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,8 +13,12 @@ namespace Estudo.Cobranças.Serviço.Api
 
         public Startup(IConfiguration configuração) => this.configuração = configuração;
 
-        public void ConfigureServices(IServiceCollection serviços) =>
+        public void ConfigureServices(IServiceCollection serviços)
+        {
             serviços.ConfigurarServiçoEAplicação(configuração);
+            serviços.ConfigurarConsumidorDeClientes(configuração);
+            serviços.AddHostedService<ServiçoDeConsumidorDeClientes>();
+        }
 
         public static void Configure(IApplicationBuilder aplicação) => aplicação.Configurar();
     }

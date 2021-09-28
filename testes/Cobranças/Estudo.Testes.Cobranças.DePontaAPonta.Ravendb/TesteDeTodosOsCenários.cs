@@ -1,5 +1,7 @@
-using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
-using Estudo.Infraestrutura.Bus.Abstrações.Produtor;
+using Estudo.Cobranças.Domínio.Entidades;
+using Estudo.Cobranças.Domínio.Repositórios;
+using Estudo.Cobranças.Serviço.Api;
+using Estudo.Infraestrutura.Armazenamento.Abstrações;
 using Estudo.Testes.Core.Api;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
@@ -7,11 +9,11 @@ using Xunit;
 
 namespace Estudo.Testes.Cobranças.DePontaAPonta
 {
-    public class TesteDeTodosOsCenários : IClassFixture<WebHostFixtureInjetandoConsumidorEmMemória>
+    public class TesteDeTodosOsCenários : IClassFixture<WebHostFixture<Startup>>
     {
-        private readonly WebHostFixtureInjetandoConsumidorEmMemória testFixture;
+        private readonly WebHostFixture<Startup> testFixture;
 
-        public TesteDeTodosOsCenários(WebHostFixtureInjetandoConsumidorEmMemória testFixture) =>
+        public TesteDeTodosOsCenários(WebHostFixture<Startup> testFixture) =>
             this.testFixture = testFixture;
 
         [Fact]
@@ -25,18 +27,11 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
 
         private async Task AdicionarCliente()
         {
-            var produtor = testFixture.ServiceProvider.GetRequiredService<IProdutor>();
-            await produtor.EnviarAsync(nameof(Cliente),
-                new Infraestrutura.Bus.Abstrações.EventoEventArgs<Cliente>(new Cliente()
-                {
-                    Cpf = "57251010020",
-                    Estado = "Rio Grande do Sul"
-                }), default); await produtor.EnviarAsync(nameof(Cliente),
-                new Infraestrutura.Bus.Abstrações.EventoEventArgs<Cliente>(new Cliente()
-                {
-                    Cpf = "27555728095",
-                    Estado = "Rio de Janeiro"
-                }), default);
+            var repositórioDePessoa = testFixture.ServiceProvider.GetRequiredService<RepositórioDePessoa>();
+            await repositórioDePessoa.Salvar(new Pessoa("57251010020", "Rio Grande do Sul"), default);
+            await repositórioDePessoa.Salvar(new Pessoa("27555728095", "Rio de Janeiro"), default);
+            var dao = testFixture.ServiceProvider.GetRequiredService<IDao>();
+            await dao.SalvarAlterações(default);
         }
     }
 }
