@@ -11,7 +11,7 @@ namespace Estudo.CálculoDeConsumo.Serviço.Api
 
         public Startup(IConfiguration configuração) => this.configuração = configuração;
 
-        public void ConfigureServices(IServiceCollection serviços) => 
+        public void ConfigureServices(IServiceCollection serviços) =>
             serviços.ConfigurarServiçoEAplicação(configuração);
 
         public static void Configure(IApplicationBuilder aplicação) => aplicação.Configurar();

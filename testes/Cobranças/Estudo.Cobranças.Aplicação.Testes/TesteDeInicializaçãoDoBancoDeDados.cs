@@ -1,5 +1,4 @@
 using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
-using Estudo.Cobranças.Aplicação.Armazenamento.Ravendb;
 using Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados;
 using Estudo.Infraestrutura.Armazenamento.Ravendb;
 using Estudo.Infraestrutura.Geral;
