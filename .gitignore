@@ -9,3 +9,6 @@ Properties
 # .NET
 bin
 obj
+
+# Saída dos testes
+*.trx
