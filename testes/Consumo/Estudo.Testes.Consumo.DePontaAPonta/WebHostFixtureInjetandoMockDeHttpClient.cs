@@ -14,12 +14,13 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
         protected override void ConfigurarServiços(IConfiguration configuração, IServiceCollection serviços)
         {
             base.ConfigurarServiços(configuração, serviços);
-            serviços.AddSingleton(CriarMockDeHttpClient);
+            serviços.AddSingleton(() => CriarMockDeHttpClient());
         }
 
         private HttpClient CriarMockDeHttpClient()
         {
             var mockDeHttp = new MockHttpMessageHandler();
+
             mockDeHttp
                 .When(HttpMethod.Get, new Uri(Cliente.BaseAddress, "Clientes").AbsoluteUri)
                 .Respond(HttpStatusCode.OK)
