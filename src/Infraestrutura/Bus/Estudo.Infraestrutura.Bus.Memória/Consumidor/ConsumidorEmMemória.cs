@@ -1,7 +1,6 @@
 ﻿using Estudo.Infraestrutura.Bus.Abstrações;
 using Estudo.Infraestrutura.Bus.Abstrações.Consumidor;
 using Estudo.Infraestrutura.Bus.Abstrações.Consumidor.Dtos;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -19,7 +18,6 @@ namespace Estudo.Infraestrutura.Bus.Memória.Consumidor
         }
 
         public event EventoAssíncrono<EventoEventArgs<T>> Consumir;
-        public event EventoAssíncrono<ExceçãoEventArgs> Exceção;
 
         public async Task Iniciar(string identificador, CancellationToken cancellationToken)
         {
@@ -28,14 +26,7 @@ namespace Estudo.Infraestrutura.Bus.Memória.Consumidor
                 var evento = eventosPorTipo.ConsumirPróximoEvento<T>(identificador);
                 if (evento is not null)
                 {
-                    try
-                    {
-                        await Consumir(new EventoEventArgs<T>(evento.Corpo), cancellationToken);
-                    }
-                    catch (Exception e)
-                    {
-                        await Exceção(new ExceçãoEventArgs(e), cancellationToken);
-                    }
+                    await Consumir(new EventoEventArgs<T>(evento.Corpo), cancellationToken);
                     continue;
                 }
                 if (pararAoConsumirTodosOsEventos)

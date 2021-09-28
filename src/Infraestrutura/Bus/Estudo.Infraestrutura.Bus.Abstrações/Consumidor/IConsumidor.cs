@@ -7,7 +7,6 @@ namespace Estudo.Infraestrutura.Bus.Abstrações.Consumidor
     public interface IConsumidor<T>
     {
         event EventoAssíncrono<EventoEventArgs<T>> Consumir;
-        event EventoAssíncrono<ExceçãoEventArgs> Exceção;
         Task Iniciar(string identificador, CancellationToken cancellationToken);
     }
 }

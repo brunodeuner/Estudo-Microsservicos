@@ -26,34 +26,23 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
         }
 
         public event EventoAssíncrono<EventoEventArgs<T>> Consumir;
-        public event EventoAssíncrono<ExceçãoEventArgs> Exceção;
 
         public async Task Iniciar(string identificador, CancellationToken cancellationToken)
         {
             while (!cancellationToken.IsCancellationRequested)
             {
                 using var subscription = ObterSubscription(identificador);
-
                 try
                 {
-                    subscription.OnSubscriptionConnectionRetry += async exception =>
-                        await Exceção(new ExceçãoEventArgs(exception), cancellationToken);
-
                     await subscription.Run(loteDeProcessamento => ConsumirLote(loteDeProcessamento, cancellationToken),
                         cancellationToken);
                 }
                 catch (Exception e)
                 {
-                    if (cancellationToken.IsCancellationRequested)
-                        throw;
+                    if (pararAoConsumirTodosOsEventos && e is SubscriptionClosedException)
+                        break;
 
-                    if (e is SubscriptionClosedException)
-                        return;
-
-                    if (e is SubscriptionDoesNotBelongToNodeException)
-                        continue;
-
-                    await ProcessarExceção(e, cancellationToken);
+                    throw;
                 }
             }
         }
@@ -61,18 +50,7 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
         private async Task ConsumirLote(SubscriptionBatch<T> loteDeProcessamento, CancellationToken cancellationToken)
         {
             foreach (var itens in loteDeProcessamento.Items)
-            {
-                try
-                {
-                    await Consumir(new EventoEventArgs<T>(itens.Result), cancellationToken);
-                }
-                catch (Exception e)
-                {
-                    await ProcessarExceção(e, cancellationToken);
-                    if (cancellationToken.IsCancellationRequested)
-                        break;
-                }
-            }
+                await Consumir(new EventoEventArgs<T>(itens.Result), cancellationToken);
         }
 
         private SubscriptionWorker<T> ObterSubscription(string identificador)
@@ -83,13 +61,6 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
             };
             return documentStore.Subscriptions.GetSubscriptionWorker<T>(
                 configuraçãoWorker, database: configuraçãoDoRavendb.Database);
-        }
-
-        private Task ProcessarExceção(Exception exceção, CancellationToken cancellationToken)
-        {
-            if (Exceção is not null)
-                return Exceção(new ExceçãoEventArgs(exceção), cancellationToken);
-            return Task.CompletedTask;
         }
     }
 }
