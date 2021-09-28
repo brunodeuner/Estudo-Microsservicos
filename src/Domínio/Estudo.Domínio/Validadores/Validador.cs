@@ -27,13 +27,19 @@ namespace Estudo.Domínio.Validadores
                 .Cast<ValidadorAttribute>();
             foreach (var atributoDeValidador in atributosDeValidador)
             {
-                var validador = serviceProvider.GetRequiredService(atributoDeValidador.Tipo);
-                if (validador is not IValidator<T> validadorFluentValidation)
-                    throw new ArgumentException($"{validador.GetType().Name} não suportado!");
+                var validadorFluentValidation = ObterValidadorDoFluentValidation<T>(atributoDeValidador);
                 if (!await ValidarObjeto(validadorFluentValidation, objetoAValidar, cancellationToken))
                     return false;
             }
             return true;
+        }
+
+        private IValidator<T> ObterValidadorDoFluentValidation<T>(ValidadorAttribute atributoDeValidador)
+        {
+            var validador = serviceProvider.GetRequiredService(atributoDeValidador.Tipo);
+            if (validador is IValidator<T> validadorFluentValidation)
+                return validadorFluentValidation;
+            throw new ArgumentException($"{validador.GetType().Name} não suportado!");
         }
 
         private async ValueTask<bool> ValidarObjeto<T>(IValidator<T> validadorFluentValidation,

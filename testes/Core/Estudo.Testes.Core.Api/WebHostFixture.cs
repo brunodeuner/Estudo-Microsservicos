@@ -11,7 +11,7 @@ namespace Estudo.Testes.Core.Api
 {
     public class WebHostFixture<TStartup> : IDisposable where TStartup : class
     {
-        private readonly TestServer servidor;
+        private TestServer servidor;
 
         public WebHostFixture()
         {
@@ -27,19 +27,21 @@ namespace Estudo.Testes.Core.Api
             Variáveis.AtribuirValorVariável("RotaBase", string.Empty);
         }
 
-        public HttpClient Cliente { get; }
+        public HttpClient Cliente { get; private set; }
 
-        public IServiceProvider ServiceProvider { get; }
+        public IServiceProvider ServiceProvider { get; set; }
 
         public void Iniciar() => servidor.Host.Start();
 
+        protected virtual void ConfigurarServiços(IServiceCollection serviceCollection) { }
+
         public void Dispose()
         {
-            Cliente.Dispose();
-            servidor.Dispose();
+            Cliente?.Dispose();
+            Cliente = default;
+            servidor?.Dispose();
+            servidor = default;
             GC.SuppressFinalize(this);
         }
-
-        protected virtual void ConfigurarServiços(IServiceCollection serviceCollection) { }
     }
 }

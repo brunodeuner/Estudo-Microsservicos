@@ -25,10 +25,13 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
                 .Respond(HttpStatusCode.OK)
                 .With(new MethodMatcher(HttpMethod.Post))
                 .WithContent("{\"Id\":null,\"Descrição\":\"" + descriçãoDeTeste + "\"}");
-            await ObterDao(mockDeHttp.ToHttpClient()).Salvar(new EntidadeDeTeste()
-            {
-                Descrição = descriçãoDeTeste
-            }, default);
+
+            var exceção = await Record.ExceptionAsync(async () => await ObterDao(mockDeHttp
+                .ToHttpClient()).Salvar(new EntidadeDeTeste()
+                {
+                    Descrição = descriçãoDeTeste
+                }, default));
+            Assert.Null(exceção);
         }
 
         [Fact]

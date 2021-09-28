@@ -1,11 +1,11 @@
-using Estudo.Clientes.ServiÁo.Api;
+Ôªøusing Estudo.Clientes.Servi√ßo.Api;
 using Estudo.Testes.Core.Api;
 
 namespace Estudo.Testes.Clientes.DePontaAPonta
 {
-    public class TesteDeTodosOsCen·rios : TesteDeTodosOsCen·rios<Startup>
+    public class TesteDeTodosOsCen√°rios : TesteDeTodosOsCen√°rios<Startup>
     {
-        public TesteDeTodosOsCen·rios(WebHostFixture<Startup> testFixture) : base(testFixture)
+        public TesteDeTodosOsCen√°rios(WebHostFixture<Startup> testFixture) : base(testFixture)
         {
         }
     }

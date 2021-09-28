@@ -10,6 +10,10 @@ namespace Estudo.Testes.Core.Api
         public TesteDeTodosOsCenários(WebHostFixture<TStartup> testFixture) => this.testFixture = testFixture;
 
         [Fact]
-        public Task TestarTodosOsCenários() => ExecutarTodosOsCenários.Executar(testFixture);
+        public async Task TestarTodosOsCenários()
+        {
+            var exceção = await Record.ExceptionAsync(() => ExecutarTodosOsCenários.Executar(testFixture));
+            Assert.Null(exceção);
+        }
     }
 }
