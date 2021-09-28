@@ -1,0 +1,17 @@
+﻿{
+  "Nome": "Ler sem informar cpf e mês ocasionando um erro de validação",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças",
+        "Método": "Get"
+      },
+      "Retorno": {
+        "Status": "BadRequest",
+        "Corpo": [
+          "Informe um cpf ou um mês"
+        ]
+      }
+    }
+  ]
+}

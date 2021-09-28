@@ -35,6 +35,27 @@
           }
         ]
       }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças?mês=1",
+        "Método": "Get"
+      },
+      "Retorno": {
+        "Status": "OK",
+        "Corpo": [
+          {
+            "pessoa": {
+              "cpf": "57251010020",
+              "estado": "Rio Grande do Sul",
+              "id": "{{Cliente/1}}"
+            },
+            "dataDeVencimento": "2021-01-01T00:00:00",
+            "valor": 123.45,
+            "id": "{{Cobrança/1}}"
+          }
+        ]
+      }
     }
   ]
 }
