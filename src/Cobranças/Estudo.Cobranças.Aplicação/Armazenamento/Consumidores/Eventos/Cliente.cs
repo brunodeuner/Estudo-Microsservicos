@@ -1,7 +1,6 @@
-﻿namespace Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos
+﻿using Estudo.Cobranças.Domínio.Entidades;
+
+namespace Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos
 {
-    public class Cliente
-    {
-        public string Cpf { get; init; }
-    }
+    public class Cliente : Pessoa { }
 }

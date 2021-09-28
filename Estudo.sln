@@ -119,6 +119,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Infraestrutura.Bus.R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Cobranças.Aplicação.Testes", "testes\Cobranças\Estudo.Cobranças.Aplicação.Testes\Estudo.Cobranças.Aplicação.Testes.csproj", "{400F974A-9883-4609-9C1B-F3AC34737A4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Testes.Cobranças.DePontaAPonta.Ravendb", "testes\Cobranças\Estudo.Testes.Cobranças.DePontaAPonta.Ravendb\Estudo.Testes.Cobranças.DePontaAPonta.Ravendb.csproj", "{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -245,6 +247,10 @@ Global
 		{400F974A-9883-4609-9C1B-F3AC34737A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{400F974A-9883-4609-9C1B-F3AC34737A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{400F974A-9883-4609-9C1B-F3AC34737A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -299,6 +305,7 @@ Global
 		{E0167A21-9E19-4C72-9786-8EB6BCA0EF19} = {BA2DB300-2CE1-431C-8311-BB5C652F3E0B}
 		{799477AC-3144-4F2E-914C-24330025C55F} = {E0167A21-9E19-4C72-9786-8EB6BCA0EF19}
 		{400F974A-9883-4609-9C1B-F3AC34737A4A} = {E82C7E9E-931F-4B7E-B589-868024E79F5A}
+		{0666EB6D-BF0F-4443-96AF-F9D2648B0CEB} = {E82C7E9E-931F-4B7E-B589-868024E79F5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2618158F-597B-4720-9288-5CACD7FAB9B0}

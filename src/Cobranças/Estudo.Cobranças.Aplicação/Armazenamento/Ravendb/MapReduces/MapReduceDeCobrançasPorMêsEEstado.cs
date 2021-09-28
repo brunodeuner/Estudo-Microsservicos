@@ -20,6 +20,7 @@ namespace Estudo.Cobranças.Aplicação.Armazenamento.Ravendb.MapReduces
             select new
             {
                 Mês = cobrança.DataDeVencimento.Month,
+                cobrança.Pessoa.Estado,
                 cobrança.Valor,
             };
 
@@ -29,10 +30,12 @@ namespace Estudo.Cobranças.Aplicação.Armazenamento.Ravendb.MapReduces
             group cobrançaPorMêsEEstado by new
             {
                 cobrançaPorMêsEEstado.Mês,
+                cobrançaPorMêsEEstado.Estado,
             } into agrupamento
             select new
             {
                 agrupamento.Key.Mês,
+                agrupamento.Key.Estado,
                 Valor = agrupamento.Sum(x => x.Valor),
             };
     }

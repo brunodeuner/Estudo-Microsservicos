@@ -6,8 +6,13 @@ namespace Estudo.Cobranças.Domínio.Entidades
     {
         public Pessoa() { }
 
-        public Pessoa(string cpf) => Cpf = cpf;
+        public Pessoa(string cpf, string estado)
+        {
+            Cpf = cpf;
+            Estado = estado;
+        }
 
         public string Cpf { get; init; }
+        public string Estado { get; init; }
     }
 }

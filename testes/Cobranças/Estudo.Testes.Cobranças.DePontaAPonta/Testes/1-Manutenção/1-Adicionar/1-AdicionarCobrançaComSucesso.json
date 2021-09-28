@@ -26,6 +26,7 @@
           {
             "pessoa": {
               "cpf": "57251010020",
+              "estado": "Rio Grande do Sul",
               "id": "[[Cliente/1]]"
             },
             "dataDeVencimento": "2021-01-01T00:00:00",

@@ -28,7 +28,7 @@ namespace Estudo.Cobranças.Aplicação.Armazenamento.Consumidores
                 using var escopo = serviceProvider.CreateScope();
                 var serviceProviderDoEscopo = escopo.ServiceProvider;
                 var repositórioDePessoa = serviceProviderDoEscopo.GetRequiredService<RepositórioDePessoa>();
-                await repositórioDePessoa.Salvar(new Pessoa(requisição.Corpo.Cpf), cancellationToken);
+                await repositórioDePessoa.Salvar(new Pessoa(requisição.Corpo.Cpf, requisição.Corpo.Estado), cancellationToken);
                 var dao = serviceProviderDoEscopo.GetRequiredService<IDao>();
                 await dao.SalvarAlterações(cancellationToken);
             };

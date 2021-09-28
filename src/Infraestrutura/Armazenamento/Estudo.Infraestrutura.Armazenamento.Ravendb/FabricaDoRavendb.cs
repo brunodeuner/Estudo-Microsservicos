@@ -46,6 +46,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
             var convenções = new DocumentConventions()
             {
                 IdentityPartsSeparator = '-',
+                FindCollectionName = tipo => tipo.Name,
             };
             if (ConfiguraçãoDoRavendb.TempoDeDuraçãoDoCache.HasValue)
             {

@@ -18,18 +18,24 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
         public async Task TestarTodosOsCenários()
         {
             await AdicionarCliente();
+
             var exceção = await Record.ExceptionAsync(() => ExecutarTodosOsCenários.Executar(testFixture));
             Assert.Null(exceção);
         }
 
-        private Task AdicionarCliente()
+        private async Task AdicionarCliente()
         {
             var produtor = testFixture.ServiceProvider.GetRequiredService<IProdutor>();
-            return produtor.EnviarAsync(nameof(Cliente),
+            await produtor.EnviarAsync(nameof(Cliente),
                 new Infraestrutura.Bus.Abstrações.EventoEventArgs<Cliente>(new Cliente()
                 {
                     Cpf = "57251010020",
                     Estado = "Rio Grande do Sul"
+                }), default); await produtor.EnviarAsync(nameof(Cliente),
+                new Infraestrutura.Bus.Abstrações.EventoEventArgs<Cliente>(new Cliente()
+                {
+                    Cpf = "27555728095",
+                    Estado = "Rio de Janeiro"
                 }), default);
         }
     }
