@@ -7,6 +7,5 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório
     {
         ValueTask<T> ObterPeloId(string id, CancellationToken cancellationToken);
         ValueTask Salvar(T entidade, CancellationToken cancellationToken);
-        ValueTask Remover(string id, CancellationToken cancellationToken);
     }
 }

@@ -16,18 +16,12 @@ namespace Estudo.Infraestrutura.Armazenamento.Memória
     {
         private static readonly IDictionary<string, object> objetos = new ConcurrentDictionary<string, object>();
 
-        public ValueTask Adicionar<T>(T objeto, CancellationToken cancellationToken) where T : class, new()
+        public ValueTask Salvar<T>(T objeto, CancellationToken cancellationToken) where T : class, new()
         {
             var id = objeto.ObterId();
             if (id.NãoPreenchido())
                 id = objeto.AtribuirNovoId();
-            objetos.Add(id, objeto);
-            return ValueTask.CompletedTask;
-        }
-
-        public ValueTask Atualizar<T>(T objeto, CancellationToken cancellationToken) where T : class, new()
-        {
-            objetos[objeto.ObterId()] = objeto;
+            objetos[id] = objeto;
             return ValueTask.CompletedTask;
         }
 

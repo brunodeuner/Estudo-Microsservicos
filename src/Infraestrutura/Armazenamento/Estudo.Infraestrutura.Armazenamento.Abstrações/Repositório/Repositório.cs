@@ -13,22 +13,9 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório
         public virtual ValueTask<T> ObterPeloId(string id, CancellationToken cancellationToken) =>
             dao.ObterPeloId<T>(id, cancellationToken);
 
-        public virtual ValueTask Remover(string id, CancellationToken cancellationToken) =>
-            dao.Remover<T>(id, cancellationToken);
-
-        public virtual ValueTask Salvar(T objeto, CancellationToken cancellationToken)
-        {
-            if (objeto.IdPreenchido())
-                return AtualizarAsync(objeto, cancellationToken);
-            return AdicionarAsync(objeto, cancellationToken);
-        }
+        public virtual ValueTask Salvar(T objeto, CancellationToken cancellationToken) =>
+            dao.Salvar(objeto, cancellationToken);
 
         protected IQueryable<T> Selecionar() => dao.Selecionar<T>();
-
-        protected virtual ValueTask AdicionarAsync(T objeto, CancellationToken cancellationToken) =>
-            dao.Adicionar(objeto, cancellationToken);
-
-        protected virtual ValueTask AtualizarAsync(T objeto, CancellationToken cancellationToken) =>
-            dao.Atualizar(objeto, cancellationToken);
     }
 }

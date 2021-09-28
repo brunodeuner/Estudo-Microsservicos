@@ -14,16 +14,17 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient
     public class ExecutorDeRequisições
     {
         private readonly System.Net.Http.HttpClient httpClient;
-        private readonly ConfiguraçãoDoDaoHttpClient configuraçãoDoDaoHttpClient;
         private readonly JsonSerializer jsonSerializer;
 
         public ExecutorDeRequisições(System.Net.Http.HttpClient httpClient,
             ConfiguraçãoDoDaoHttpClient configuraçãoDoDaoHttpClient)
         {
             this.httpClient = httpClient;
-            this.configuraçãoDoDaoHttpClient = configuraçãoDoDaoHttpClient;
+            ConfiguraçãoDoDaoHttpClient = configuraçãoDoDaoHttpClient;
             jsonSerializer = JsonSerializer.Create(configuraçãoDoDaoHttpClient.JsonDeserializerSettings);
         }
+
+        public ConfiguraçãoDoDaoHttpClient ConfiguraçãoDoDaoHttpClient { get; set; }
 
         public Task ExecutarRequisição<Envio>(DadosDaRequisição<Envio> dadosDaRequisição,
             CancellationToken cancellationToken) =>
@@ -75,13 +76,13 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient
             var requisição = new HttpRequestMessage(dadosDaRequisição.HttpMethod, rota);
             if (dadosDaRequisição.Corpo is not null)
                 requisição.Content = new StringContent(JsonConvert.SerializeObject(dadosDaRequisição.Corpo,
-                    configuraçãoDoDaoHttpClient.JsonSerializerSettings), Encoding.UTF8, MediaTypeNames.Application.Json);
+                    ConfiguraçãoDoDaoHttpClient.JsonSerializerSettings), Encoding.UTF8, MediaTypeNames.Application.Json);
             return requisição;
         }
 
         private Uri ObterRota<Envio>(DadosDaRequisição<Envio> dadosDaRequisição)
         {
-            var rota = configuraçãoDoDaoHttpClient.ObterRotaAPartirDoTipo(typeof(Envio));
+            var rota = ConfiguraçãoDoDaoHttpClient.ObterRotaAPartirDoTipo(typeof(Envio));
             if (dadosDaRequisição.Id.Preenchido())
                 return new Uri(rota, dadosDaRequisição.Id);
             return rota;

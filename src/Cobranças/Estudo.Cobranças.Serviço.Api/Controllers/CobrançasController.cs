@@ -25,10 +25,6 @@ namespace Estudo.Cobranças.Serviço.Api.Controllers
         public Task CobrarCliente([FromBody] ComandoDeCobrarCliente comandoDeCobrarCliente,
             CancellationToken cancellationToken) => mediator.Send(comandoDeCobrarCliente, cancellationToken);
 
-        [HttpDelete("{id}")]
-        public Task RemoverCobrança(string id, CancellationToken cancellationToken) =>
-            mediator.Send(new ComandoDeRemoverCobrança(id), cancellationToken);
-
         [HttpGet]
         public IAsyncEnumerable<Cobrança> ObterCobranças([FromQuery] string cpf, [FromQuery] int? mês,
             CancellationToken cancellationToken) => repositórioDeCobrança

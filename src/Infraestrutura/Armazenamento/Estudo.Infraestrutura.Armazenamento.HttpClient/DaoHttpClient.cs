@@ -11,21 +11,21 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient
 {
     public sealed partial class DaoHttpClient : IDao
     {
-        public DaoHttpClient(ExecutorDeRequisições executorDeRequisições) =>
-            ExecutorDeRequisições = executorDeRequisições;
+        private readonly ExecutorDeRequisições executorDeRequisições;
+        private readonly ExecutorExpressao executorExpressao;
 
-        public ExecutorDeRequisições ExecutorDeRequisições { get; }
+        public DaoHttpClient(ExecutorDeRequisições executorDeRequisições, ExecutorExpressao executorExpressao)
+        {
+            this.executorDeRequisições = executorDeRequisições;
+            this.executorExpressao = executorExpressao;
+        }
 
-        public async ValueTask Adicionar<T>(T objeto, CancellationToken cancellationToken) where T : class, new() =>
-            await ExecutorDeRequisições.ExecutarRequisição(
+        public async ValueTask Salvar<T>(T objeto, CancellationToken cancellationToken) where T : class, new() =>
+            await executorDeRequisições.ExecutarRequisição(
                 new DadosDaRequisição<T>(HttpMethod.Post, objeto), cancellationToken);
 
-        public async ValueTask Atualizar<T>(T objeto, CancellationToken cancellationToken) where T : class, new() =>
-            await ExecutorDeRequisições.ExecutarRequisição(
-                new DadosDaRequisição<T>(HttpMethod.Put, objeto), cancellationToken);
-
         public async ValueTask<T> ObterPeloId<T>(string id, CancellationToken cancellationToken) =>
-            await ExecutorDeRequisições.ExecutarRequisição<T, T>(
+            await executorDeRequisições.ExecutarRequisição<T, T>(
                 new DadosDaRequisição<T>(HttpMethod.Get, id), cancellationToken);
 
         public ValueTask SalvarAlterações(CancellationToken cancellationToken) => ValueTask.CompletedTask;

@@ -8,8 +8,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações
     {
         IQueryable<T> Selecionar<T>();
         ValueTask<T> ObterPeloId<T>(string id, CancellationToken cancellationToken);
-        ValueTask Adicionar<T>(T objeto, CancellationToken cancellationToken) where T : class, new();
-        ValueTask Atualizar<T>(T objeto, CancellationToken cancellationToken) where T : class, new();
+        ValueTask Salvar<T>(T objeto, CancellationToken cancellationToken) where T : class, new();
         ValueTask SalvarAlterações(CancellationToken cancellationToken);
     }
 }

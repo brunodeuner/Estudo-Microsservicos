@@ -24,10 +24,6 @@ namespace Estudo.Clientes.Serviço.Api.Controllers
         public Task AdicionarCliente([FromBody] ComandoDeAdicionarCliente comandoDeCobrarCliente,
             CancellationToken cancellationToken) => mediator.Send(comandoDeCobrarCliente, cancellationToken);
 
-        [HttpDelete("{id}")]
-        public Task RemoverCliente(string id, CancellationToken cancellationToken) =>
-            mediator.Send(new ComandoDeRemoverCliente(id), cancellationToken);
-
         [HttpGet]
         public ValueTask<Cliente> ObterClienteAPartirDoCpf([FromQuery] string cpf,
             CancellationToken cancellationToken) => repositórioDeCliente.ObterAPartirDoCpf(cpf, cancellationToken);

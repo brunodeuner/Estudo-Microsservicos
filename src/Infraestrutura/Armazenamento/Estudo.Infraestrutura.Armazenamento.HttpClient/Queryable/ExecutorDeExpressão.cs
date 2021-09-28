@@ -13,6 +13,13 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Queryable
         private readonly ConfiguraçãoDoDaoHttpClient configuraçãoDoDaoHttpClient;
         private readonly ExecutorDeRequisições executorDeRequisições;
 
+        public ExecutorExpressao(ConfiguraçãoDoDaoHttpClient configuraçãoDoDaoHttpClient,
+            ExecutorDeRequisições executorDeRequisições)
+        {
+            this.configuraçãoDoDaoHttpClient = configuraçãoDoDaoHttpClient;
+            this.executorDeRequisições = executorDeRequisições;
+        }
+
         public Task<List<T>> ExecutarRequisicao<T>(Expression expressão, CancellationToken cancellationToken)
         {
             var rota = ObterRota<T>(expressão as MethodCallExpression);
