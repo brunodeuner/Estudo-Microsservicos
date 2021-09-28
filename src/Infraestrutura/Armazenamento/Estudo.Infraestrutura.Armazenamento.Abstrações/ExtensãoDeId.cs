@@ -1,14 +1,10 @@
-﻿using Estudo.Infraestrutura.Geral;
-using System;
+﻿using System;
 using System.Reflection;
 
 namespace Estudo.Infraestrutura.Armazenamento.Abstrações
 {
     public static class ExtensãoDeId
     {
-        public static bool IdPreenchido(this object objeto) =>
-            objeto.ObterId().Preenchido();
-
         public static string ObterId(this object objeto)
         {
             var propriedadeComONomeId = objeto.ObterPropriedadeComONomeId();

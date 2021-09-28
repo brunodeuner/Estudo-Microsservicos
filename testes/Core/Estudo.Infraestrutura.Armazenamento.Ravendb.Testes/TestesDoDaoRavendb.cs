@@ -1,4 +1,5 @@
 using Estudo.Infraestrutura.Geral;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -30,6 +31,16 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes
             using var dao = FabricaDeDaoRavendb.ObterDao();
             var retorno = await dao.ObterPeloId<EntidadeDeTeste>("Id inexistente", default);
             Assert.Null(retorno);
+        }
+
+        [Fact]
+        public async Task ToAsyncEnumerable_SemNenhumRegistro_NenhumErro()
+        {
+            using var dao = FabricaDeDaoRavendb.ObterDao();
+            var registrosLidos = 0;
+            await foreach (var registro in dao.Selecionar<EntidadeComNenhumRegistro>().ToAsyncEnumerable(default))
+                registrosLidos++;
+            Assert.Equal(0, registrosLidos);
         }
 
         private static async Task TestarAdicionarNaSessão(EntidadeDeTeste entidade)
