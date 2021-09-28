@@ -7,8 +7,8 @@ namespace Estudo.Testes.Consumo.Performance
     {
         public static void Main()
         {
-            //BenchmarkRunner.Run<ObtençãoDosDigitosDoValorAPartirDoCpf>();
-            //BenchmarkRunner.Run<ParseDeStringParaOValorDeCobrança>();
+            BenchmarkRunner.Run<ObtençãoDosDigitosDoValorAPartirDoCpf>();
+            BenchmarkRunner.Run<ParseDeStringParaOValorDeCobrança>();
             BenchmarkRunner.Run<ProcessamentoDeListaDeTarefas>();
         }
     }
