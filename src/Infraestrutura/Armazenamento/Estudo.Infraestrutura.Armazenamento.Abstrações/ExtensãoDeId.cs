@@ -1,5 +1,6 @@
 ﻿using Estudo.Infraestrutura.Geral;
 using System;
+using System.Reflection;
 
 namespace Estudo.Infraestrutura.Armazenamento.Abstrações
 {
@@ -10,7 +11,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações
 
         public static string ObterId(this object objeto)
         {
-            System.Reflection.PropertyInfo propriedadeComONomeId = ObterPropriedadeComONomeId(objeto);
+            var propriedadeComONomeId = objeto.ObterPropriedadeComONomeId();
             if (propriedadeComONomeId?.CanRead ?? false)
                 return propriedadeComONomeId.GetValue(objeto)?.ToString();
             throw new ArgumentException($"{objeto.GetType().Name} não possui propriedade {nameof(IId.Id)} " +
@@ -19,7 +20,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações
 
         public static string AtribuirNovoId(this object objeto)
         {
-            var propriedadeComONomeId = objeto?.GetType().GetProperty(nameof(IId.Id));
+            var propriedadeComONomeId = objeto.ObterPropriedadeComONomeId();
             if (propriedadeComONomeId?.CanWrite ?? false)
             {
                 var id = Guid.NewGuid().ToString();
@@ -30,7 +31,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações
                                         $"que possa ser atribuida");
         }
 
-        private static System.Reflection.PropertyInfo ObterPropriedadeComONomeId(object objeto) =>
+        private static PropertyInfo ObterPropriedadeComONomeId(this object objeto) =>
            objeto?.GetType().GetProperty(nameof(IId.Id));
     }
 }
