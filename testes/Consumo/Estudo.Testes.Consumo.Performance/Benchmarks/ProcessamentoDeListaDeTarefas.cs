@@ -11,7 +11,7 @@ namespace Estudo.Testes.Consumo.Performance.Benchmarks
         private const int QuantidadeDeTarefasACriar = 2000;
 
         [Benchmark]
-        public async Task CriarTaskListEEliminarContinueWithA()
+        public async Task CriarListaDeTasksEUsarContinueWithComLockManual()
         {
             var objetoParaBloqueio = new object();
             var lista = new List<Task>();
@@ -25,7 +25,7 @@ namespace Estudo.Testes.Consumo.Performance.Benchmarks
         }
 
         [Benchmark]
-        public async Task CriarTaskListEEliminarContinueWithB()
+        public async Task CriarSynchronizedCollectionEUsarContinueWithComLockManual()
         {
             var lista = new SynchronizedCollection<Task>();
             for (var i = 0; i <= QuantidadeDeTarefasACriar; i++)
@@ -34,7 +34,7 @@ namespace Estudo.Testes.Consumo.Performance.Benchmarks
         }
 
         [Benchmark]
-        public async Task CriarTaskListEEliminarManual()
+        public async Task CriarListaDeTasksERemoverManualmenteAntesDeInserirNovas()
         {
             var lista = new List<Task>();
             for (var i = 0; i <= QuantidadeDeTarefasACriar; i++)
@@ -46,7 +46,7 @@ namespace Estudo.Testes.Consumo.Performance.Benchmarks
         }
 
         [Benchmark]
-        public async Task CriarTaskListEEliminarManualB()
+        public async Task CriarListaDeValueTasksERemvoerManualmenteAntesDeInserirNovas()
         {
             var lista = new List<ValueTask>();
             for (var i = 0; i <= QuantidadeDeTarefasACriar; i++)
