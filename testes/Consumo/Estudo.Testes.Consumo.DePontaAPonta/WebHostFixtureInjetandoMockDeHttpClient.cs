@@ -14,20 +14,20 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
         protected override void ConfigurarServiços(IConfiguration configuração, IServiceCollection serviços)
         {
             base.ConfigurarServiços(configuração, serviços);
-            serviços.AddSingleton(() => CriarMockDeHttpClient());
+            serviços.AddSingleton(() => CriarMockDeHttpClient(Cliente));
         }
 
-        private HttpClient CriarMockDeHttpClient()
+        private static HttpClient CriarMockDeHttpClient(HttpClient cliente)
         {
             var mockDeHttp = new MockHttpMessageHandler();
 
             mockDeHttp
-                .When(HttpMethod.Get, new Uri(Cliente.BaseAddress, "Clientes").AbsoluteUri)
+                .When(HttpMethod.Get, new Uri(cliente.BaseAddress, "Clientes").AbsoluteUri)
                 .Respond(HttpStatusCode.OK)
                 .WithContent("{\"Cpf\":\"97296984066\"}");
 
             mockDeHttp
-                .When(HttpMethod.Post, new Uri(Cliente.BaseAddress, "Cobranças").AbsoluteUri)
+                .When(HttpMethod.Post, new Uri(cliente.BaseAddress, "Cobranças").AbsoluteUri)
                 .Respond(HttpStatusCode.OK);
 
             return mockDeHttp.ToHttpClient();
