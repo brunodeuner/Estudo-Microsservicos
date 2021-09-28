@@ -11,7 +11,7 @@ namespace Estudo.Cobranças.Serviço.Api
 {
     public static class Program
     {
-        public static async Task Main() => await CreateHostBuilder<Startup>().Build().RunAsync(default);
+        public static async Task Main() => await CreateHostBuilder().Build().RunAsync(default);
 
         public static void ConfigurarConsumidorDeClientes(IConfiguration configuração, IServiceCollection serviços)
         {
@@ -19,11 +19,10 @@ namespace Estudo.Cobranças.Serviço.Api
             serviços.AddHostedService<ServiçoDeConsumidorDeClientes>();
         }
 
-        private static IHostBuilder CreateHostBuilder<TStartup>() where TStartup : class =>
-            Host.CreateDefaultBuilder()
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>())
-                .ConfigureServices((hostBuilder, serviços) =>
-                    ConfigurarConsumidorDeClientes(hostBuilder.Configuration, serviços));
+        private static IHostBuilder CreateHostBuilder() => Host.CreateDefaultBuilder()
+            .UseContentRoot(Directory.GetCurrentDirectory())
+            .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>())
+            .ConfigureServices((hostBuilder, serviços) =>
+                ConfigurarConsumidorDeClientes(hostBuilder.Configuration, serviços));
     }
 }
