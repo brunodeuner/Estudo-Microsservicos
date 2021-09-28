@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Estudo.Cobranças.Aplicação.Testes
 {
-    public class InicializaçãoDoBancoDeDados
+    public class TesteDeInicializaçãoDoBancoDeDados
     {
         private const string NomeDaInscrição = nameof(Cliente);
 
