@@ -99,9 +99,11 @@ namespace Estudo.Aplicação
             if (configuraçãoDaConexão.ObterTipo() != typeof(DaoHttpClient))
                 return;
 
-            if (configuraçãoDaConexão.ConfiguraçãoDoDaoHttpClient.ConfigurarHttpClientPadrão)
+            var configuraçãoDoDaoHttpClient = configuraçãoDaConexão.ConfiguraçãoDoDaoHttpClient ?? new();
+
+            if (configuraçãoDoDaoHttpClient.ConfigurarHttpClientPadrão)
                 serviços.AddHttpClient();
-            serviços.AddSingleton(configuraçãoDaConexão.ConfiguraçãoDoDaoHttpClient);
+            serviços.AddSingleton(configuraçãoDoDaoHttpClient);
             serviços.AddTransient<ExecutorDeRequisições>();
             serviços.AddTransient<ExecutorExpressao>();
             serviços.AddScoped<IDao, DaoHttpClient>();

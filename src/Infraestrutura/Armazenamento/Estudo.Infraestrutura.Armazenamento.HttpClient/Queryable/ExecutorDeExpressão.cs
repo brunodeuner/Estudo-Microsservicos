@@ -30,7 +30,7 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Queryable
         private Uri ObterRota<T>(MethodCallExpression methodCallExpression)
         {
             var urlRequisição = new StringBuilder(
-                configuraçãoDoDaoHttpClient.ObterRotaAPartirDoTipo(typeof(T)).AbsoluteUri);
+                configuraçãoDoDaoHttpClient.ObterRota(typeof(T)).AbsoluteUri);
             var tradutorOData = new TradutorOData();
             var odata = methodCallExpression is null
                 ? string.Empty

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados
 {
-    internal static class Program
+    public static class Program
     {
         public static async Task Main()
         {

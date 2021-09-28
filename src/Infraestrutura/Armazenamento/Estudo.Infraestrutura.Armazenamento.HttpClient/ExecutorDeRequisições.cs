@@ -82,7 +82,7 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient
 
         private Uri ObterRota<Envio>(DadosDaRequisição<Envio> dadosDaRequisição)
         {
-            var rota = ConfiguraçãoDoDaoHttpClient.ObterRotaAPartirDoTipo(typeof(Envio));
+            var rota = ConfiguraçãoDoDaoHttpClient.ObterRota(typeof(Envio));
             if (dadosDaRequisição.Id.Preenchido())
                 return new Uri(rota, dadosDaRequisição.Id);
             return rota;

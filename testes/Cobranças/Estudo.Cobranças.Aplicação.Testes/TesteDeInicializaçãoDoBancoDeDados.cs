@@ -1,5 +1,6 @@
 using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
 using Estudo.Cobranças.Aplicação.Armazenamento.Ravendb;
+using Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados;
 using Estudo.Infraestrutura.Armazenamento.Ravendb;
 using Estudo.Infraestrutura.Geral;
 using Microsoft.Extensions.Configuration;
@@ -23,7 +24,7 @@ namespace Estudo.Cobranças.Aplicação.Testes
 
             await fabricaDoRavendb.DocumentStore.Subscriptions.DeleteAsync(NomeDaInscrição);
 
-            await fabricaDoRavendb.DocumentStore.Inicializar(configuraçãoDoRavendb, default);
+            await Program.Main();
 
             var subscriptions = await fabricaDoRavendb.DocumentStore.Subscriptions.GetSubscriptionsAsync(
                 0, 1, configuraçãoDoRavendb.Database);

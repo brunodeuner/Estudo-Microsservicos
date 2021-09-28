@@ -1,5 +1,4 @@
-﻿using Estudo.CálculoDeConsumo.Aplicação;
-using Estudo.Serviço.Api;
+﻿using Estudo.Serviço.Api;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,11 +11,8 @@ namespace Estudo.CálculoDeConsumo.Serviço.Api
 
         public Startup(IConfiguration configuração) => this.configuração = configuração;
 
-        public void ConfigureServices(IServiceCollection serviços)
-        {
-            configuração.ConfigurarServiçosDaAplicação();
+        public void ConfigureServices(IServiceCollection serviços) => 
             serviços.ConfigurarServiçoEAplicação(configuração);
-        }
 
         public static void Configure(IApplicationBuilder aplicação) => aplicação.Configurar();
     }

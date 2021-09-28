@@ -32,6 +32,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\src\Cobranças\Estudo.Cobranças.Aplicação\Estudo.Cobranças.Aplicação.csproj" />
+		<ProjectReference Include="..\..\..\src\Cobranças\Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados\Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

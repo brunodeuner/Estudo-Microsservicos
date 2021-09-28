@@ -8,6 +8,6 @@ namespace Estudo.CálculoDeConsumo.Domínio.Entidades
 
         public Cliente(string cpf) => Cpf = cpf;
 
-        public string Cpf { get; private set; }
+        public string Cpf { get; init; }
     }
 }
