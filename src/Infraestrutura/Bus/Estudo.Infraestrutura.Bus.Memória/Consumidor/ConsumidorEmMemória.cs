@@ -21,8 +21,9 @@ namespace Estudo.Infraestrutura.Bus.Memória.Consumidor
 
         public async Task Iniciar(string identificador, CancellationToken cancellationToken)
         {
-            while (!cancellationToken.IsCancellationRequested)
+            while (true)
             {
+                cancellationToken.ThrowIfCancellationRequested();
                 var evento = eventosPorTipo.ConsumirPróximoEvento<T>(identificador);
                 if (evento is not null)
                 {
