@@ -17,8 +17,14 @@ namespace Estudo.Cobranças.Aplicação
                .GetSection(nameof(ConfiguraçãoDaAplicaçãoDeCobranças))
                .Get<ConfiguraçãoDaAplicaçãoDeCobranças>();
             if (configuraçãoDaAplicaçãoDeCobranças?.InjetarConsumidorDoRavendb ?? false)
-                serviços.AddTransient<IConsumidor<Cliente>, ConsumidorDoRavendb<Cliente>>();
-
+            {
+                var configuraçãoDoRavendb = configuraçãoDaAplicaçãoDeCobranças
+                    .ConfiguraçãoDoRavendbParaOConsumidorDeClientes;
+                serviços.AddSingleton(new FabricaDoRavendbParaOConsumidor(configuraçãoDoRavendb));
+                serviços.AddTransient<IConsumidor<Cliente>>(serviços => new ConsumidorDoRavendb<Cliente>(
+                    serviços.GetRequiredService<FabricaDoRavendbParaOConsumidor>().DocumentStore,
+                    configuraçãoDoRavendb));
+            }
             serviços.AddTransient<ConsumidorDeClientes>();
         }
     }

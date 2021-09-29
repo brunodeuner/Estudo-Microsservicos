@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Estudo.Cobranças.Aplicação.Armazenamento.Ravendb.Subscriptions
 {
-    internal static class CriarSubscriptionsNãoExistentes
+    public static class CriarSubscriptionsNãoExistentes
     {
         private const int QuantidadeDeSubscriptions = 1;
 

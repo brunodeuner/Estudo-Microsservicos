@@ -5,10 +5,9 @@ using System;
 
 namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb
 {
-    public sealed class FabricaDoRavendb : IDisposable
+    public class FabricaDoRavendb : IDisposable
     {
         private IDocumentStore documentStore;
-        private IDisposable cacheAgresivo;
 
         public FabricaDoRavendb(ConfiguraçãoDoRavendb configuraçãoDoRavendb) =>
             ConfiguraçãoDoRavendb = configuraçãoDoRavendb;
@@ -22,8 +21,7 @@ namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb
         {
             documentStore?.Dispose();
             documentStore = default;
-            cacheAgresivo?.Dispose();
-            cacheAgresivo = default;
+            GC.SuppressFinalize(this);
         }
 
         private IDocumentStore CriarEIniciarDocumentStore()
@@ -36,24 +34,13 @@ namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb
                 Conventions = CriarConvenções()
             };
             novoDocumentStore.Initialize();
-            if (ConfiguraçãoDoRavendb.TempoDeDuraçãoDoCache.HasValue)
-                cacheAgresivo = novoDocumentStore.AggressivelyCache();
             return novoDocumentStore;
         }
 
-        private DocumentConventions CriarConvenções()
+        private static DocumentConventions CriarConvenções() => new()
         {
-            var convenções = new DocumentConventions()
-            {
-                IdentityPartsSeparator = '-',
-                FindCollectionName = tipo => tipo.Name,
-            };
-            if (ConfiguraçãoDoRavendb.TempoDeDuraçãoDoCache.HasValue)
-            {
-                convenções.AggressiveCache.Duration = ConfiguraçãoDoRavendb.TempoDeDuraçãoDoCache.Value;
-                convenções.AggressiveCache.Mode = Raven.Client.Http.AggressiveCacheMode.TrackChanges;
-            }
-            return convenções;
-        }
+            IdentityPartsSeparator = '-',
+            FindCollectionName = tipo => tipo.Name,
+        };
     }
 }

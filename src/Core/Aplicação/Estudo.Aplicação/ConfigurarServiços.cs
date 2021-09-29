@@ -53,7 +53,7 @@ namespace Estudo.Aplicação
         {
             serviços.AddMediatR(assemblies);
             foreach (var repositorioASerInjetado in ObterTipoConcretosQueComeçamCom(assemblies, "Repositório"))
-                serviços.AddScoped(repositorioASerInjetado);
+                serviços.AddTransient(repositorioASerInjetado);
         }
 
         private static IEnumerable<Type> ObterTipoConcretosQueComeçamCom(Assembly[] assemblies,
@@ -80,8 +80,8 @@ namespace Estudo.Aplicação
                 return;
 
             serviços.AddSingleton<FabricaDoRavendb>();
-            serviços.AddSingleton(serviceProvider =>
-                serviceProvider.GetRequiredService<FabricaDoRavendb>().DocumentStore);
+            serviços.AddSingleton(serviços =>
+                serviços.GetRequiredService<FabricaDoRavendb>().DocumentStore);
             serviços.AddSingleton(configuraçãoDaConexão.ConfiguraçãoDoRavendb);
             serviços.AddScoped<IDao, DaoRavendb>();
         }
@@ -90,7 +90,7 @@ namespace Estudo.Aplicação
             ConfiguraçãoDaConexão configuraçãoDaConexão)
         {
             if (configuraçãoDaConexão.ObterTipo() == typeof(DaoMemória))
-                serviços.AddScoped<IDao, DaoMemória>();
+                serviços.AddTransient<IDao, DaoMemória>();
         }
 
         private static void ConfigurarDaoHttpClient(IServiceCollection serviços,
@@ -106,7 +106,7 @@ namespace Estudo.Aplicação
             serviços.AddSingleton(configuraçãoDoDaoHttpClient);
             serviços.AddTransient<ExecutorDeRequisições>();
             serviços.AddTransient<ExecutorExpressao>();
-            serviços.AddScoped<IDao, DaoHttpClient>();
+            serviços.AddTransient<IDao, DaoHttpClient>();
         }
     }
 }

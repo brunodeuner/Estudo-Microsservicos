@@ -6,6 +6,7 @@ using Estudo.Core.Domínio.Validação;
 using Estudo.Core.Serviço.Api.Atributos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -38,5 +39,9 @@ namespace Estudo.Clientes.Serviço.Api.Controllers
                 cancellationToken);
             return default;
         }
+
+        [HttpGet("Todos")]
+        public IAsyncEnumerable<Cliente> ObterTodos(CancellationToken cancellationToken) =>
+            repositórioDeCliente.ObterTodos(cancellationToken);
     }
 }

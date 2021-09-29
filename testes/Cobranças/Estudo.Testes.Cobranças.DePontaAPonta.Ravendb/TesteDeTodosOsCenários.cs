@@ -1,5 +1,5 @@
 using Estudo.Aplicação.Configurações;
-using Estudo.Cobranças.Aplicação.Armazenamento.Ravendb;
+using Estudo.Cobranças.Aplicação.Armazenamento.Ravendb.MapReduces;
 using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
 using Estudo.Cobranças.Serviço.Api;
@@ -29,7 +29,7 @@ namespace Estudo.Cobranças.Testes.DePontaAPonta.Ravendb
             using var fabricaDoRavendb = new FabricaDoRavendb(configuraçãoDoRavendb);
             await fabricaDoRavendb.DocumentStore.ExecutarTarefaEmUmNovoBancoDeDados(configuraçãoDoRavendb, async () =>
             {
-                await fabricaDoRavendb.DocumentStore.Inicializar(fabricaDoRavendb.ConfiguraçãoDoRavendb, default);
+                await fabricaDoRavendb.DocumentStore.CriarMapReduces(default);
 
                 await AdicionarCliente();
 

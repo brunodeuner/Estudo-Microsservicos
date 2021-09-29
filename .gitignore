@@ -5,6 +5,7 @@
 .vs
 *.user
 Properties
+.config
 
 # .NET
 bin

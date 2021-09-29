@@ -1,6 +1,8 @@
 ﻿using Estudo.Clientes.Domínio.Entidades;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Repositório;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,6 +19,9 @@ namespace Estudo.Clientes.Domínio.Repositórios
             objeto.Id = CriarIdAPartirDoCpf(objeto.Cpf);
             return base.Salvar(objeto, cancellationToken);
         }
+
+        public IAsyncEnumerable<Cliente> ObterTodos(CancellationToken cancellationToken) =>
+            Selecionar().ToAsyncEnumerable(cancellationToken);
 
         public ValueTask<Cliente> ObterAPartirDoCpf(string cpf, CancellationToken cancellationToken) =>
             ObterPeloId(CriarIdAPartirDoCpf(cpf), cancellationToken);

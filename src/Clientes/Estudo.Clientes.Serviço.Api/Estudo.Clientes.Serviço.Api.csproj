@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-  <ItemGroup>
-    <ProjectReference Include="..\..\Core\Serviço\Api\Estudo.Serviço.Api\Estudo.Core.Serviço.Api.csproj" />
-    <ProjectReference Include="..\Estudo.Clientes.Domínio\Estudo.Clientes.Domínio.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="Estudo.Clientes.Serviço.Api.pfx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Core\Serviço\Api\Estudo.Serviço.Api\Estudo.Core.Serviço.Api.csproj" />
+		<ProjectReference Include="..\Estudo.Clientes.Domínio\Estudo.Clientes.Domínio.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="Estudo.Clientes.Serviço.Api.pfx">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 </Project>

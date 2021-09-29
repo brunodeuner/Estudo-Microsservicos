@@ -44,6 +44,9 @@
     <None Update="Testes\1-Manutenção\1-Adicionar\1-AdicionarClienteComSucesso.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Testes\1-Manutenção\2-Leitura\2-LerTodosOsClientes.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Testes\1-Manutenção\2-Leitura\1-LerClienteInformandoUmCpfInválido.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
