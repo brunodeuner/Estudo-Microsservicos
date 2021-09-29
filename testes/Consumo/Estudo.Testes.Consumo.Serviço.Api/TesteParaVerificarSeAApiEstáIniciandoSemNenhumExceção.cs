@@ -12,7 +12,7 @@ namespace Estudo.Testes.Consumo.Serviço.Api
         [Fact]
         public async Task InicializaçãoDaApi_IniciarApi_ApiNãoDeuErroEmAtéCincoSegundos()
         {
-            var token = new CancellationTokenSource(TimeSpan.FromSeconds(5)).Token;
+            var token = new CancellationTokenSource(TimeSpan.FromSeconds(1)).Token;
             await CriarHostBuilder.CriarERodar<Startup>(token);
             Assert.True(token.IsCancellationRequested);
         }

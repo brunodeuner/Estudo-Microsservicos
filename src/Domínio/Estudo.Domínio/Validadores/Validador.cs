@@ -36,10 +36,9 @@ namespace Estudo.Domínio.Validadores
 
         private IValidator<T> ObterValidadorDoFluentValidation<T>(ValidadorAttribute atributoDeValidador)
         {
-            var validador = serviceProvider.GetRequiredService(atributoDeValidador.Tipo);
-            if (validador is IValidator<T> validadorFluentValidation)
-                return validadorFluentValidation;
-            throw new ArgumentException($"{validador.GetType().Name} não suportado!");
+            if (atributoDeValidador.Tipo.IsAssignableTo(typeof(IValidator<T>)))
+                return (IValidator<T>)serviceProvider.GetRequiredService(atributoDeValidador.Tipo);
+            throw new ArgumentException($"{atributoDeValidador.Tipo.Name} não suportado!");
         }
 
         private async ValueTask<bool> ValidarObjeto<T>(IValidator<T> validadorFluentValidation,
