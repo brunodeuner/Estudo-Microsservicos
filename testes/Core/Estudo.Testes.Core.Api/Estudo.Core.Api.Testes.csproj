@@ -7,8 +7,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\src\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória\Estudo.Core.Infraestrutura.Bus.Memória.csproj" />
-		<ProjectReference Include="..\..\..\src\Infraestrutura\Geral\Estudo.Infraestrutura.Geral\Estudo.Core.Infraestrutura.Geral.csproj" />
+		<ProjectReference Include="..\..\..\src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória\Estudo.Core.Infraestrutura.Bus.Memória.csproj" />
+		<ProjectReference Include="..\..\..\src\Core\Infraestrutura\Geral\Estudo.Infraestrutura.Geral\Estudo.Core.Infraestrutura.Geral.csproj" />
 		<ProjectReference Include="..\Estudo.Testes.Core.Http\Estudo.Core.Http.Testes.csproj" />
 	</ItemGroup>
 

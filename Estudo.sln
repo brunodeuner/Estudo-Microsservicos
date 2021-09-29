@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestrutura", "Infraestrutura", "{D8DC82BF-7FAE-4426-943C-C2B4C7EABBDA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.Abstrações", "src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj", "{10782E60-D567-47F3-83DA-654E5CF489D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.Abstrações", "src\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj", "{10782E60-D567-47F3-83DA-654E5CF489D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Armazenamento", "Armazenamento", "{509A774B-637F-4A18-B427-2AFA824DD557}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.Ravendb", "src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Core.Infraestrutura.Armazenamento.Ravendb.csproj", "{91BA7529-016F-43C5-9626-8A0E03F1A98F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.Ravendb", "src\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Core.Infraestrutura.Armazenamento.Ravendb.csproj", "{91BA7529-016F-43C5-9626-8A0E03F1A98F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E977028F-1D3B-4117-860B-1F96A31F88E8}"
 EndProject
@@ -32,15 +32,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DecisõesArquiteturais", "D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{6A11D13B-AAF3-4E73-A964-85FD369D9418}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Domínio", "src\Domínio\Estudo.Domínio\Estudo.Core.Domínio.csproj", "{7A34AEA4-309B-4A96-A915-9EBBB76F3B18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Domínio", "src\Core\Domínio\Estudo.Domínio\Estudo.Core.Domínio.csproj", "{7A34AEA4-309B-4A96-A915-9EBBB76F3B18}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clientes", "Clientes", "{30569255-D8D2-40D1-8487-6883B017D914}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bus", "Bus", "{F4C44EF6-D1E6-429D-A505-48B3A8CA91BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.Abstrações", "src\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj", "{A5A93837-638F-4E4A-87FB-2F1CEB20767C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.Abstrações", "src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj", "{A5A93837-638F-4E4A-87FB-2F1CEB20767C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.Ravendb", "src\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb\Estudo.Core.Infraestrutura.Bus.Ravendb.csproj", "{D1CBC82F-0CE8-4891-9C79-BA07DD4BEFE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.Ravendb", "src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb\Estudo.Core.Infraestrutura.Bus.Ravendb.csproj", "{D1CBC82F-0CE8-4891-9C79-BA07DD4BEFE3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "testes", "testes", "{92E1EAEB-17CD-4DEA-8B3F-F80A1E873321}"
 EndProject
@@ -58,15 +58,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Cobranças.Serviço.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{7F961908-4DA8-4282-B447-1A2C13CDAC93}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Serviço.Api", "src\Serviço\Api\Estudo.Serviço.Api\Estudo.Core.Serviço.Api.csproj", "{FB87357B-FE0F-4287-A275-F05B41BE7287}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Serviço.Api", "src\Core\Serviço\Api\Estudo.Serviço.Api\Estudo.Core.Serviço.Api.csproj", "{FB87357B-FE0F-4287-A275-F05B41BE7287}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serviço", "Serviço", "{01DE9DFB-B755-4517-9529-11CCBFF3B765}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Geral", "src\Infraestrutura\Geral\Estudo.Infraestrutura.Geral\Estudo.Core.Infraestrutura.Geral.csproj", "{DF899AAB-7D1D-4772-ABFE-CB7E05309B74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Geral", "src\Core\Infraestrutura\Geral\Estudo.Infraestrutura.Geral\Estudo.Core.Infraestrutura.Geral.csproj", "{DF899AAB-7D1D-4772-ABFE-CB7E05309B74}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Geral", "Geral", "{0FC166C2-B231-43D3-894B-E9BBA0EBA01A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.HttpClient", "src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.HttpClient\Estudo.Core.Infraestrutura.Armazenamento.HttpClient.csproj", "{CB4C0EBF-6053-494F-B5AA-456B56F3D29A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.HttpClient", "src\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.HttpClient\Estudo.Core.Infraestrutura.Armazenamento.HttpClient.csproj", "{CB4C0EBF-6053-494F-B5AA-456B56F3D29A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CálculoDeConsumo", "CálculoDeConsumo", "{8535118E-4ACB-4922-A817-5A000958B933}"
 EndProject
@@ -84,7 +84,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Clientes.Serviço.Ap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicação", "Aplicação", "{6925C462-E0F5-463D-B005-349F9C1EA7AB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Aplicação", "src\Aplicação\Estudo.Aplicação\Estudo.Core.Aplicação.csproj", "{C99AF900-D35C-4F8F-BFE9-F1EC058D7926}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Aplicação", "src\Core\Aplicação\Estudo.Aplicação\Estudo.Core.Aplicação.csproj", "{C99AF900-D35C-4F8F-BFE9-F1EC058D7926}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CálculoDeConsumo", "CálculoDeConsumo", "{27B6C92B-EB68-46AC-8CEF-1B367306A2E9}"
 EndProject
@@ -96,11 +96,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Cobranças.Testes.De
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados", "src\Cobranças\Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados\Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.csproj", "{9FE87F34-5047-4D91-B1DE-DE438AB4DA98}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.Memória", "src\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória\Estudo.Core.Infraestrutura.Bus.Memória.csproj", "{C769B7CA-6080-4DD6-B535-333BFAF474B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.Memória", "src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória\Estudo.Core.Infraestrutura.Bus.Memória.csproj", "{C769B7CA-6080-4DD6-B535-333BFAF474B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.CálculoDeConsumo.Serviço.Api", "src\CálculoDeConsumo\Estudo.CálculoDeConsumo.Serviço.Api\Estudo.CálculoDeConsumo.Serviço.Api.csproj", "{6C44E1EE-674D-4EBE-BDE4-1582F6E39763}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.Memória", "src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória\Estudo.Core.Infraestrutura.Armazenamento.Memória.csproj", "{2BFC4868-AAF1-42D9-A23D-D7417512AD9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.Memória", "src\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória\Estudo.Core.Infraestrutura.Armazenamento.Memória.csproj", "{2BFC4868-AAF1-42D9-A23D-D7417512AD9A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.CálculoDeConsumo.Testes.DePontaAPonta", "testes\Consumo\Estudo.Testes.Consumo.DePontaAPonta\Estudo.CálculoDeConsumo.Testes.DePontaAPonta.csproj", "{9FE0CE86-6AE1-4E7F-A763-A1ED1CCC5D5A}"
 EndProject

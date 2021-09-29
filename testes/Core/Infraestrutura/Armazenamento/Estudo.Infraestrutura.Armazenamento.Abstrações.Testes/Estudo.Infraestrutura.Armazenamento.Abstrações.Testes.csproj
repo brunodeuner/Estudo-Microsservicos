@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj" />
+    <ProjectReference Include="..\..\..\..\..\src\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj" />
   </ItemGroup>
 
 </Project>

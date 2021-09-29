@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <ProjectReference Include="..\..\Domínio\Estudo.Domínio\Estudo.Core.Domínio.csproj" />
-    <ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj" />
+    <ProjectReference Include="..\..\Core\Domínio\Estudo.Domínio\Estudo.Core.Domínio.csproj" />
+    <ProjectReference Include="..\..\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj" />
     <ProjectReference Include="..\Estudo.CálculoDeConsumo.Infraestrutura\Estudo.CálculoDeConsumo.Infraestrutura.csproj" />
   </ItemGroup>
 </Project>

@@ -6,9 +6,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Core.Infraestrutura.Armazenamento.Ravendb.csproj" />
-	  <ProjectReference Include="..\..\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj" />
-	  <ProjectReference Include="..\..\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb\Estudo.Core.Infraestrutura.Bus.Ravendb.csproj" />
+	  <ProjectReference Include="..\..\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Core.Infraestrutura.Armazenamento.Ravendb.csproj" />
+	  <ProjectReference Include="..\..\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj" />
+	  <ProjectReference Include="..\..\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb\Estudo.Core.Infraestrutura.Bus.Ravendb.csproj" />
 	  <ProjectReference Include="..\Estudo.Cobranças.Domínio.Consultas\Estudo.Cobranças.Domínio.Consultas.csproj" />
 	  <ProjectReference Include="..\Estudo.Cobranças.Domínio\Estudo.Cobranças.Domínio.csproj" />
 	</ItemGroup>

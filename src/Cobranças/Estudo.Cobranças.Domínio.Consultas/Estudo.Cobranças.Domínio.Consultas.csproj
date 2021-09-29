@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj" />
+    <ProjectReference Include="..\..\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj" />
   </ItemGroup>
 </Project>
