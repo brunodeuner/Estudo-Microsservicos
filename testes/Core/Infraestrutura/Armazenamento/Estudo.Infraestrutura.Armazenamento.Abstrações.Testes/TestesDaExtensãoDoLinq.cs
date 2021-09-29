@@ -15,7 +15,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Testes
         {
             var query = new List<object>().AsQueryable();
             var exceção = await Assert.ThrowsAsync<NotImplementedException>(() => ProcessarRegistros(query));
-            Assert.Equal("IDaoProxy não possui provider do tipo IQueryProviderDao", exceção.Message);
+            Assert.Equal("EnumerableQuery`1 não possui provider do tipo IQueryProviderDao", exceção.Message);
         }
 
         [Fact]

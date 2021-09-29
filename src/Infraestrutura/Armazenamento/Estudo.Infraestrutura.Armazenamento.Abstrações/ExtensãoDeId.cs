@@ -10,7 +10,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações
             var propriedadeComONomeId = objeto.ObterPropriedadeComONomeId();
             if (propriedadeComONomeId?.CanRead ?? false)
                 return propriedadeComONomeId.GetValue(objeto)?.ToString();
-            throw new ArgumentException($"{objeto.GetType().Name} não possui propriedade {nameof(IId.Id)} " +
+            throw new ArgumentException($"{objeto?.GetType().Name} não possui propriedade {nameof(IId.Id)} " +
                                         $"que possa ser lida");
         }
 
@@ -23,7 +23,7 @@ namespace Estudo.Infraestrutura.Armazenamento.Abstrações
                 propriedadeComONomeId.SetValue(objeto, id);
                 return id;
             }
-            throw new ArgumentException($"{objeto.GetType().Name} não possui propriedade {nameof(IId.Id)} " +
+            throw new ArgumentException($"{objeto?.GetType().Name} não possui propriedade {nameof(IId.Id)} " +
                                         $"que possa ser atribuida");
         }
 

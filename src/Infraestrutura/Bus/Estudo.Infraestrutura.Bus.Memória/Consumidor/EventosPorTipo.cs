@@ -22,12 +22,6 @@ namespace Estudo.Infraestrutura.Bus.Memória.Consumidor
             return new EventoEventArgs<T>((T)evento.Corpo);
         }
 
-        public void LimparEventos(string identificador)
-        {
-            if (eventosPorTipo.TryGetValue(identificador, out var eventosDoTipo))
-                eventosDoTipo.Clear();
-        }
-
         private ConcurrentQueue<EventoEventArgs<object>> ObterOuCriarNovosEventosDoTipo(string identificador)
         {
             if (eventosPorTipo.TryGetValue(identificador, out var eventosDoTipo))
