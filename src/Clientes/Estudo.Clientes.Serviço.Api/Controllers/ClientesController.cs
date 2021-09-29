@@ -3,6 +3,7 @@ using Estudo.Clientes.Domínio.Entidades;
 using Estudo.Clientes.Domínio.Especificações;
 using Estudo.Clientes.Domínio.Repositórios;
 using Estudo.Core.Domínio.Validação;
+using Estudo.Core.Serviço.Api.Atributos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Estudo.Clientes.Serviço.Api.Controllers
 {
-    [Route("[controller]")]
+    [RotaPadrão]
     public class ClientesController
     {
         private readonly IMediator mediator;

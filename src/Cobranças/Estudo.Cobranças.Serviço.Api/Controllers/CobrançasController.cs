@@ -1,6 +1,7 @@
 ﻿using Estudo.Cobranças.Domínio.CasosDeUso.CobrarPessoa.ManipuladoresDeComandos.Comandos;
 using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
+using Estudo.Core.Serviço.Api.Atributos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Estudo.Cobranças.Serviço.Api.Controllers
 {
-    [Route("[controller]")]
+    [RotaPadrão]
     public class CobrançasController
     {
         private readonly IMediator mediator;

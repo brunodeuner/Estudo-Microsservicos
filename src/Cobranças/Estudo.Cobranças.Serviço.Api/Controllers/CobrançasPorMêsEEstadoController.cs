@@ -1,12 +1,13 @@
 ﻿using Estudo.Cobranças.Domínio.Consultas.Entidades;
 using Estudo.Cobranças.Domínio.Consultas.Repositórios;
+using Estudo.Core.Serviço.Api.Atributos;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading;
 
 namespace Estudo.Cobranças.Serviço.Api.Controllers
 {
-    [Route("[controller]")]
+    [RotaPadrão]
     public class CobrançasPorMêsEEstadoController
     {
         private readonly RepositórioDeCobrançasPorMêsEEstado repositórioDeCobrançasPorMêsEEstado;

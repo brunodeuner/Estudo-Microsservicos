@@ -1,4 +1,5 @@
 ﻿using Estudo.CálculoDeConsumo.Domínio.CasosDeUso.ManipuladoresDeComandos.Comandos;
+using Estudo.Core.Serviço.Api.Atributos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Estudo.CálculoDeConsumo.Serviço.Api.Controllers
 {
-    [Route("[controller]")]
+    [RotaPadrão]
     public class CobrarTodosOsClientesController
     {
         private readonly IMediator mediator;
