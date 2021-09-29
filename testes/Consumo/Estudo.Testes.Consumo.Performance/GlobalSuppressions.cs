@@ -5,6 +5,8 @@
 
 using System.Diagnostics.CodeAnalysis;
 
+[assembly: SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "<Pending>", Scope = "member", Target = "~M:Estudo.Testes.Consumo.Performance.Benchmarks.ObtençãoDosDigitosDoValorAPartirDoCpf.ConcatESubstring~System.String")]
+[assembly: SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "<Pending>", Scope = "member", Target = "~M:Estudo.Testes.Consumo.Performance.Benchmarks.ObtençãoDosDigitosDoValorAPartirDoCpf.InterpolaçãoESubString~System.String")]
 [assembly: SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "<Pending>", Scope = "member", Target = "~M:Estudo.Testes.Consumo.Performance.Benchmarks.ObtençãoDosDigitosDoValorAPartirDoCpf.ConcatEAcessoDiretoAsPosiçõesDoCpf~System.String")]
 [assembly: SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "<Pending>", Scope = "member", Target = "~M:Estudo.Testes.Consumo.Performance.Benchmarks.ObtençãoDosDigitosDoValorAPartirDoCpf.InterpolaçãoEAcessoDiretoAsPosiçõesDoCpf~System.String")]
 [assembly: SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "<Pending>", Scope = "member", Target = "~M:Estudo.Testes.Consumo.Performance.Benchmarks.ParseDeStringParaOValorDeCobrança.ParseDeDecimal~System.Decimal")]

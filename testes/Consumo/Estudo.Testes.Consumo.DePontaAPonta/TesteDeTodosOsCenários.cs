@@ -13,7 +13,10 @@ namespace Estudo.Testes.Consumo.DePontaAPonta
             this.testFixture = testFixture;
 
         [Fact]
-        public Task CobrarTodosOsClientes_UmClienteCadastrado_CobrançaAdicionadaParaOCliente() =>
-            ExecutarTodosOsCenários.Executar(testFixture);
+        public async Task CobrarTodosOsClientes_UmClienteCadastrado_CobrançaAdicionadaParaOCliente()
+        {
+            await ExecutarTodosOsCenários.Executar(testFixture);
+            Assert.True(true);
+        }
     }
 }
