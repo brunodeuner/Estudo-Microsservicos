@@ -35,7 +35,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Testes\1-Manutenção\1-Adicionar\1-AdicionarCobrançaSemInformarNenhumCampo.json">
+    <None Update="Testes\1-Manutenção\1-Adicionar\3-AdicionarCobrançaInformandoValorNegativo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Testes\1-Manutenção\1-Adicionar\2-AdicionarCobrançaSemInformarNenhumCampo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Testes\1-Manutenção\2-Leitura\1-LerSemInformarCpfEMês.json">

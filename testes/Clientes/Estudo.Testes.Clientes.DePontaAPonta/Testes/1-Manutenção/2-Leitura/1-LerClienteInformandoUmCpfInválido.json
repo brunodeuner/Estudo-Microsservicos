@@ -1,0 +1,18 @@
+﻿{
+  "Nome": "Adicionar cliente com falha na validação por nenhum campo ser informado",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes?cpf=123",
+        "Método": "Get",
+        "Corpo": {}
+      },
+      "Retorno": {
+        "Status": "BadRequest",
+        "Corpo": [
+          "Cpf inválido"
+        ]
+      }
+    }
+  ]
+}
