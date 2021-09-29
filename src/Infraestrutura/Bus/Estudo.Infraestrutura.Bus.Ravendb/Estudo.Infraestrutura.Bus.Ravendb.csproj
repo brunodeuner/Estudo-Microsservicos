@@ -2,7 +2,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Infraestrutura.Armazenamento.Ravendb.csproj" />
-		<ProjectReference Include="..\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Infraestrutura.Bus.Abstrações.csproj" />
+		<ProjectReference Include="..\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		.github\workflows\build.yml = .github\workflows\build.yml
 		Directory.Build.props = Directory.Build.props
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestrutura", "Infraestrutura", "{D8DC82BF-7FAE-4426-943C-C2B4C7EABBDA}"
@@ -24,9 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentação", "Documenta
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DecisõesArquiteturais", "DecisõesArquiteturais", "{617ED938-5949-4C24-9A90-ACA1428D5DD1}"
 	ProjectSection(SolutionItems) = preProject
-		AbstraçõesDoArmazenamento.md = AbstraçõesDoArmazenamento.md
-		Cadastro.md = Cadastro.md
-		Testes.md = Testes.md
+		Documentações\DecisõesArquiteturais\AbstraçõesDoArmazenamento.md = Documentações\DecisõesArquiteturais\AbstraçõesDoArmazenamento.md
+		Documentações\DecisõesArquiteturais\Cadastro.md = Documentações\DecisõesArquiteturais\Cadastro.md
+		Documentações\DecisõesArquiteturais\Testes.md = Documentações\DecisõesArquiteturais\Testes.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{6A11D13B-AAF3-4E73-A964-85FD369D9418}"
@@ -39,7 +40,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Clientes.Domínio", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bus", "Bus", "{F4C44EF6-D1E6-429D-A505-48B3A8CA91BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Bus.Abstrações", "src\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Infraestrutura.Bus.Abstrações.csproj", "{A5A93837-638F-4E4A-87FB-2F1CEB20767C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.Abstrações", "src\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj", "{A5A93837-638F-4E4A-87FB-2F1CEB20767C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Bus.Ravendb", "src\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb\Estudo.Infraestrutura.Bus.Ravendb.csproj", "{D1CBC82F-0CE8-4891-9C79-BA07DD4BEFE3}"
 EndProject
@@ -127,11 +128,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Testes.Cobranças.Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Testes.CálculoDeConsumo.Serviço.Api", "testes\Consumo\Estudo.Testes.Consumo.Serviço.Api\Estudo.Testes.CálculoDeConsumo.Serviço.Api.csproj", "{4A293DD1-5A24-4F78-B09A-BAFFD281FC14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Infraestrutura.Armazenamento.Abstrações.Testes", "testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.csproj", "{B584BBCE-29B9-450B-A891-94D41FFF305B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Armazenamento.Abstrações.Testes", "testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.csproj", "{B584BBCE-29B9-450B-A891-94D41FFF305B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domínio", "Domínio", "{50C9F99D-8A80-4F87-B84C-4CD260084CC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo.Core.Domínio.Testes", "testes\Core\Domínio\Estudo.Core.Domínio.Testes\Estudo.Core.Domínio.Testes.csproj", "{CD30D5F0-3D3A-4E12-898B-C42990911E5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Domínio.Testes", "testes\Core\Domínio\Estudo.Core.Domínio.Testes\Estudo.Core.Domínio.Testes.csproj", "{CD30D5F0-3D3A-4E12-898B-C42990911E5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
