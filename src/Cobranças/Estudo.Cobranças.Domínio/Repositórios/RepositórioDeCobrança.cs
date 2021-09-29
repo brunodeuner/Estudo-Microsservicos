@@ -16,7 +16,7 @@ namespace Estudo.Cobranças.Domínio.Repositórios
 
         public RepositórioDeCobrança(IDao dao, IMediator mediator) : base(dao) => this.mediator = mediator;
 
-        public IAsyncEnumerable<Cobrança> ObterCobrançasDoClienteAPartirDoMês(CancellationToken cancellationToken,
+        public IAsyncEnumerable<Cobrança> ObterCobrançasDoClienteOuDoMês(CancellationToken cancellationToken,
             string cpf = default, int? mês = default)
         {
             if (cpf.NãoPreenchido() && !mês.HasValue)

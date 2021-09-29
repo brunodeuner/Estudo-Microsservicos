@@ -1,4 +1,4 @@
-﻿namespace Estudo.Cobranças.Serviço.Api.Configurações
+﻿namespace Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Configurações
 {
     public class ConfiguraçãoDaAplicaçãoDeCobranças
     {

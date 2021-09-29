@@ -27,3 +27,5 @@ Necessitasse de um construtor vazio nos objetos.
 
 ## Evolução
 Conforme a necessidade podem ser criado novas intefaces para a leitura e retornar uma lista por exemplo.
+Há momentos onde são necessários executar algum comando e o conceito do repositório esconde isso e pode deixar confuso
+conforme a evolução do código, a criação de um novo conceito seria o ideal.

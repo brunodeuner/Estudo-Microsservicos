@@ -1,4 +1,4 @@
-﻿using Estudo.Cobranças.Domínio.CasosDeUso.CobrarCliente.ManipuladoresDeComandos.Comandos;
+﻿using Estudo.Cobranças.Domínio.CasosDeUso.CobrarPessoa.ManipuladoresDeComandos.Comandos;
 using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
 using MediatR;
@@ -22,12 +22,12 @@ namespace Estudo.Cobranças.Serviço.Api.Controllers
         }
 
         [HttpPost]
-        public Task CobrarCliente([FromBody] ComandoDeCobrarCliente comandoDeCobrarCliente,
+        public Task CobrarCliente([FromBody] ComandoDeCobrarPessoa comandoDeCobrarCliente,
             CancellationToken cancellationToken) => mediator.Send(comandoDeCobrarCliente, cancellationToken);
 
         [HttpGet]
         public IAsyncEnumerable<Cobrança> ObterCobranças([FromQuery] string cpf, [FromQuery] int? mês,
             CancellationToken cancellationToken) => repositórioDeCobrança
-            .ObterCobrançasDoClienteAPartirDoMês(cancellationToken, cpf, mês);
+            .ObterCobrançasDoClienteOuDoMês(cancellationToken, cpf, mês);
     }
 }

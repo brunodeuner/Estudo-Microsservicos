@@ -8,7 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Mime;
 
-namespace Estudo.Testes.Cobranças.DePontaAPonta
+namespace Estudo.Testes.CálculoDeConsumo.DePontaAPonta
 {
     public class WebHostFixtureInjetandoMockDeHttpClient : WebHostFixture<Startup>
     {

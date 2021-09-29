@@ -1,3 +1,4 @@
+using Estudo.Core.Domínio.Testes.Dtos;
 using Estudo.Domínio.Validadores;
 using System;
 using System.Threading.Tasks;

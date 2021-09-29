@@ -13,6 +13,6 @@ namespace Estudo.Cobranças.Serviço.Api.Consumidores
             this.consumidorDeClientes = consumidorDeClientes;
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken) =>
-              consumidorDeClientes.Iniciar(stoppingToken);
+            consumidorDeClientes.Iniciar(stoppingToken);
     }
 }

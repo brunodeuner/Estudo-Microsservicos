@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Testes.Consumo.Serviço.Api
+namespace Estudo.Testes.CálculoDeConsumo.Serviço.Api
 {
     public class TesteParaVerificarSeAApiEstáIniciandoSemNenhumExceção
     {

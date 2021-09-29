@@ -1,5 +1,6 @@
 using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable;
 using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
+using Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.Dtos;
 using Moq;
 using System;
 using System.Collections.Generic;

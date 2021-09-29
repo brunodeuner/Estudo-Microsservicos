@@ -2,5 +2,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Domínio\Estudo.Domínio\Estudo.Domínio.csproj" />
     <ProjectReference Include="..\..\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Infraestrutura.Armazenamento.Abstrações.csproj" />
+    <ProjectReference Include="..\Estudo.CálculoDeConsumo.Infraestrutura\Estudo.CálculoDeConsumo.Infraestrutura.csproj" />
   </ItemGroup>
 </Project>

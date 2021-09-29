@@ -46,3 +46,5 @@ A programação seria diferente em relação a outros projetos que adotam o modelo d
 A biblioteca de classe que facilita a criação de testes end to end já está bem validada em outros projetos, 
 porém não foi trazida todas as suas funcionalidades para este projeto. Em outros projetos há casos de envio de 
 blobs, comparação de relatórios por html e etc.
+Os testes envolvendo o contexto da api foram criados para utilizar herança ao em vez de composição com a intenção
+de compactar o código atual para facilitar a mudança de framework de teste de xUnit para nUnit.  

@@ -1,4 +1,5 @@
 ﻿using Estudo.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Infraestrutura.Bus.Ravendb.Testes.Entidades;
 using Raven.Client.Documents;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,15 +10,13 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Testes
     {
         private const string NomeDaInscrição = nameof(EntidadeDeTeste);
 
-        public static async Task CriarSubscriptionParaEntidadeDeTeste(this IDocumentStore documentStore,
-            ConfiguraçãoDoRavendb configuraçãoDoRavendb, CancellationToken cancellationToken)
-        {
-            await documentStore.Subscriptions.CreateAsync(
+        public static Task CriarSubscriptionParaEntidadeDeTeste(this IDocumentStore documentStore,
+            ConfiguraçãoDoRavendb configuraçãoDoRavendb, CancellationToken cancellationToken) =>
+            documentStore.Subscriptions.CreateAsync(
                new Raven.Client.Documents.Subscriptions.SubscriptionCreationOptions<EntidadeDeTeste>()
                {
                    Name = NomeDaInscrição
                }, configuraçãoDoRavendb.Database, token: cancellationToken);
-        }
 
         public static Task RemoverSubscriptionDeEntidadeDeTeste(this IDocumentStore documentStore,
             CancellationToken cancellationToken) =>

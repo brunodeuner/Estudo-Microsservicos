@@ -12,7 +12,7 @@
         "Corpo": [
           "'Cpf' deve ser informado.",
           "'Data De Vencimento' deve ser informado.",
-          "'Valor' deve ser informado."
+          "'Valor' deve ser superior a '0'."
         ]
       }
     }

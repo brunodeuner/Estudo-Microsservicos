@@ -43,16 +43,14 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
             var repositórioDePessoa = testFixture.ServiceProvider.GetRequiredService<RepositórioDePessoa>();
             await repositórioDePessoa.Salvar(new Pessoa("57251010020", "Rio Grande do Sul"), default);
             await repositórioDePessoa.Salvar(new Pessoa("27555728095", "Rio de Janeiro"), default);
-            var dao = testFixture.ServiceProvider.GetRequiredService<IDao>();
-            await dao.SalvarAlterações(default);
+            await testFixture.ServiceProvider.GetRequiredService<IDao>().SalvarAlterações(default);
         }
 
         private static ConfiguraçãoDoRavendb ObterConfiguraçãoDoRavendb()
         {
             var configuração = Configuração.CriarConfiguraçãoLendoOAppsettings();
-            var configuraçãoDoRavendb = configuração.GetSection(nameof(ConfiguraçãoDaConexão))
+            return configuração.GetSection(nameof(ConfiguraçãoDaConexão))
                 .GetSection(nameof(ConfiguraçãoDoRavendb)).Get<ConfiguraçãoDoRavendb>();
-            return configuraçãoDoRavendb;
         }
     }
 }

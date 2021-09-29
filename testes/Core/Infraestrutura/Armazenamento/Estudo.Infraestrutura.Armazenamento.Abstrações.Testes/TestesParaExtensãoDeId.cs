@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.Dtos;
+using System;
 using Xunit;
 
 namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Testes

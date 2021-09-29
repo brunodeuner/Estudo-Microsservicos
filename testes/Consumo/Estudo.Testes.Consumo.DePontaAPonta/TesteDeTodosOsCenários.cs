@@ -1,22 +1,11 @@
-using Estudo.Testes.Cobranças.DePontaAPonta;
+using Estudo.CálculoDeConsumo.Serviço.Api;
 using Estudo.Testes.Core.Api;
-using System.Threading.Tasks;
-using Xunit;
 
-namespace Estudo.Testes.Consumo.DePontaAPonta
+namespace Estudo.Testes.CálculoDeConsumo.DePontaAPonta
 {
-    public class TesteDeTodosOsCenários : IClassFixture<WebHostFixtureInjetandoMockDeHttpClient>
+    public class TesteDeTodosOsCenários : TesteDeTodosOsCenáriosComFixturePersonalizado<
+        Startup, WebHostFixtureInjetandoMockDeHttpClient>
     {
-        private readonly WebHostFixtureInjetandoMockDeHttpClient testFixture;
-
-        public TesteDeTodosOsCenários(WebHostFixtureInjetandoMockDeHttpClient testFixture) =>
-            this.testFixture = testFixture;
-
-        [Fact]
-        public async Task CobrarTodosOsClientes_UmClienteCadastrado_CobrançaAdicionadaParaOCliente()
-        {
-            var exceção = await Record.ExceptionAsync(() => ExecutarTodosOsCenários.Executar(testFixture));
-            Assert.Null(exceção);
-        }
+        public TesteDeTodosOsCenários(WebHostFixtureInjetandoMockDeHttpClient testFixture) : base(testFixture) { }
     }
 }

@@ -1,3 +1,5 @@
+using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.Entidades;
+using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.Fabricas;
 using Estudo.Infraestrutura.Geral;
 using System.Threading.Tasks;
 using Xunit;

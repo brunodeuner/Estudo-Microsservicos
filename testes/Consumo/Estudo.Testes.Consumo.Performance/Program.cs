@@ -1,15 +1,15 @@
 ﻿using BenchmarkDotNet.Running;
-using Estudo.Testes.Consumo.Performance.Benchmarks;
+using Estudo.Testes.CálculoDeConsumo.Performance.Benchmarks;
 
-namespace Estudo.Testes.Consumo.Performance
+namespace Estudo.Testes.CálculoDeConsumo.Performance
 {
     internal static class Program
     {
         public static void Main()
         {
-            BenchmarkRunner.Run<ObtençãoDosDigitosDoValorAPartirDoCpf>();
-            BenchmarkRunner.Run<ParseDeStringParaOValorDeCobrança>();
-            BenchmarkRunner.Run<ProcessamentoDeListaDeTarefas>();
+            BenchmarkRunner.Run<TesteDePerformanceParaObtençãoDosDigitosDoValorAPartirDoCpf>();
+            BenchmarkRunner.Run<TesteDePerformanceParaParseDeStringDeQuatroDigitosParaInteiro>();
+            BenchmarkRunner.Run<TesteDePerformanceParaProcessamentoDeListaDeTarefas>();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Estudo.Cobranças.Aplicação.Armazenamento.Ravendb
         public static async Task Inicializar(this IDocumentStore documentStore,
             ConfiguraçãoDoRavendb configuraçãoDoRavendb, CancellationToken cancellationToken)
         {
-            await documentStore.CriarTodosOsMapReduce(cancellationToken);
+            await documentStore.CriarMapReduces(cancellationToken);
             await documentStore.CriarSubscriptions(configuraçãoDoRavendb, cancellationToken);
         }
     }

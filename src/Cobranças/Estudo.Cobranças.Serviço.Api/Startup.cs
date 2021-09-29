@@ -1,4 +1,4 @@
-﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores;
+﻿using Estudo.Cobranças.Aplicação;
 using Estudo.Cobranças.Serviço.Api.Consumidores;
 using Estudo.Serviço.Api;
 using Microsoft.AspNetCore.Builder;
@@ -16,7 +16,7 @@ namespace Estudo.Cobranças.Serviço.Api
         public void ConfigureServices(IServiceCollection serviços)
         {
             serviços.ConfigurarServiçoEAplicação(configuração);
-            serviços.ConfigurarConsumidorDeClientes(configuração);
+            serviços.ConfigurarServiçosDaAplicação(configuração);
             serviços.AddHostedService<ServiçoDeConsumidorDeClientes>();
         }
 

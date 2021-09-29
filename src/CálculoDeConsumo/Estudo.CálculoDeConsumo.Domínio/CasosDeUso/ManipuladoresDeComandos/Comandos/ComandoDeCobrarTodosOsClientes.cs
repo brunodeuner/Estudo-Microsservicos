@@ -2,7 +2,5 @@
 
 namespace Estudo.CálculoDeConsumo.Domínio.CasosDeUso.ManipuladoresDeComandos.Comandos
 {
-    public class ComandoDeCobrarTodosOsClientes : ComandoSemRetorno
-    {
-    }
+    public class ComandoDeCobrarTodosOsClientes : ComandoSemRetorno { }
 }

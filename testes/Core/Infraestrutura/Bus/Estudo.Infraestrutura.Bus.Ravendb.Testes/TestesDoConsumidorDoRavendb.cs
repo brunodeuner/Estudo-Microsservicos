@@ -1,6 +1,7 @@
 using Estudo.Infraestrutura.Armazenamento.Ravendb;
 using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes;
 using Estudo.Infraestrutura.Bus.Ravendb.Consumidor;
+using Estudo.Infraestrutura.Bus.Ravendb.Testes.Entidades;
 using Estudo.Infraestrutura.Geral;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;

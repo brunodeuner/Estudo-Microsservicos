@@ -4,7 +4,7 @@ using Estudo.Infraestrutura.Geral;
 
 namespace Estudo.Clientes.Domínio.Especificações
 {
-    internal static class ValidaçãoDeCpf
+    public static class ValidaçãoDeCpf
     {
         public static bool ÉValido(this string cpf) => cpf.Preenchido() && new CPF(cpf).IsValid();
         public static string ObterSomenteOsNúmeros(this string cpf) => new CPF(cpf).SemMascara();
