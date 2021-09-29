@@ -1,12 +1,22 @@
 ﻿using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
+using Raven.Client.Documents;
+using System;
 
 namespace Estudo.Cobranças.Aplicação.Armazenamento.Consumidores
 {
-    internal class FabricaDoRavendbParaOConsumidor : FabricaDoRavendb
+    internal sealed class FabricaDoRavendbParaOConsumidor : IDisposable
     {
-        public FabricaDoRavendbParaOConsumidor(ConfiguraçãoDoRavendb configuraçãoDoRavendb) :
-            base(configuraçãoDoRavendb)
+        private FabricaDoRavendb fabricaDoRavendb;
+
+        public FabricaDoRavendbParaOConsumidor(FabricaDoRavendb fabricaDoRavendb) =>
+            this.fabricaDoRavendb = fabricaDoRavendb;
+
+        public IDocumentStore ObterDocumentStore() => fabricaDoRavendb.DocumentStore;
+
+        public void Dispose()
         {
+            fabricaDoRavendb?.Dispose();
+            fabricaDoRavendb = default;
         }
     }
 }

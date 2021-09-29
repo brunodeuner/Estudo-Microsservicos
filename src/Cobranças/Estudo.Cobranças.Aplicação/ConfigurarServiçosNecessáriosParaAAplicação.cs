@@ -1,6 +1,7 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores;
 using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Configurações;
 using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
 using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor;
 using Estudo.Core.Infraestrutura.Bus.Ravendb.Consumidor;
 using Microsoft.Extensions.Configuration;
@@ -20,9 +21,10 @@ namespace Estudo.Cobranças.Aplicação
             {
                 var configuraçãoDoRavendb = configuraçãoDaAplicaçãoDeCobranças
                     .ConfiguraçãoDoRavendbParaOConsumidorDeClientes;
-                serviços.AddSingleton(new FabricaDoRavendbParaOConsumidor(configuraçãoDoRavendb));
+                serviços.AddSingleton(new FabricaDoRavendbParaOConsumidor(
+                    new FabricaDoRavendb(configuraçãoDoRavendb)));
                 serviços.AddTransient<IConsumidor<Cliente>>(serviços => new ConsumidorDoRavendb<Cliente>(
-                    serviços.GetRequiredService<FabricaDoRavendbParaOConsumidor>().DocumentStore,
+                    serviços.GetRequiredService<FabricaDoRavendbParaOConsumidor>().ObterDocumentStore(),
                     configuraçãoDoRavendb));
             }
             serviços.AddTransient<ConsumidorDeClientes>();

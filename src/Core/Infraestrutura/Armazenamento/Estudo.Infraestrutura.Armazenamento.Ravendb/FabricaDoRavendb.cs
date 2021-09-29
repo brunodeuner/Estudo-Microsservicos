@@ -5,7 +5,7 @@ using System;
 
 namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb
 {
-    public class FabricaDoRavendb : IDisposable
+    public sealed class FabricaDoRavendb : IDisposable
     {
         private IDocumentStore documentStore;
 
