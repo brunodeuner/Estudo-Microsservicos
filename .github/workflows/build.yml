@@ -44,7 +44,7 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"brunodeuner_Estudo-Microsservicos" /o:"brunodeuner" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.coverageReportPaths=".\sonarqubecoverage\SonarQube.xml" /d:sonar.coverage.exclusions="testes\**"
-          dotnet build estudo.sln 
+          dotnet build estudo.sln /p:ValidateArchitecture=true
       - name: Test and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
