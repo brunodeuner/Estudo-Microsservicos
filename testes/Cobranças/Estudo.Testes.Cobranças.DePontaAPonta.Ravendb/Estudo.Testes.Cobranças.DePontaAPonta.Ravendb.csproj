@@ -32,6 +32,7 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\..\..\src\Cobranças\Estudo.Cobranças.Aplicação\Estudo.Cobranças.Aplicação.csproj" />
 	  <ProjectReference Include="..\..\..\src\Cobranças\Estudo.Cobranças.Serviço.Api\Estudo.Cobranças.Serviço.Api.csproj" />
+	  <ProjectReference Include="..\..\Core\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.csproj" />
 	  <ProjectReference Include="..\..\Core\Estudo.Testes.Core.Api\Estudo.Testes.Core.Api.csproj" />
 	</ItemGroup>
 

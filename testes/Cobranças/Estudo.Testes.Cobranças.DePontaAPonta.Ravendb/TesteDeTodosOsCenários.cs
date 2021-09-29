@@ -1,8 +1,14 @@
+using Estudo.Aplicação.Configurações;
+using Estudo.Cobranças.Aplicação.Armazenamento.Ravendb;
 using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
 using Estudo.Cobranças.Serviço.Api;
 using Estudo.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes;
+using Estudo.Infraestrutura.Geral;
 using Estudo.Testes.Core.Api;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Xunit;
@@ -19,10 +25,17 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
         [Fact]
         public async Task TestarTodosOsCenários()
         {
-            await AdicionarCliente();
+            var configuraçãoDoRavendb = ObterConfiguraçãoDoRavendb();
+            using var fabricaDoRavendb = new FabricaDoRavendb(configuraçãoDoRavendb);
+            await fabricaDoRavendb.DocumentStore.ExecutarTarefaEmUmNovoBancoDeDados(configuraçãoDoRavendb, async () =>
+            {
+                await fabricaDoRavendb.DocumentStore.Inicializar(fabricaDoRavendb.ConfiguraçãoDoRavendb, default);
 
-            var exceção = await Record.ExceptionAsync(() => ExecutarTodosOsCenários.Executar(testFixture));
-            Assert.Null(exceção);
+                await AdicionarCliente();
+
+                var exceção = await Record.ExceptionAsync(() => ExecutarTodosOsCenários.Executar(testFixture));
+                Assert.Null(exceção);
+            });
         }
 
         private async Task AdicionarCliente()
@@ -32,6 +45,14 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
             await repositórioDePessoa.Salvar(new Pessoa("27555728095", "Rio de Janeiro"), default);
             var dao = testFixture.ServiceProvider.GetRequiredService<IDao>();
             await dao.SalvarAlterações(default);
+        }
+
+        private static ConfiguraçãoDoRavendb ObterConfiguraçãoDoRavendb()
+        {
+            var configuração = Configuração.CriarConfiguraçãoLendoOAppsettings();
+            var configuraçãoDoRavendb = configuração.GetSection(nameof(ConfiguraçãoDaConexão))
+                .GetSection(nameof(ConfiguraçãoDoRavendb)).Get<ConfiguraçãoDoRavendb>();
+            return configuraçãoDoRavendb;
         }
     }
 }

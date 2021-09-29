@@ -15,8 +15,8 @@ namespace Estudo.Testes.Consumo.DePontaAPonta
         [Fact]
         public async Task CobrarTodosOsClientes_UmClienteCadastrado_CobrançaAdicionadaParaOCliente()
         {
-            await ExecutarTodosOsCenários.Executar(testFixture);
-            Assert.True(true);
+            var exceção = await Record.ExceptionAsync(() => ExecutarTodosOsCenários.Executar(testFixture));
+            Assert.Null(exceção);
         }
     }
 }
