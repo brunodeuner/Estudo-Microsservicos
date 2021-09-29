@@ -4,7 +4,7 @@
     <ProjectReference Include="..\Domínio\Estudo.Clientes.Domínio\Estudo.Clientes.Domínio.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="Armazenamento\Estudo.Clientes.Serviço.Api.pfx">
+    <None Update="Estudo.Clientes.Serviço.Api.pfx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

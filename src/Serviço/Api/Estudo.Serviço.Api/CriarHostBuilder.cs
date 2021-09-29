@@ -8,11 +8,12 @@ namespace Estudo.Serviço.Api
 {
     public static class CriarHostBuilder
     {
-        public static Task CriarERodar<TStartup>(CancellationToken cancellationToken = default)
-            where TStartup : class => CreateHostBuilder<TStartup>().Build().RunAsync(cancellationToken);
+        public static Task CriarERodar<TStartup>(string[] args = default,
+            CancellationToken cancellationToken = default) where TStartup : class =>
+            CreateHostBuilder<TStartup>(args).Build().RunAsync(cancellationToken);
 
-        private static IHostBuilder CreateHostBuilder<TStartup>() where TStartup : class =>
-            Host.CreateDefaultBuilder()
+        private static IHostBuilder CreateHostBuilder<TStartup>(string[] args) where TStartup : class =>
+            Host.CreateDefaultBuilder(args)
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<TStartup>());
     }

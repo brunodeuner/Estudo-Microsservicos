@@ -10,6 +10,6 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb
         public string CaminhoDoCertificado { get; set; }
         public TimeSpan? TempoDeDuraçãoDoCache { get; set; }
 
-        public X509Certificate2 ObterCertificado() => new X509Certificate2(CaminhoDoCertificado);
+        public X509Certificate2 ObterCertificado() => new(CaminhoDoCertificado);
     }
 }

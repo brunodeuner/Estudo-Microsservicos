@@ -5,6 +5,6 @@ namespace Estudo.Clientes.Serviço.Api
 {
     public static class Program
     {
-        public static async Task Main() => await CriarHostBuilder.CriarERodar<Startup>();
+        public static async Task Main(string[] args) => await CriarHostBuilder.CriarERodar<Startup>(args);
     }
 }

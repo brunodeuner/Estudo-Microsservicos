@@ -7,9 +7,9 @@ namespace Estudo.Cobranças.Serviço.Api
 {
     public static class Program
     {
-        public static async Task Main() => await CreateHostBuilder().Build().RunAsync(default);
+        public static async Task Main(string[] args) => await CreateHostBuilder(args).Build().RunAsync(default);
 
-        private static IHostBuilder CreateHostBuilder() => Host.CreateDefaultBuilder()
+        private static IHostBuilder CreateHostBuilder(string[] args) => Host.CreateDefaultBuilder(args)
             .UseContentRoot(Directory.GetCurrentDirectory())
             .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>());
     }
