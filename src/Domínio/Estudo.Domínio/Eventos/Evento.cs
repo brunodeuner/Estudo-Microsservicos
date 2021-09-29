@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Estudo.Domínio.Eventos
+namespace Estudo.Core.Domínio.Eventos
 {
     public class Evento : INotification { }
 }

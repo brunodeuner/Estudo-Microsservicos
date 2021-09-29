@@ -1,8 +1,8 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
 using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
-using Estudo.Infraestrutura.Armazenamento.Abstrações;
-using Estudo.Infraestrutura.Bus.Abstrações.Consumidor;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading;

@@ -1,7 +1,7 @@
 ﻿using Estudo.Clientes.Domínio.CasosDeUso.Manutenção.ManipuladoresDeComandos.Comandos.Validadores;
 using Estudo.Clientes.Domínio.Especificações;
-using Estudo.Domínio.Comandos;
-using Estudo.Domínio.Validadores;
+using Estudo.Core.Domínio.Comandos;
+using Estudo.Core.Domínio.Validadores;
 
 namespace Estudo.Clientes.Domínio.CasosDeUso.Manutenção.ManipuladoresDeComandos.Comandos
 {

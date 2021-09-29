@@ -1,4 +1,4 @@
-﻿namespace Estudo.Testes.Core.Api
+﻿namespace Estudo.Core.Api.Testes
 {
     public class TesteDeTodosOsCenários<TStartup> : TesteDeTodosOsCenáriosComFixturePersonalizado<
         TStartup, WebHostFixture<TStartup>> where TStartup : class

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Estudo.Testes.CálculoDeConsumo.Performance.Benchmarks
+namespace Estudo.CálculoDeConsumo.Testes.Performance.Benchmarks
 {
     [MemoryDiagnoser]
     public class TesteDePerformanceParaProcessamentoDeListaDeTarefas

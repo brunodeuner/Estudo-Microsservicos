@@ -1,8 +1,8 @@
-﻿using Estudo.Testes.Core.Http.Dtos;
+﻿using Estudo.Core.Http.Testes.Dtos;
 using System;
 using System.Net.Http;
 
-namespace Estudo.Testes.Core.Http
+namespace Estudo.Core.Http.Testes
 {
     public class ConfiguraçãoDosTestes
     {

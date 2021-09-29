@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace Estudo.Infraestrutura.Armazenamento.Abstrações
+namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações
 {
     public static class ExtensãoDeId
     {

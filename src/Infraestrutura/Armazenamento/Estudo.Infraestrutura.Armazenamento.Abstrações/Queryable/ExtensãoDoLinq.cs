@@ -1,9 +1,10 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable;
-using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 
-namespace System.Linq
+namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable
 {
     public static class ExtensãoDoLinq
     {

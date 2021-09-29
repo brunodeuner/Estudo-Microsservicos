@@ -1,5 +1,5 @@
 using Estudo.Clientes.Serviço.Api;
-using Estudo.Serviço.Api;
+using Estudo.Core.Serviço.Api;
 using System;
 using System.Threading;
 using System.Threading.Tasks;

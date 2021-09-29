@@ -1,7 +1,7 @@
 ﻿using Estudo.Clientes.Domínio.CasosDeUso.Manutenção.ManipuladoresDeComandos.Comandos;
 using Estudo.Clientes.Domínio.Entidades;
 using Estudo.Clientes.Domínio.Repositórios;
-using Estudo.Domínio.Validadores;
+using Estudo.Core.Domínio.Validadores;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;

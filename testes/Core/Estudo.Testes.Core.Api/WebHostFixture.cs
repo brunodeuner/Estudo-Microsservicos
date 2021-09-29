@@ -1,5 +1,5 @@
-﻿using Estudo.Infraestrutura.Geral;
-using Estudo.Testes.Core.Http.Variáveis;
+﻿using Estudo.Core.Http.Testes.Variáveis;
+using Estudo.Core.Infraestrutura.Geral;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Configuration;
@@ -8,7 +8,7 @@ using System;
 using System.IO;
 using System.Net.Http;
 
-namespace Estudo.Testes.Core.Api
+namespace Estudo.Core.Api.Testes
 {
     public class WebHostFixture<TStartup> : IDisposable where TStartup : class
     {

@@ -1,12 +1,12 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Abstrações;
-using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
 using Raven.Client.Documents.Session;
 using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Armazenamento.Ravendb
+namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb
 {
     public sealed partial class DaoRavendb : IDao, IDisposable
     {

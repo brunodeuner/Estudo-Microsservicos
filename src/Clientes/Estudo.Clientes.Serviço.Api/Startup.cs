@@ -1,4 +1,4 @@
-﻿using Estudo.Serviço.Api;
+﻿using Estudo.Core.Serviço.Api;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

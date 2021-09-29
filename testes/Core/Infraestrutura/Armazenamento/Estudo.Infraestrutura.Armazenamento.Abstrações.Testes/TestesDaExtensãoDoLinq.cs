@@ -1,6 +1,6 @@
-using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable;
-using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
-using Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.Dtos;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Testes.Dtos;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Testes
+namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Testes
 {
     public class TestesDaExtensãoDoLinq
     {

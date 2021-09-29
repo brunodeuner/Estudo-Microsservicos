@@ -1,4 +1,4 @@
-﻿namespace Estudo.Infraestrutura.Armazenamento.Abstrações
+﻿namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações
 {
     public interface IId
     {

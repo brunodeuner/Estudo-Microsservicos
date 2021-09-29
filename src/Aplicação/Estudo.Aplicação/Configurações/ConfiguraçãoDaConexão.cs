@@ -1,5 +1,5 @@
-﻿using Estudo.Infraestrutura.Armazenamento.HttpClient;
-using Estudo.Infraestrutura.Armazenamento.Ravendb;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.HttpClient;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
 using System;
 
 namespace Estudo.Aplicação.Configurações

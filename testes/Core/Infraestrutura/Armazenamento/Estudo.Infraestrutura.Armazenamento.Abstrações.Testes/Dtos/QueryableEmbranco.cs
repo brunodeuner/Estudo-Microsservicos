@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.Dtos
+namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Testes.Dtos
 {
     internal class QueryableEmbranco<T> : IOrderedQueryable<T>
     {

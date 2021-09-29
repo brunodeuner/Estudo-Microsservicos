@@ -1,6 +1,6 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Abstrações;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
 
-namespace Estudo.Domínio.Entidades
+namespace Estudo.Core.Domínio.Entidades
 {
     public class Entidade : IId
     {

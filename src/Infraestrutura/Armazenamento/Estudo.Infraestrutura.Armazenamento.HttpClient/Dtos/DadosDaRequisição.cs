@@ -1,7 +1,7 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Abstrações;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
 using System.Net.Http;
 
-namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Dtos
+namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Dtos
 {
     public struct DadosDaRequisição<T>
     {

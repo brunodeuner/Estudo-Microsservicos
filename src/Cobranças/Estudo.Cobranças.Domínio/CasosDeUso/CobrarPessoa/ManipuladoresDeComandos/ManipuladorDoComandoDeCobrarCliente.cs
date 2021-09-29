@@ -1,7 +1,7 @@
 ﻿using Estudo.Cobranças.Domínio.CasosDeUso.CobrarPessoa.ManipuladoresDeComandos.Comandos;
 using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
-using Estudo.Domínio.Validadores;
+using Estudo.Core.Domínio.Validadores;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;

@@ -1,8 +1,8 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Abstrações;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 
-namespace Estudo.Serviço.Api.Middlewares
+namespace Estudo.Core.Serviço.Api.Middlewares
 {
     internal class MiddlewareDaUnidadeDeTrabalho
     {

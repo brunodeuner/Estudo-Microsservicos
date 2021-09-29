@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Armazenamento.Abstrações
+namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações
 {
     public interface IDao
     {

@@ -1,10 +1,10 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace Estudo.Infraestrutura.Armazenamento.HttpClient
+namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient
 {
     public partial class DaoHttpClient : IToAsyncEnumerable
     {

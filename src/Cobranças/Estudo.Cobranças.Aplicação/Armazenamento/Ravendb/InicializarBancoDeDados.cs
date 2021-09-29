@@ -1,6 +1,6 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Ravendb.MapReduces;
 using Estudo.Cobranças.Aplicação.Armazenamento.Ravendb.Subscriptions;
-using Estudo.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
 using Raven.Client.Documents;
 using System.Threading;
 using System.Threading.Tasks;

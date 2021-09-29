@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Estudo.Infraestrutura.Armazenamento.HttpClient
+namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient
 {
     public class ConfiguraçãoDoDaoHttpClient
     {

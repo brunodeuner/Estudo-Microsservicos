@@ -1,6 +1,6 @@
 ﻿using Estudo.Cobranças.Domínio.Entidades;
-using Estudo.Infraestrutura.Armazenamento.Abstrações;
-using Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Repositório;
 using System.Threading;
 using System.Threading.Tasks;
 

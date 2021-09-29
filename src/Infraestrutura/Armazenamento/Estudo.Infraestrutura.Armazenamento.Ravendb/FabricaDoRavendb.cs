@@ -3,7 +3,7 @@ using Raven.Client.Documents.Conventions;
 using Raven.Client.Documents.Session;
 using System;
 
-namespace Estudo.Infraestrutura.Armazenamento.Ravendb
+namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb
 {
     public sealed class FabricaDoRavendb : IDisposable
     {

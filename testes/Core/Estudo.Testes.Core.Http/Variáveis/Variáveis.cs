@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Estudo.Testes.Core.Http.Variáveis
+namespace Estudo.Core.Http.Testes.Variáveis
 {
     public static class Variáveis
     {

@@ -1,4 +1,4 @@
-﻿using Estudo.Serviço.Api;
+﻿using Estudo.Core.Serviço.Api;
 using System.Threading.Tasks;
 
 namespace Estudo.CálculoDeConsumo.Serviço.Api

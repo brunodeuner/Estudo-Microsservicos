@@ -1,4 +1,4 @@
-﻿using Estudo.Domínio.Comandos;
+﻿using Estudo.Core.Domínio.Comandos;
 
 namespace Estudo.CálculoDeConsumo.Domínio.CasosDeUso.ManipuladoresDeComandos.Comandos
 {

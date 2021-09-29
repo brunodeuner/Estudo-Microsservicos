@@ -1,10 +1,10 @@
-using Estudo.Infraestrutura.Bus.Memória.Consumidor;
+using Estudo.Core.Infraestrutura.Bus.Memória.Consumidor;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Infraestrutura.Bus.Memória.Testes
+namespace Estudo.Core.Infraestrutura.Bus.Memória.Testes
 {
     public class TesteDoConsumidorEmMemória
     {

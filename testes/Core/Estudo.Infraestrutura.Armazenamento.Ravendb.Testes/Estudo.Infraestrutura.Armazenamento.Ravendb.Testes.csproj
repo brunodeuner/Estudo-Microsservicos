@@ -31,8 +31,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Infraestrutura.Armazenamento.Abstrações.csproj" />
-		<ProjectReference Include="..\..\..\src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Infraestrutura.Armazenamento.Ravendb.csproj" />
+		<ProjectReference Include="..\..\..\src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj" />
+		<ProjectReference Include="..\..\..\src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Core.Infraestrutura.Armazenamento.Ravendb.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

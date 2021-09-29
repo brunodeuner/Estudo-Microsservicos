@@ -1,8 +1,8 @@
-﻿using Estudo.Serviço.Api.Middlewares;
+﻿using Estudo.Core.Serviço.Api.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using System.Reflection;
 
-namespace Estudo.Serviço.Api
+namespace Estudo.Core.Serviço.Api
 {
     public static class ConfigurarAplicação
     {

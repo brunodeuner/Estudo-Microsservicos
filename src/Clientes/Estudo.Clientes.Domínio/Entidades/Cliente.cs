@@ -1,4 +1,4 @@
-﻿using Estudo.Domínio.Entidades;
+﻿using Estudo.Core.Domínio.Entidades;
 
 namespace Estudo.Clientes.Domínio.Entidades
 {

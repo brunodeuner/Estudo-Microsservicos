@@ -1,8 +1,8 @@
-﻿using Estudo.Infraestrutura.Bus.Abstrações.Consumidor.Dtos;
+﻿using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor.Dtos;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Bus.Abstrações.Consumidor
+namespace Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor
 {
     public interface IConsumidor<T>
     {

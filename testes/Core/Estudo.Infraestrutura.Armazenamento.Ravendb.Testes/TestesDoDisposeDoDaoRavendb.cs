@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes
+namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes
 {
     public class DisposeDoDaoEFabricaDoRavendb
     {

@@ -1,5 +1,5 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
-using Estudo.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
 using Raven.Client.Documents;
 using System.Collections.Generic;
 using System.Linq;

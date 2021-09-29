@@ -1,4 +1,4 @@
-﻿using Estudo.Domínio.Entidades;
+﻿using Estudo.Core.Domínio.Entidades;
 
 namespace Estudo.CálculoDeConsumo.Domínio.Entidades
 {

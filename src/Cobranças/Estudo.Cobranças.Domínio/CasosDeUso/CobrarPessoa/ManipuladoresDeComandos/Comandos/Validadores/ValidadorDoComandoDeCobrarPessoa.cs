@@ -1,4 +1,4 @@
-﻿using Estudo.Domínio.Validadores;
+﻿using Estudo.Core.Domínio.Validadores;
 using FluentValidation;
 
 namespace Estudo.Cobranças.Domínio.CasosDeUso.CobrarPessoa.ManipuladoresDeComandos.Comandos.Validadores

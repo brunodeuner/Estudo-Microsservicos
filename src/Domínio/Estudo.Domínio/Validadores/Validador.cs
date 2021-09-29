@@ -1,4 +1,4 @@
-﻿using Estudo.Domínio.Validação;
+﻿using Estudo.Core.Domínio.Validação;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Domínio.Validadores
+namespace Estudo.Core.Domínio.Validadores
 {
     public class Validador : IValidador
     {

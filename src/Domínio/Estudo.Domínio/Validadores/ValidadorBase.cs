@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Estudo.Domínio.Validadores
+namespace Estudo.Core.Domínio.Validadores
 {
     public abstract class ValidadorBase<T> : AbstractValidator<T> { }
 }

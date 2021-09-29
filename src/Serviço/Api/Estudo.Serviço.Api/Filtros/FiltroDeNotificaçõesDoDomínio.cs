@@ -1,11 +1,11 @@
-﻿using Estudo.Domínio.Validação;
-using Estudo.Infraestrutura.Geral;
+﻿using Estudo.Core.Domínio.Validação;
+using Estudo.Core.Infraestrutura.Geral;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Linq;
 using System.Net;
 
-namespace Estudo.Serviço.Api
+namespace Estudo.Core.Serviço.Api.Filtros
 {
     public class FiltroDeNotificaçõesDoDomínio : IActionFilter
     {

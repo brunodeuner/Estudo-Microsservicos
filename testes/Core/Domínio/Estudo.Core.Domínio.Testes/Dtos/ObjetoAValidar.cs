@@ -1,4 +1,4 @@
-﻿using Estudo.Domínio.Validadores;
+﻿using Estudo.Core.Domínio.Validadores;
 
 namespace Estudo.Core.Domínio.Testes.Dtos
 {

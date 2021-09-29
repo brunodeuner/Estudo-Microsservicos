@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Bus.Abstrações.Produtor
+namespace Estudo.Core.Infraestrutura.Bus.Abstrações.Produtor
 {
     public interface IProdutor
     {

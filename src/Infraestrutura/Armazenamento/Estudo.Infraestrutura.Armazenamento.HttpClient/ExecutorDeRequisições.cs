@@ -1,5 +1,5 @@
-﻿using Estudo.Infraestrutura.Armazenamento.HttpClient.Dtos;
-using Estudo.Infraestrutura.Geral;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Dtos;
+using Estudo.Core.Infraestrutura.Geral;
 using Newtonsoft.Json;
 using System;
 using System.IO;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Armazenamento.HttpClient
+namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient
 {
     public class ExecutorDeRequisições
     {

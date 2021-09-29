@@ -1,5 +1,5 @@
 ﻿using Estudo.Clientes.Domínio.Especificações;
-using Estudo.Domínio.Validadores;
+using Estudo.Core.Domínio.Validadores;
 using FluentValidation;
 
 namespace Estudo.Clientes.Domínio.CasosDeUso.Manutenção.ManipuladoresDeComandos.Comandos.Validadores

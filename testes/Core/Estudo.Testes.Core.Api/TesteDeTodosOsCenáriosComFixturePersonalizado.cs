@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Testes.Core.Api
+namespace Estudo.Core.Api.Testes
 {
     public class TesteDeTodosOsCenáriosComFixturePersonalizado<TStartup, TFixture> : IClassFixture<TFixture>
         where TStartup : class
@@ -14,7 +14,7 @@ namespace Estudo.Testes.Core.Api
         [Fact]
         public async Task TestarTodosOsCenários()
         {
-            var exceção = await Record.ExceptionAsync(() => ExecutarTodosOsCenários.Executar(testFixture));
+            var exceção = await Record.ExceptionAsync(() => testFixture.Executar());
             Assert.Null(exceção);
         }
     }

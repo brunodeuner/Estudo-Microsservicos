@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Estudo.Infraestrutura.Armazenamento.Ravendb
+namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb
 {
     public class ConfiguraçãoDoRavendb
     {

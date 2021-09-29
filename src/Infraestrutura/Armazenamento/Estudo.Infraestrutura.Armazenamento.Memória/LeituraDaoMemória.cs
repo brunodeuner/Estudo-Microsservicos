@@ -1,11 +1,11 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Armazenamento.Memória
+namespace Estudo.Core.Infraestrutura.Armazenamento.Memória
 {
     public sealed partial class DaoMemória : IToAsyncEnumerable
     {

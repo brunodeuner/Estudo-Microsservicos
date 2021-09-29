@@ -1,7 +1,7 @@
 ﻿using BenchmarkDotNet.Running;
-using Estudo.Testes.CálculoDeConsumo.Performance.Benchmarks;
+using Estudo.CálculoDeConsumo.Testes.Performance.Benchmarks;
 
-namespace Estudo.Testes.CálculoDeConsumo.Performance
+namespace Estudo.CálculoDeConsumo.Testes.Performance
 {
     internal static class Program
     {

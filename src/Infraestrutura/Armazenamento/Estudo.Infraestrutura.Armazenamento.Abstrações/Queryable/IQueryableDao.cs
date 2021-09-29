@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable
+namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable
 {
     public interface IQueryableDao<out T> : IOrderedQueryable<T>
     {

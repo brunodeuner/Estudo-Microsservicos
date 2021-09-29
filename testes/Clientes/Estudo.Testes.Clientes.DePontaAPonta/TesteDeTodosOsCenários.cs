@@ -1,5 +1,5 @@
 ﻿using Estudo.Clientes.Serviço.Api;
-using Estudo.Testes.Core.Api;
+using Estudo.Core.Api.Testes;
 
 namespace Estudo.Testes.Clientes.DePontaAPonta
 {

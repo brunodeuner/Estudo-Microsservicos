@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório
+namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Repositório
 {
     public class Repositório<T> : IRepositório<T> where T : class, new()
     {

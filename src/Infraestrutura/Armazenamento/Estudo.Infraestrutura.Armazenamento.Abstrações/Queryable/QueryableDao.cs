@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable
+namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable
 {
     public class QueryableDao<T> : IQueryableDao<T>
     {

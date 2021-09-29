@@ -1,13 +1,12 @@
 using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
-using Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados;
-using Estudo.Infraestrutura.Armazenamento.Ravendb;
-using Estudo.Infraestrutura.Geral;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Core.Infraestrutura.Geral;
 using Microsoft.Extensions.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Cobranças.Aplicação.Testes
+namespace Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes
 {
     public class TesteDeInicializaçãoDoBancoDeDados
     {

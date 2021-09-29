@@ -5,4 +5,4 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("CodeQuality", "IDE0052:Remove unread private members", Justification = "<Pending>", Scope = "member", Target = "~F:Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.Dtos.ObjetoDeTesteComIdSomenteGravação.id")]
+[assembly: SuppressMessage("CodeQuality", "IDE0052:Remove unread private members", Justification = "<Pending>", Scope = "member", Target = "~F:Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Testes.Dtos.ObjetoDeTesteComIdSomenteGravação.id")]

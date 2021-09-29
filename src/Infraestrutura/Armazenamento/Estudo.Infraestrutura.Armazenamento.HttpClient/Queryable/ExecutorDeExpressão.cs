@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Queryable
+namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Queryable
 {
     public class ExecutorExpressao
     {

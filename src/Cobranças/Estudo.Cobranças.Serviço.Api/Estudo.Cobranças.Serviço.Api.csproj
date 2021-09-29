@@ -3,8 +3,8 @@
     <PackageReference Include="MediatR" Version="9.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb\Estudo.Infraestrutura.Bus.Ravendb.csproj" />
-    <ProjectReference Include="..\..\Serviço\Api\Estudo.Serviço.Api\Estudo.Serviço.Api.csproj" />
+    <ProjectReference Include="..\..\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb\Estudo.Core.Infraestrutura.Bus.Ravendb.csproj" />
+    <ProjectReference Include="..\..\Serviço\Api\Estudo.Serviço.Api\Estudo.Core.Serviço.Api.csproj" />
     <ProjectReference Include="..\Estudo.Cobranças.Aplicação\Estudo.Cobranças.Aplicação.csproj" />
     <ProjectReference Include="..\Estudo.Cobranças.Domínio\Estudo.Cobranças.Domínio.csproj" />
   </ItemGroup>

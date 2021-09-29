@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Estudo.Infraestrutura.Bus.Abstrações
+namespace Estudo.Core.Infraestrutura.Bus.Abstrações
 {
     public class EventoEventArgs<T> : EventArgs
     {

@@ -1,6 +1,6 @@
-﻿using Estudo.Testes.Core.Http.Arquivos;
-using Estudo.Testes.Core.Http.Dtos;
-using Estudo.Testes.Core.Http.Variáveis;
+﻿using Estudo.Core.Http.Testes.Arquivos;
+using Estudo.Core.Http.Testes.Dtos;
+using Estudo.Core.Http.Testes.Variáveis;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -12,7 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Testes.Core.Http
+namespace Estudo.Core.Http.Testes
 {
     public static class ExecutorDeTestes
     {

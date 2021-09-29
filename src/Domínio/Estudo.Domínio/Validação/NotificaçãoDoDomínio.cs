@@ -1,7 +1,7 @@
-﻿using Estudo.Domínio.Eventos;
+﻿using Estudo.Core.Domínio.Eventos;
 using FluentValidation.Results;
 
-namespace Estudo.Domínio.Validação
+namespace Estudo.Core.Domínio.Validação
 {
     public class NotificaçãoDoDomínio : Evento
     {

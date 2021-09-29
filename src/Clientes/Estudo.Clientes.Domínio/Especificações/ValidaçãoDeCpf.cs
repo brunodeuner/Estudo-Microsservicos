@@ -1,6 +1,6 @@
 ﻿using DocsBr;
 using Estudo.Clientes.Domínio.Entidades;
-using Estudo.Infraestrutura.Geral;
+using Estudo.Core.Infraestrutura.Geral;
 
 namespace Estudo.Clientes.Domínio.Especificações
 {

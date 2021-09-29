@@ -1,8 +1,9 @@
 ﻿using Estudo.Cobranças.Domínio.Entidades;
-using Estudo.Domínio.Validação;
-using Estudo.Infraestrutura.Armazenamento.Abstrações;
-using Estudo.Infraestrutura.Armazenamento.Abstrações.Repositório;
-using Estudo.Infraestrutura.Geral;
+using Estudo.Core.Domínio.Validação;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Repositório;
+using Estudo.Core.Infraestrutura.Geral;
 using MediatR;
 using System.Collections.Generic;
 using System.Linq;

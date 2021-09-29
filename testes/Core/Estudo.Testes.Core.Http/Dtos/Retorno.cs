@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Estudo.Testes.Core.Http.Dtos
+namespace Estudo.Core.Http.Testes.Dtos
 {
     public class Retorno
     {

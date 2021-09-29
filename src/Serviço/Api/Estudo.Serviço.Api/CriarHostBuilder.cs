@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Serviço.Api
+namespace Estudo.Core.Serviço.Api
 {
     public static class CriarHostBuilder
     {

@@ -1,6 +1,6 @@
 ﻿using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
-using Estudo.Domínio.Validadores;
+using Estudo.Core.Domínio.Validadores;
 using FluentValidation;
 using System;
 using System.Threading;

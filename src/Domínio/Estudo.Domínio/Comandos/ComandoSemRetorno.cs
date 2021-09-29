@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Estudo.Domínio.Comandos
+namespace Estudo.Core.Domínio.Comandos
 {
     public class ComandoSemRetorno : IRequest { }
 }

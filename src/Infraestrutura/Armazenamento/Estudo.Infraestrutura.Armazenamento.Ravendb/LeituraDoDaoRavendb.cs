@@ -1,4 +1,4 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura;
 using Raven.Client.Documents.Linq;
 using Raven.Client.Documents.Session;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace Estudo.Infraestrutura.Armazenamento.Ravendb
+namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb
 {
     public partial class DaoRavendb : IToAsyncEnumerable
     {

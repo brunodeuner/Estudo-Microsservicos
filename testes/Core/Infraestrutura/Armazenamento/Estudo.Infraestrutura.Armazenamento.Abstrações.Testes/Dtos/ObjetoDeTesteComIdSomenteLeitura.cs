@@ -1,4 +1,4 @@
-﻿namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.Dtos
+﻿namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Testes.Dtos
 {
     internal class ObjetoDeTesteComIdSomenteLeitura
     {

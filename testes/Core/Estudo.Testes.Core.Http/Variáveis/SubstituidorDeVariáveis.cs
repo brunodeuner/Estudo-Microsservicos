@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Estudo.Testes.Core.Http.Variáveis
+namespace Estudo.Core.Http.Testes.Variáveis
 {
     internal static class SubstituidorDeVariáveis
     {
@@ -14,7 +14,7 @@ namespace Estudo.Testes.Core.Http.Variáveis
         public const string IdentificadorAtribuidorVariávelFinal = "]]";
 
         public static string SubstituirVariável(this string texto) =>
-            SubstituirVariávelInterno(texto, IdentificadorVariávelSemAspasInicio, IdentificadorVariávelSemAspasFinal,
+            texto.SubstituirVariávelInterno(IdentificadorVariávelSemAspasInicio, IdentificadorVariávelSemAspasFinal,
                 true).SubstituirVariávelInterno(IdentificadorVariávelInicial, IdentificadorVariávelFinal, false);
 
         private static string SubstituirVariávelInterno(this string texto, string textoInicialVariável, string textoFinalVariável,

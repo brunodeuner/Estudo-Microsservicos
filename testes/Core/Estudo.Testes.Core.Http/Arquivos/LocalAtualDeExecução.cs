@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 
-namespace Estudo.Testes.Core.Http.Arquivos
+namespace Estudo.Core.Http.Testes.Arquivos
 {
     internal static class LocalAtualDeExecução
     {

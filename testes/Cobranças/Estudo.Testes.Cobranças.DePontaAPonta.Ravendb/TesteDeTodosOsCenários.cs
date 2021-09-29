@@ -3,17 +3,17 @@ using Estudo.Cobranças.Aplicação.Armazenamento.Ravendb;
 using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
 using Estudo.Cobranças.Serviço.Api;
-using Estudo.Infraestrutura.Armazenamento.Abstrações;
-using Estudo.Infraestrutura.Armazenamento.Ravendb;
-using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes;
-using Estudo.Infraestrutura.Geral;
-using Estudo.Testes.Core.Api;
+using Estudo.Core.Api.Testes;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes;
+using Estudo.Core.Infraestrutura.Geral;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Testes.Cobranças.DePontaAPonta
+namespace Estudo.Cobranças.Testes.DePontaAPonta.Ravendb
 {
     public class TesteDeTodosOsCenários : IClassFixture<WebHostFixture<Startup>>
     {
@@ -33,7 +33,7 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
 
                 await AdicionarCliente();
 
-                var exceção = await Record.ExceptionAsync(() => ExecutarTodosOsCenários.Executar(testFixture));
+                var exceção = await Record.ExceptionAsync(() => testFixture.Executar());
                 Assert.Null(exceção);
             });
         }

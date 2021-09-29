@@ -1,10 +1,10 @@
-﻿using Estudo.Infraestrutura.Bus.Abstrações;
-using Estudo.Infraestrutura.Bus.Abstrações.Produtor;
-using Estudo.Infraestrutura.Bus.Memória.Consumidor;
+﻿using Estudo.Core.Infraestrutura.Bus.Abstrações;
+using Estudo.Core.Infraestrutura.Bus.Abstrações.Produtor;
+using Estudo.Core.Infraestrutura.Bus.Memória.Consumidor;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Bus.Memória.Produtor
+namespace Estudo.Core.Infraestrutura.Bus.Memória.Produtor
 {
     public class ProdutorEmMemória : IProdutor
     {

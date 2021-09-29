@@ -1,8 +1,8 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores;
 using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Configurações;
 using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
-using Estudo.Infraestrutura.Bus.Abstrações.Consumidor;
-using Estudo.Infraestrutura.Bus.Ravendb.Consumidor;
+using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor;
+using Estudo.Core.Infraestrutura.Bus.Ravendb.Consumidor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

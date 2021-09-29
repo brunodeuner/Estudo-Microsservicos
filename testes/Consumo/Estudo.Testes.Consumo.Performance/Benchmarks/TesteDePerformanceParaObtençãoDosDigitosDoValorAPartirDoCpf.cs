@@ -1,6 +1,6 @@
 ﻿using BenchmarkDotNet.Attributes;
 
-namespace Estudo.Testes.CálculoDeConsumo.Performance.Benchmarks
+namespace Estudo.CálculoDeConsumo.Testes.Performance.Benchmarks
 {
     [MemoryDiagnoser]
     public class TesteDePerformanceParaObtençãoDosDigitosDoValorAPartirDoCpf

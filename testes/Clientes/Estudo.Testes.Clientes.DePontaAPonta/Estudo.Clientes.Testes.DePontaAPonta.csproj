@@ -31,7 +31,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Clientes\Estudo.Clientes.Serviço.Api\Estudo.Clientes.Serviço.Api.csproj" />
-    <ProjectReference Include="..\..\Core\Estudo.Testes.Core.Api\Estudo.Testes.Core.Api.csproj" />
+    <ProjectReference Include="..\..\Core\Estudo.Testes.Core.Api\Estudo.Core.Api.Testes.csproj" />
   </ItemGroup>
 
   <ItemGroup>

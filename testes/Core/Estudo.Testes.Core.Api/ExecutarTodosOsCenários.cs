@@ -1,7 +1,7 @@
-﻿using Estudo.Testes.Core.Http;
+﻿using Estudo.Core.Http.Testes;
 using System.Threading.Tasks;
 
-namespace Estudo.Testes.Core.Api
+namespace Estudo.Core.Api.Testes
 {
     public static class ExecutarTodosOsCenários
     {

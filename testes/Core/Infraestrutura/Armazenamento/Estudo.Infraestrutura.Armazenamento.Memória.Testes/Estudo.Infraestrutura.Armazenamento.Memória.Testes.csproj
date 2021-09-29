@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória\Estudo.Infraestrutura.Armazenamento.Memória.csproj" />
+    <ProjectReference Include="..\..\..\..\..\src\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória\Estudo.Core.Infraestrutura.Armazenamento.Memória.csproj" />
   </ItemGroup>
 
 </Project>

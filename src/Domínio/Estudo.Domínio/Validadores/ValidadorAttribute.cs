@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Estudo.Domínio.Validadores
+namespace Estudo.Core.Domínio.Validadores
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class ValidadorAttribute : Attribute

@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace Estudo.Domínio.Validação
+namespace Estudo.Core.Domínio.Validação
 {
     public class NotificaçõesDoDomínio : INotificaçõesDoDomínio
     {

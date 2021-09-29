@@ -1,4 +1,4 @@
-﻿using Estudo.Domínio.Entidades;
+﻿using Estudo.Core.Domínio.Entidades;
 using System;
 
 namespace Estudo.Cobranças.Domínio.Entidades

@@ -1,12 +1,12 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.Entidades;
-using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.Fabricas;
-using Estudo.Infraestrutura.Geral;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes.Entidades;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes.Fabricas;
+using Estudo.Core.Infraestrutura.Geral;
 using Microsoft.Extensions.Configuration;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes
+namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes
 {
     public class TestesDaLeituraDoDaoRavendb
     {

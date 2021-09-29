@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Domínio.Validação
+namespace Estudo.Core.Domínio.Validação
 {
     public class ManipuladorDeNotificaçõesDoDomínio : INotificationHandler<NotificaçãoDoDomínio>
     {

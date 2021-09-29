@@ -1,5 +1,5 @@
 using Estudo.Core.Domínio.Testes.Dtos;
-using Estudo.Domínio.Validadores;
+using Estudo.Core.Domínio.Validadores;
 using System;
 using System.Threading.Tasks;
 using Xunit;

@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Domínio.Validadores
+namespace Estudo.Core.Domínio.Validadores
 {
     public interface IValidador
     {

@@ -1,8 +1,9 @@
 ﻿using Estudo.Aplicação;
+using Estudo.Core.Serviço.Api.Filtros;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Estudo.Serviço.Api
+namespace Estudo.Core.Serviço.Api
 {
     public static class ConfigurarServiços
     {

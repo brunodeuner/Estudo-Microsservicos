@@ -1,6 +1,6 @@
 ﻿using Estudo.Clientes.Domínio.Especificações;
 using Estudo.Clientes.Domínio.Repositórios;
-using Estudo.Domínio.Validadores;
+using Estudo.Core.Domínio.Validadores;
 using FluentValidation;
 using System;
 using System.Threading;

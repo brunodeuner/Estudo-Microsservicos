@@ -1,14 +1,15 @@
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
 using RichardSzalay.MockHttp;
 using RichardSzalay.MockHttp.Matchers;
 using System;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Mime;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
+namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Testes
 {
     public class TestesDaLeituraDosDadosPeloIdNoDaoHttpClient
     {
@@ -99,7 +100,7 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
             return dao.ObterPeloId<EntidadeDeTeste>(id, default);
         }
 
-        private static Abstrações.IDao ObterDao(System.Net.Http.HttpClient httpClient)
+        private static IDao ObterDao(System.Net.Http.HttpClient httpClient)
         {
             var configuraçãoDoDaoHttpClient = new ConfiguraçãoDoDaoHttpClient()
             {

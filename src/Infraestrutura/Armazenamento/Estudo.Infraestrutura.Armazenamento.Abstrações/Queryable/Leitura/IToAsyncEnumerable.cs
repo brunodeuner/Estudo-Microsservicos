@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading;
 
-namespace Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura
+namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable.Leitura
 {
     public interface IToAsyncEnumerable
     {

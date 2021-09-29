@@ -1,6 +1,6 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Ravendb;
-using Estudo.Infraestrutura.Armazenamento.Ravendb;
-using Estudo.Infraestrutura.Geral;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Core.Infraestrutura.Geral;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 

@@ -1,11 +1,10 @@
-using Estudo.CálculoDeConsumo.Serviço.Api;
-using Estudo.Serviço.Api;
+using Estudo.Core.Serviço.Api;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Testes.CálculoDeConsumo.Serviço.Api
+namespace Estudo.CálculoDeConsumo.Serviço.Api.Testes
 {
     public class TesteParaVerificarSeAApiEstáIniciandoSemNenhumExceção
     {

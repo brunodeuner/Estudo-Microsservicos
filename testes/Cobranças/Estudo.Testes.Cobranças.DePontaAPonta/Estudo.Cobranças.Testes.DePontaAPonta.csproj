@@ -1,8 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -20,7 +18,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
-    <PackageReference Include="RichardSzalay.MockHttp" Version="6.0.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -33,12 +30,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\CálculoDeConsumo\Estudo.CálculoDeConsumo.Serviço.Api\Estudo.CálculoDeConsumo.Serviço.Api.csproj" />
-    <ProjectReference Include="..\..\Core\Estudo.Testes.Core.Api\Estudo.Testes.Core.Api.csproj" />
+    <ProjectReference Include="..\..\..\src\Cobranças\Estudo.Cobranças.Serviço.Api\Estudo.Cobranças.Serviço.Api.csproj" />
+    <ProjectReference Include="..\..\Core\Estudo.Testes.Core.Api\Estudo.Core.Api.Testes.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Testes\1-CobrarTodosOsClientes\1-CobrarTodosOsClientesComSucesso.json">
+    <None Update="Testes\1-Manutenção\1-Adicionar\1-AdicionarCobrançaSemInformarNenhumCampo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Testes\1-Manutenção\2-Leitura\1-LerSemInformarCpfEMês.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Testes\1-Manutenção\1-Adicionar\1-AdicionarCobrançaComSucesso.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

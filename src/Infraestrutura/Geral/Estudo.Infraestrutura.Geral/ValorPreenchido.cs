@@ -1,4 +1,4 @@
-﻿namespace Estudo.Infraestrutura.Geral
+﻿namespace Estudo.Core.Infraestrutura.Geral
 {
     public static class ValorPreenchido
     {

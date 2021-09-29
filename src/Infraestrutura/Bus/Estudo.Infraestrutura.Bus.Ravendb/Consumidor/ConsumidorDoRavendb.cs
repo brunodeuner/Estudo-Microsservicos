@@ -1,7 +1,7 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Ravendb;
-using Estudo.Infraestrutura.Bus.Abstrações;
-using Estudo.Infraestrutura.Bus.Abstrações.Consumidor;
-using Estudo.Infraestrutura.Bus.Abstrações.Consumidor.Dtos;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Core.Infraestrutura.Bus.Abstrações;
+using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor;
+using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor.Dtos;
 using Raven.Client.Documents;
 using Raven.Client.Documents.Subscriptions;
 using Raven.Client.Exceptions.Documents.Subscriptions;
@@ -9,7 +9,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Bus.Ravendb.Consumidor
+namespace Estudo.Core.Infraestrutura.Bus.Ravendb.Consumidor
 {
     public class ConsumidorDoRavendb<T> : IConsumidor<T> where T : class, new()
     {

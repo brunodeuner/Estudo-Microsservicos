@@ -1,7 +1,7 @@
 using Estudo.CálculoDeConsumo.Serviço.Api;
-using Estudo.Testes.Core.Api;
+using Estudo.Core.Api.Testes;
 
-namespace Estudo.Testes.CálculoDeConsumo.DePontaAPonta
+namespace Estudo.CálculoDeConsumo.Testes.DePontaAPonta
 {
     public class TesteDeTodosOsCenários : TesteDeTodosOsCenáriosComFixturePersonalizado<
         Startup, WebHostFixtureInjetandoMockDeHttpClient>

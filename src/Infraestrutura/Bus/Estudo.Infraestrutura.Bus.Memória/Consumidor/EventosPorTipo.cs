@@ -1,7 +1,7 @@
-﻿using Estudo.Infraestrutura.Bus.Abstrações;
+﻿using Estudo.Core.Infraestrutura.Bus.Abstrações;
 using System.Collections.Concurrent;
 
-namespace Estudo.Infraestrutura.Bus.Memória.Consumidor
+namespace Estudo.Core.Infraestrutura.Bus.Memória.Consumidor
 {
     public class EventosPorTipo
     {

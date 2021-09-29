@@ -1,10 +1,10 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
 using Estudo.Cobranças.Serviço.Api;
-using Estudo.Infraestrutura.Bus.Abstrações.Consumidor;
-using Estudo.Infraestrutura.Bus.Abstrações.Produtor;
-using Estudo.Infraestrutura.Bus.Memória.Consumidor;
-using Estudo.Infraestrutura.Bus.Memória.Produtor;
-using Estudo.Testes.Core.Api;
+using Estudo.Core.Api.Testes;
+using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor;
+using Estudo.Core.Infraestrutura.Bus.Abstrações.Produtor;
+using Estudo.Core.Infraestrutura.Bus.Memória.Consumidor;
+using Estudo.Core.Infraestrutura.Bus.Memória.Produtor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

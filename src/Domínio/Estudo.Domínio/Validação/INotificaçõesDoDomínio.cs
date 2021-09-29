@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Estudo.Domínio.Validação
+namespace Estudo.Core.Domínio.Validação
 {
     public interface INotificaçõesDoDomínio
     {

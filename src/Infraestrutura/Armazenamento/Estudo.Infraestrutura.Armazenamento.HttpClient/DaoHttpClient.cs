@@ -1,14 +1,14 @@
-﻿using Estudo.Infraestrutura.Armazenamento.Abstrações;
-using Estudo.Infraestrutura.Armazenamento.Abstrações.Queryable;
-using Estudo.Infraestrutura.Armazenamento.HttpClient.Dtos;
-using Estudo.Infraestrutura.Armazenamento.HttpClient.Queryable;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
+using Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Dtos;
+using Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Queryable;
 using System;
 using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Armazenamento.HttpClient
+namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient
 {
     public sealed partial class DaoHttpClient : IDao
     {

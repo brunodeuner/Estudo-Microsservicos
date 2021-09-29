@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Queryable
+namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Queryable
 {
     public class TradutorOData : ExpressionVisitor
     {

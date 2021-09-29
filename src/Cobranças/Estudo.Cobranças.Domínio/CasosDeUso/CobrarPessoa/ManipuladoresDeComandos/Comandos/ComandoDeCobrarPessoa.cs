@@ -1,6 +1,6 @@
 ﻿using Estudo.Cobranças.Domínio.CasosDeUso.CobrarPessoa.ManipuladoresDeComandos.Comandos.Validadores;
-using Estudo.Domínio.Comandos;
-using Estudo.Domínio.Validadores;
+using Estudo.Core.Domínio.Comandos;
+using Estudo.Core.Domínio.Validadores;
 using System;
 
 namespace Estudo.Cobranças.Domínio.CasosDeUso.CobrarPessoa.ManipuladoresDeComandos.Comandos

@@ -1,6 +1,6 @@
 ﻿using Estudo.Cobranças.Aplicação;
 using Estudo.Cobranças.Serviço.Api.Consumidores;
-using Estudo.Serviço.Api;
+using Estudo.Core.Serviço.Api;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
