@@ -1,0 +1,20 @@
+﻿{
+  "Nome": "Adicionar cobrança sem informar nenhum campo",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças/",
+        "Método": "Post",
+        "Corpo": {}
+      },
+      "Retorno": {
+        "Status": "BadRequest",
+        "Corpo": [
+          "'Cpf' deve ser informado.",
+          "'Data De Vencimento' deve ser informado.",
+          "'Valor' deve ser informado."
+        ]
+      }
+    }
+  ]
+}

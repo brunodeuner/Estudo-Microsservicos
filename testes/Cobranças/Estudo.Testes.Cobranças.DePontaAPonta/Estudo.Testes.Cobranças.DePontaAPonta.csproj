@@ -35,6 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Testes\1-Manutenção\1-Adicionar\1-AdicionarCobrançaSemInformarNenhumCampo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Testes\1-Manutenção\2-Leitura\1-LerSemInformarCpfEMês.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
