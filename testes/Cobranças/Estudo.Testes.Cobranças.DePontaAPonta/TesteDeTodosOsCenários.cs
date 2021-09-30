@@ -1,26 +1,26 @@
-using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
+ï»¿using Estudo.CobranÃ§as.AplicaÃ§Ã£o.Armazenamento.Consumidores.Eventos;
 using Estudo.Core.Api.Testes;
-using Estudo.Core.Infraestrutura.Bus.Abstrações;
-using Estudo.Core.Infraestrutura.Bus.Abstrações.Produtor;
+using Estudo.Core.Infraestrutura.Bus.AbstraÃ§Ãµes;
+using Estudo.Core.Infraestrutura.Bus.AbstraÃ§Ãµes.Produtor;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Cobranças.Testes.DePontaAPonta
+namespace Estudo.CobranÃ§as.Testes.DePontaAPonta
 {
-    public class TesteDeTodosOsCenários : IClassFixture<WebHostFixtureInjetandoConsumidorEmMemória>
+    public class TesteDeTodosOsCenÃ¡rios : IClassFixture<WebHostFixtureInjetandoConsumidorEmMemÃ³ria>
     {
-        private readonly WebHostFixtureInjetandoConsumidorEmMemória testFixture;
+        private readonly WebHostFixtureInjetandoConsumidorEmMemÃ³ria testFixture;
 
-        public TesteDeTodosOsCenários(WebHostFixtureInjetandoConsumidorEmMemória testFixture) =>
+        public TesteDeTodosOsCenÃ¡rios(WebHostFixtureInjetandoConsumidorEmMemÃ³ria testFixture) =>
             this.testFixture = testFixture;
 
         [Fact]
-        public async Task TestarTodosOsCenários()
+        public async Task TestarTodosOsCenÃ¡rios()
         {
             await AdicionarCliente();
-            var exceção = await Record.ExceptionAsync(() => testFixture.Executar());
-            Assert.Null(exceção);
+            var exceÃ§Ã£o = await Record.ExceptionAsync(() => testFixture.Executar());
+            Assert.Null(exceÃ§Ã£o);
         }
 
         private Task AdicionarCliente()

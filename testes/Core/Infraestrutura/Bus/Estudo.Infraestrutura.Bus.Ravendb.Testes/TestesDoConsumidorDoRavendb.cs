@@ -1,4 +1,4 @@
-using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
+ï»¿using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
 using Estudo.Core.Infraestrutura.Bus.Ravendb.Consumidor;
 using Estudo.Core.Infraestrutura.Geral;
 using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes;
@@ -14,11 +14,11 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Testes
         [Fact]
         public async Task Consumidor_ConsumirComSucesso_ConsumidorPara()
         {
-            var configuraçãoDoRavendb = ObterConfiguraçãoDoRavendb();
-            using var fabricaDoRavendb = new FabricaDoRavendb(configuraçãoDoRavendb);
-            await fabricaDoRavendb.DocumentStore.ExecutarTarefaEmUmNovoBancoDeDados(configuraçãoDoRavendb, async () =>
+            var configuraÃ§Ã£oDoRavendb = ObterConfiguraÃ§Ã£oDoRavendb();
+            using var fabricaDoRavendb = new FabricaDoRavendb(configuraÃ§Ã£oDoRavendb);
+            await fabricaDoRavendb.DocumentStore.ExecutarTarefaEmUmNovoBancoDeDados(configuraÃ§Ã£oDoRavendb, async () =>
                 {
-                    await fabricaDoRavendb.DocumentStore.CriarSubscriptionParaEntidadeDeTeste(configuraçãoDoRavendb,
+                    await fabricaDoRavendb.DocumentStore.CriarSubscriptionParaEntidadeDeTeste(configuraÃ§Ã£oDoRavendb,
                         default);
                     try
                     {
@@ -26,14 +26,14 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Testes
                         var entidadeDeTeste = await AdicionarEntidadeDeTeste(daoRavendb);
 
                         var consumidor = new ConsumidorDoRavendb<EntidadeDeTeste>(
-                            fabricaDoRavendb.DocumentStore, configuraçãoDoRavendb, true);
+                            fabricaDoRavendb.DocumentStore, configuraÃ§Ã£oDoRavendb, true);
 
                         var eventosConsumidos = 0;
 
                         consumidor.Consumir += (argumentos, cancellationToken) =>
                         {
                             Assert.Equal(entidadeDeTeste.Id, argumentos.Corpo.Id);
-                            Assert.Equal(entidadeDeTeste.Descrição, argumentos.Corpo.Descrição);
+                            Assert.Equal(entidadeDeTeste.DescriÃ§Ã£o, argumentos.Corpo.DescriÃ§Ã£o);
                             eventosConsumidos++;
                             return Task.CompletedTask;
                         };
@@ -48,22 +48,22 @@ namespace Estudo.Infraestrutura.Bus.Ravendb.Testes
                 });
         }
 
-        private static ConfiguraçãoDoRavendb ObterConfiguraçãoDoRavendb()
+        private static ConfiguraÃ§Ã£oDoRavendb ObterConfiguraÃ§Ã£oDoRavendb()
         {
-            var configuração = Configuração.CriarConfiguraçãoLendoOAppsettings();
-            var configuraçãoDoRavendb = configuração.GetSection(nameof(ConfiguraçãoDoRavendb))
-                .Get<ConfiguraçãoDoRavendb>();
-            return configuraçãoDoRavendb;
+            var configuraÃ§Ã£o = ConfiguraÃ§Ã£o.CriarConfiguraÃ§Ã£oLendoOAppsettings();
+            var configuraÃ§Ã£oDoRavendb = configuraÃ§Ã£o.GetSection(nameof(ConfiguraÃ§Ã£oDoRavendb))
+                .Get<ConfiguraÃ§Ã£oDoRavendb>();
+            return configuraÃ§Ã£oDoRavendb;
         }
 
         private static async Task<EntidadeDeTeste> AdicionarEntidadeDeTeste(DaoRavendb daoRavendb)
         {
             var entidadeDeTeste = new EntidadeDeTeste()
             {
-                Descrição = "Teste",
+                DescriÃ§Ã£o = "Teste",
             };
             await daoRavendb.Salvar(entidadeDeTeste, default);
-            await daoRavendb.SalvarAlterações(default);
+            await daoRavendb.SalvarAlteraÃ§Ãµes(default);
             return entidadeDeTeste;
         }
     }

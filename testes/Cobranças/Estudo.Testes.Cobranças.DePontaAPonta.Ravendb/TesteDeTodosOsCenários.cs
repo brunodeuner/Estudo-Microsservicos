@@ -1,10 +1,10 @@
-using Estudo.CobranÁas.AplicaÁ„o.Armazenamento.Ravendb.MapReduces;
-using Estudo.CobranÁas.DomÌnio.Entidades;
-using Estudo.CobranÁas.DomÌnio.RepositÛrios;
-using Estudo.CobranÁas.ServiÁo.Api;
+Ôªøusing Estudo.Cobran√ßas.Aplica√ß√£o.Armazenamento.Ravendb.MapReduces;
+using Estudo.Cobran√ßas.Dom√≠nio.Entidades;
+using Estudo.Cobran√ßas.Dom√≠nio.Reposit√≥rios;
+using Estudo.Cobran√ßas.Servi√ßo.Api;
 using Estudo.Core.Api.Testes;
-using Estudo.Core.AplicaÁ„o.ConfiguraÁıes;
-using Estudo.Core.Infraestrutura.Armazenamento.AbstraÁıes;
+using Estudo.Core.Aplica√ß√£o.Configura√ß√µes;
+using Estudo.Core.Infraestrutura.Armazenamento.Abstra√ß√µes;
 using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
 using Estudo.Core.Infraestrutura.Geral;
 using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes;
@@ -13,44 +13,44 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.CobranÁas.Testes.DePontaAPonta.Ravendb
+namespace Estudo.Cobran√ßas.Testes.DePontaAPonta.Ravendb
 {
-    public class TesteDeTodosOsCen·rios : IClassFixture<WebHostFixture<Startup>>
+    public class TesteDeTodosOsCen√°rios : IClassFixture<WebHostFixture<Startup>>
     {
         private readonly WebHostFixture<Startup> testFixture;
 
-        public TesteDeTodosOsCen·rios(WebHostFixture<Startup> testFixture) =>
+        public TesteDeTodosOsCen√°rios(WebHostFixture<Startup> testFixture) =>
             this.testFixture = testFixture;
 
         [Fact]
-        public async Task TestarTodosOsCen·rios()
+        public async Task TestarTodosOsCen√°rios()
         {
-            var configuraÁ„oDoRavendb = ObterConfiguraÁ„oDoRavendb();
-            using var fabricaDoRavendb = new FabricaDoRavendb(configuraÁ„oDoRavendb);
-            await fabricaDoRavendb.DocumentStore.ExecutarTarefaEmUmNovoBancoDeDados(configuraÁ„oDoRavendb, async () =>
+            var configura√ß√£oDoRavendb = ObterConfigura√ß√£oDoRavendb();
+            using var fabricaDoRavendb = new FabricaDoRavendb(configura√ß√£oDoRavendb);
+            await fabricaDoRavendb.DocumentStore.ExecutarTarefaEmUmNovoBancoDeDados(configura√ß√£oDoRavendb, async () =>
             {
                 await fabricaDoRavendb.DocumentStore.CriarMapReduces(default);
 
                 await AdicionarCliente();
 
-                var exceÁ„o = await Record.ExceptionAsync(() => testFixture.Executar());
-                Assert.Null(exceÁ„o);
+                var exce√ß√£o = await Record.ExceptionAsync(() => testFixture.Executar());
+                Assert.Null(exce√ß√£o);
             });
         }
 
         private async Task AdicionarCliente()
         {
-            var repositÛrioDePessoa = testFixture.ServiceProvider.GetRequiredService<RepositÛrioDePessoa>();
-            await repositÛrioDePessoa.Salvar(new Pessoa("57251010020", "Rio Grande do Sul"), default);
-            await repositÛrioDePessoa.Salvar(new Pessoa("27555728095", "Rio de Janeiro"), default);
-            await testFixture.ServiceProvider.GetRequiredService<IDao>().SalvarAlteraÁıes(default);
+            var reposit√≥rioDePessoa = testFixture.ServiceProvider.GetRequiredService<Reposit√≥rioDePessoa>();
+            await reposit√≥rioDePessoa.Salvar(new Pessoa("57251010020", "Rio Grande do Sul"), default);
+            await reposit√≥rioDePessoa.Salvar(new Pessoa("27555728095", "Rio de Janeiro"), default);
+            await testFixture.ServiceProvider.GetRequiredService<IDao>().SalvarAltera√ß√µes(default);
         }
 
-        private static ConfiguraÁ„oDoRavendb ObterConfiguraÁ„oDoRavendb()
+        private static Configura√ß√£oDoRavendb ObterConfigura√ß√£oDoRavendb()
         {
-            var configuraÁ„o = ConfiguraÁ„o.CriarConfiguraÁ„oLendoOAppsettings();
-            return configuraÁ„o.GetSection(nameof(ConfiguraÁ„oDaConex„o))
-                .GetSection(nameof(ConfiguraÁ„oDoRavendb)).Get<ConfiguraÁ„oDoRavendb>();
+            var configura√ß√£o = Configura√ß√£o.CriarConfigura√ß√£oLendoOAppsettings();
+            return configura√ß√£o.GetSection(nameof(Configura√ß√£oDaConex√£o))
+                .GetSection(nameof(Configura√ß√£oDoRavendb)).Get<Configura√ß√£oDoRavendb>();
         }
     }
 }

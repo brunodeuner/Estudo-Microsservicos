@@ -1,4 +1,4 @@
-using Estudo.Core.Infraestrutura.Geral;
+Ôªøusing Estudo.Core.Infraestrutura.Geral;
 using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.Entidades;
 using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.Fabricas;
 using System.Threading.Tasks;
@@ -13,17 +13,17 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes
         {
             var entidade = new EntidadeDeTeste()
             {
-                DescriÁ„o = "Teste de descriÁ„o"
+                Descri√ß√£o = "Teste de descri√ß√£o"
             };
 
-            await TestarAdicionarNaSess„o(entidade);
+            await TestarAdicionarNaSess√£o(entidade);
 
             using var dao = FabricaDeDaoRavendb.ObterDao();
-            var entidadeLidaEmUmaNovaSess„o = await dao.ObterPeloId<EntidadeDeTeste>(entidade.Id, default);
+            var entidadeLidaEmUmaNovaSess√£o = await dao.ObterPeloId<EntidadeDeTeste>(entidade.Id, default);
 
-            Assert.NotEqual(entidade, entidadeLidaEmUmaNovaSess„o);
-            Assert.Equal(entidade.Id, entidadeLidaEmUmaNovaSess„o.Id);
-            Assert.Equal(entidade.DescriÁ„o, entidadeLidaEmUmaNovaSess„o.DescriÁ„o);
+            Assert.NotEqual(entidade, entidadeLidaEmUmaNovaSess√£o);
+            Assert.Equal(entidade.Id, entidadeLidaEmUmaNovaSess√£o.Id);
+            Assert.Equal(entidade.Descri√ß√£o, entidadeLidaEmUmaNovaSess√£o.Descri√ß√£o);
         }
 
         [Fact]
@@ -34,16 +34,16 @@ namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes
             Assert.Null(retorno);
         }
 
-        private static async Task TestarAdicionarNaSess„o(EntidadeDeTeste entidade)
+        private static async Task TestarAdicionarNaSess√£o(EntidadeDeTeste entidade)
         {
             using var dao = FabricaDeDaoRavendb.ObterDao();
             await dao.Salvar(entidade, default);
             Assert.True(entidade.Id.Preenchido());
 
-            var entidadeLidaNaSess„o = await dao.ObterPeloId<EntidadeDeTeste>(entidade.Id, default);
-            Assert.Equal(entidade, entidadeLidaNaSess„o);
+            var entidadeLidaNaSess√£o = await dao.ObterPeloId<EntidadeDeTeste>(entidade.Id, default);
+            Assert.Equal(entidade, entidadeLidaNaSess√£o);
 
-            await dao.SalvarAlteraÁıes(default);
+            await dao.SalvarAltera√ß√µes(default);
         }
     }
 }

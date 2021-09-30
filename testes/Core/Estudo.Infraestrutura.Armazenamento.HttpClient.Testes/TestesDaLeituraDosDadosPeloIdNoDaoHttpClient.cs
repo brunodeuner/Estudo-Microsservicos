@@ -1,5 +1,5 @@
-using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
-using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
+using Estudo.Core.Infraestrutura.Armazenamento.AbstraÃ§Ãµes;
+using Estudo.Core.Infraestrutura.Armazenamento.AbstraÃ§Ãµes.Queryable;
 using Estudo.Core.Infraestrutura.Armazenamento.HttpClient;
 using RichardSzalay.MockHttp;
 using RichardSzalay.MockHttp.Matchers;
@@ -15,25 +15,25 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
     public class TestesDaLeituraDosDadosPeloIdNoDaoHttpClient
     {
         private const string idDeTeste = nameof(idDeTeste);
-        private const string descriçãoDeTeste = "Teste de descrição";
+        private const string descriÃ§Ã£oDeTeste = "Teste de descriÃ§Ã£o";
         private static readonly Uri urlDeTeste = new("http://localhost/teste");
 
         [Fact]
-        public async Task Adicionar_EntidadePreenchida_ExecutadoMétodoPostEConteúdoDaRequisiçãoÉUmJsonDaEntidade()
+        public async Task Adicionar_EntidadePreenchida_ExecutadoMÃ©todoPostEConteÃºdoDaRequisiÃ§Ã£oÃ‰UmJsonDaEntidade()
         {
             var mockDeHttp = new MockHttpMessageHandler();
             mockDeHttp
                 .When(HttpMethod.Post, urlDeTeste.AbsoluteUri)
                 .Respond(HttpStatusCode.OK)
                 .With(new MethodMatcher(HttpMethod.Post))
-                .WithContent("{\"Id\":null,\"Descrição\":\"" + descriçãoDeTeste + "\"}");
+                .WithContent("{\"Id\":null,\"DescriÃ§Ã£o\":\"" + descriÃ§Ã£oDeTeste + "\"}");
 
-            var exceção = await Record.ExceptionAsync(async () => await ObterDao(mockDeHttp
+            var exceÃ§Ã£o = await Record.ExceptionAsync(async () => await ObterDao(mockDeHttp
                 .ToHttpClient()).Salvar(new EntidadeDeTeste()
                 {
-                    Descrição = descriçãoDeTeste
+                    DescriÃ§Ã£o = descriÃ§Ã£oDeTeste
                 }, default));
-            Assert.Null(exceção);
+            Assert.Null(exceÃ§Ã£o);
         }
 
         [Fact]
@@ -43,12 +43,12 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
             mockDeHttp
                 .When(HttpMethod.Get, new Uri(urlDeTeste, idDeTeste).AbsoluteUri)
                 .Respond(MediaTypeNames.Application.Json,
-                "{\"Id\":\"" + idDeTeste + "\", \"Descrição\":\"" + descriçãoDeTeste + "\"}");
+                "{\"Id\":\"" + idDeTeste + "\", \"DescriÃ§Ã£o\":\"" + descriÃ§Ã£oDeTeste + "\"}");
 
             var entidade = await ObterRegistro(mockDeHttp.ToHttpClient(), idDeTeste);
             Assert.NotNull(entidade);
             Assert.Equal(idDeTeste, entidade.Id);
-            Assert.Equal(descriçãoDeTeste, entidade.Descrição);
+            Assert.Equal(descriÃ§Ã£oDeTeste, entidade.DescriÃ§Ã£o);
         }
 
         [Fact]
@@ -71,13 +71,13 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
                 .When(HttpMethod.Get, urlDeTeste.AbsoluteUri)
                 .WithQueryString("?$top=1&$skip=0")
                 .Respond(MediaTypeNames.Application.Json,
-                "[{\"Id\":\"0\", \"Descrição\":\"" + descriçãoDeTeste + "\"}]");
+                "[{\"Id\":\"0\", \"DescriÃ§Ã£o\":\"" + descriÃ§Ã£oDeTeste + "\"}]");
 
             mockDeHttp
                 .When(HttpMethod.Get, urlDeTeste.AbsoluteUri)
                 .WithQueryString("?$top=1&$skip=1")
                 .Respond(MediaTypeNames.Application.Json,
-                "[{\"Id\":\"1\", \"Descrição\":\"" + descriçãoDeTeste + "\"}]");
+                "[{\"Id\":\"1\", \"DescriÃ§Ã£o\":\"" + descriÃ§Ã£oDeTeste + "\"}]");
 
             mockDeHttp
                 .When(HttpMethod.Get, urlDeTeste.AbsoluteUri)
@@ -89,7 +89,7 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
             await foreach (var entidade in dao.Selecionar<EntidadeDeTeste>().ToAsyncEnumerable(default))
             {
                 Assert.Equal(quantidadeDeRegistrosLidos.ToString(), entidade.Id);
-                Assert.Equal(descriçãoDeTeste, entidade.Descrição);
+                Assert.Equal(descriÃ§Ã£oDeTeste, entidade.DescriÃ§Ã£o);
                 quantidadeDeRegistrosLidos++;
             }
             Assert.Equal(2, quantidadeDeRegistrosLidos);
@@ -103,13 +103,13 @@ namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
 
         private static IDao ObterDao(System.Net.Http.HttpClient httpClient)
         {
-            var configuraçãoDoDaoHttpClient = new ConfiguraçãoDoDaoHttpClient()
+            var configuraÃ§Ã£oDoDaoHttpClient = new ConfiguraÃ§Ã£oDoDaoHttpClient()
             {
                 ObterRotaAPartirDoTipo = tipo => urlDeTeste,
-                QuantidadeDeRegistrosPorPaginação = 1
+                QuantidadeDeRegistrosPorPaginaÃ§Ã£o = 1
             };
 
-            return FabricaDeDaoHttpClient.ObterDao(httpClient, configuraçãoDoDaoHttpClient);
+            return FabricaDeDaoHttpClient.ObterDao(httpClient, configuraÃ§Ã£oDoDaoHttpClient);
         }
     }
 }
