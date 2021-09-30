@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Estudo.Cobranças.Serviço.Api.Testes
 {
-    public class TesteParaVerificarSeAApiEstáIniciandoSemNenhumExceção
+    public class TesteParaVerificarSeAApiEstáIniciandoSemNenhumaExceção
     {
         [Fact]
         public async Task InicializaçãoDaApi_IniciarApi_ApiNãoDeuErroEmAtéUmSegundo()
