@@ -16,6 +16,9 @@ Repositório de estudos para microsserviços, reune alguns conceitos como:
 * Publish-Subscribe
 
 # Como executar?
+As api's estão configuradas para utilizar um banco de dados na nuvem gratuito com limite de 10gb, no appsettings do
+Estudo.CálculoDeConsumo.Serviço.Api está mapeado a porta das duas outras api's.
+Para executar as três api's execute os seguintes comandos separadamente:
 
     dotnet run --project src/Clientes/Estudo.Clientes.Serviço.Api/Estudo.Clientes.Serviço.Api.csproj --urls=http://localhost:5000
     dotnet run --project src/Cobranças/Estudo.Cobranças.Serviço.Api/Estudo.Cobranças.Serviço.Api.csproj --urls=http://localhost:5001
