@@ -21,7 +21,7 @@ namespace Estudo.Cobranças.Aplicação
             {
                 var configuraçãoDoRavendb = configuraçãoDaAplicaçãoDeCobranças
                     .ConfiguraçãoDoRavendbParaOConsumidorDeClientes;
-                serviços.AddSingleton(new FabricaDoRavendbParaOConsumidor(
+                serviços.AddSingleton(_=> new FabricaDoRavendbParaOConsumidor(
                     new FabricaDoRavendb(configuraçãoDoRavendb)));
                 serviços.AddTransient<IConsumidor<Cliente>>(serviços => new ConsumidorDoRavendb<Cliente>(
                     serviços.GetRequiredService<FabricaDoRavendbParaOConsumidor>().ObterDocumentStore(),
