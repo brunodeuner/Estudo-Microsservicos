@@ -37,8 +37,7 @@ ou mais microsserviços.
 * [Validação de dependência](Arquitetura/ValidaçãoDeDependência/DiagramaDeValidaçãoDeDependência.pdf)
 
 # Documentação das api's
-Podem ser visualizadas concatenando **swagger/index.html** no final da url, 
-como por exemplo: **http://localhost:5001/swagger/index.html**.
+Podem ser visualizadas concatenando **swagger/index.html** no final da url.
 
 # Como contribuir
 Qualquer contribuição é aceita, basta ir em discussões ou criar um novo pull request.
