@@ -29,11 +29,12 @@ no projeto **Estudo.Core.Infraestrutura.Bus.Abstrações**. Devido a necessidade
 **RepositórioDePessoa** acabou assumindo uma dependência indireta da regra de negócio de clientes, que envolve
 saber que o cliente é unico por cpf, após a revisão deste desafio será removido esta dependência.
 
-A api de *CálculoDeConsumo* não é independente propositalmente para simular um serviço que consuma um
-microserviço.
+A api de **Estudo.CálculoDeConsumo.Serviço.Api** não é independente propositalmente para simular um serviço que consuma um
+ou mais microsserviços.
 
-# Decisões arquiteturais
-Podem ser visualizadas [aqui](Documentação/DecisõesArquiteturais/AbstraçõesDoArmazenamento.md).
+# Arquitetura
+* [Decisões arquiteturais](Documentações/DecisõesArquiteturais/AbstraçõesDoArmazenamento.md)
+* [Validação de dependência](Arquitetura/ValidaçãoDeDependência/DiagramaDeValidaçãoDeDependência.pdf)
 
 # Documentação das api's
 Podem ser visualizadas concatenando **swagger/index.html** no final da url, 
