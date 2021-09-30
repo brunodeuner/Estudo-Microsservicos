@@ -1,4 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<ServerGarbageCollection>false</ServerGarbageCollection>
+	</PropertyGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\Core\Serviço\Api\Estudo.Serviço.Api\Estudo.Core.Serviço.Api.csproj" />
 		<ProjectReference Include="..\Estudo.Clientes.Domínio\Estudo.Clientes.Domínio.csproj" />
