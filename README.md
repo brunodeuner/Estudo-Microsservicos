@@ -1,6 +1,4 @@
-[[!Status do build](https://github.com/brunodeuner/Estudo-Microsservicos/actions/workflows/build.yml/badge.svg)](https://github.com/brunodeuner/Estudo-Microsservicos/actions/workflows/build.yml)
-
-# Estudo-Microsservicos
+# Estudo-Microsservicos [![Status do build](https://github.com/brunodeuner/Estudo-Microsservicos/actions/workflows/build.yml/badge.svg)](https://github.com/brunodeuner/Estudo-Microsservicos/actions/workflows/build.yml)
 Repositório de estudos para microsserviços, reune alguns conceitos como:
 * Código Limpo
 * Arquitetura Limpa
