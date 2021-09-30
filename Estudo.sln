@@ -27,6 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DecisõesArquiteturais", "D
 	ProjectSection(SolutionItems) = preProject
 		Documentações\DecisõesArquiteturais\AbstraçõesDoArmazenamento.md = Documentações\DecisõesArquiteturais\AbstraçõesDoArmazenamento.md
 		Documentações\DecisõesArquiteturais\Cadastro.md = Documentações\DecisõesArquiteturais\Cadastro.md
+		Documentações\DecisõesArquiteturais\Camadas.md = Documentações\DecisõesArquiteturais\Camadas.md
 		Documentações\DecisõesArquiteturais\GeraçãoDeIdEmRelaçãoAosCamposDaEntidade.md = Documentações\DecisõesArquiteturais\GeraçãoDeIdEmRelaçãoAosCamposDaEntidade.md
 		Documentações\DecisõesArquiteturais\Testes.md = Documentações\DecisõesArquiteturais\Testes.md
 	EndProjectSection
