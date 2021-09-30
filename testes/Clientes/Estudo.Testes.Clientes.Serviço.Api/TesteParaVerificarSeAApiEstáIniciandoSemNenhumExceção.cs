@@ -10,7 +10,7 @@ namespace Estudo.Testes.Clientes.Serviço.Api
     public class TesteParaVerificarSeAApiEstáIniciandoSemNenhumExceção
     {
         [Fact]
-        public async Task InicializaçãoDaApi_IniciarApi_ApiNãoDeuErroEmAtéCincoSegundos()
+        public async Task InicializaçãoDaApi_IniciarApi_ApiNãoDeuErroEmAtéUmSegundo()
         {
             var token = new CancellationTokenSource(TimeSpan.FromSeconds(1)).Token;
             await CriarHostBuilder.CriarERodar<Startup>(cancellationToken: token);

@@ -37,12 +37,17 @@ namespace Estudo.Core.Api.Testes
 
         protected virtual void ConfigurarServiços(IConfiguration configuração, IServiceCollection serviços) { }
 
-        public void Dispose()
+        protected virtual void Dispose(bool disposing)
         {
             Cliente?.Dispose();
             Cliente = default;
             servidor?.Dispose();
             servidor = default;
+        }
+
+        public void Dispose()
+        {
+            Dispose(disposing: true);
             GC.SuppressFinalize(this);
         }
     }
