@@ -1,7 +1,7 @@
 # Camadas da arquitetura
 
 ## Contexto
-Áfim de manter as boas práticas alguns conceitos devem ser separados.
+Afim de manter as boas práticas alguns conceitos devem ser separados.
 
 ## Decisão
 O repositório é dividido em quatro camadas, são elas:
@@ -11,17 +11,21 @@ O repositório é dividido em quatro camadas, são elas:
 > Exemplos: configurar injeção de dependência, configuração de estruturas para o banco de dados
 * Domínio: regras de negócio
 > Exemplos: entidades, repositórios, comandos
-* Infraestrutura: funcionalidades necessárias
+* Infraestrutura: funcionalidades necessárias que servem o domínio
 > Exemplos: comunicação com o banco de dados, com um serviço de fila
 
+Seguindo o padrão do DDD estas camadas podem ser representadas em um Core, ou seja, é a base do sistema
+todo mundo pode usar ela, ou pode estar dentro de um contexto específico.
+
 ## Vantagens
-Remoção de querys em cima de um valor único, poupando criação de indíces com essa única intenção, leitura pelo id
-normalmente é mais rápida e pode ser cacheada mais facilmente.
-Remoção de geração de id pelo banco de dados, ganhando assim performance.
+Separação de responsábilidades, cada camada executada apenas o que é designada ganhando assim coesão e uma
+melhoria nítida na manutenção do sistema.
+As camadas só podem ter dependências com as suas camadas inferiores, não somente a mais próxima e sim em 
+todas as camadas a baixo dela, conforme ordem mencionada anteriormente. 
 
 ## Desvantagens
-Maior complexidade no repositórios.
+Complexidade, todas as camadas são opcionais porém o conceito não é opcional, sendo assim, no momento que 
+existir o conceito ele deve ser implementado conforme o padrão de camadas definidas.
 
 ## Evolução
-A decisão arquitetural hoje está sendo implementada manualmente, poderia evoluir para uma implementação de código 
-definindo o padrão.
+Nenhuma evolução prevista.
