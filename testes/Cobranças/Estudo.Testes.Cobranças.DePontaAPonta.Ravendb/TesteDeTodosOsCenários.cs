@@ -1,13 +1,13 @@
-using Estudo.Aplicação.Configurações;
 using Estudo.Cobranças.Aplicação.Armazenamento.Ravendb.MapReduces;
 using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
 using Estudo.Cobranças.Serviço.Api;
 using Estudo.Core.Api.Testes;
+using Estudo.Core.Aplicação.Configurações;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
 using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
-using Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes;
 using Estudo.Core.Infraestrutura.Geral;
+using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;

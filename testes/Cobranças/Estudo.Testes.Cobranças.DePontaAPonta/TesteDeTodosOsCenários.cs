@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Testes.Cobranças.DePontaAPonta
+namespace Estudo.Cobranças.Testes.DePontaAPonta
 {
     public class TesteDeTodosOsCenários : IClassFixture<WebHostFixtureInjetandoConsumidorEmMemória>
     {
@@ -19,7 +19,7 @@ namespace Estudo.Testes.Cobranças.DePontaAPonta
         public async Task TestarTodosOsCenários()
         {
             await AdicionarCliente();
-            var exceção = await Record.ExceptionAsync(() => ExecutarTodosOsCenários.Executar(testFixture));
+            var exceção = await Record.ExceptionAsync(() => testFixture.Executar());
             Assert.Null(exceção);
         }
 

@@ -1,4 +1,4 @@
-﻿using Estudo.Aplicação.Configurações;
+﻿using Estudo.Core.Aplicação.Configurações;
 using Estudo.Core.Domínio.Validação;
 using Estudo.Core.Domínio.Validadores;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
@@ -16,7 +16,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace Estudo.Aplicação
+namespace Estudo.Core.Aplicação
 {
     public static class ConfigurarServiços
     {

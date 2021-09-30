@@ -1,13 +1,13 @@
 using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
-using Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes;
 using Estudo.Core.Infraestrutura.Bus.Ravendb.Consumidor;
-using Estudo.Core.Infraestrutura.Bus.Ravendb.Testes.Entidades;
 using Estudo.Core.Infraestrutura.Geral;
+using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes;
+using Estudo.Infraestrutura.Bus.Ravendb.Testes.Entidades;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Core.Infraestrutura.Bus.Ravendb.Testes
+namespace Estudo.Infraestrutura.Bus.Ravendb.Testes
 {
     public class TestesDoConsumidorDoRavendb
     {
@@ -18,8 +18,8 @@ namespace Estudo.Core.Infraestrutura.Bus.Ravendb.Testes
             using var fabricaDoRavendb = new FabricaDoRavendb(configuraçãoDoRavendb);
             await fabricaDoRavendb.DocumentStore.ExecutarTarefaEmUmNovoBancoDeDados(configuraçãoDoRavendb, async () =>
                 {
-                    await CriarSubscriptionsNãoExistentes.CriarSubscriptionParaEntidadeDeTeste(
-                        fabricaDoRavendb.DocumentStore, configuraçãoDoRavendb, default);
+                    await fabricaDoRavendb.DocumentStore.CriarSubscriptionParaEntidadeDeTeste(configuraçãoDoRavendb,
+                        default);
                     try
                     {
                         using var daoRavendb = new DaoRavendb(fabricaDoRavendb);
@@ -43,8 +43,7 @@ namespace Estudo.Core.Infraestrutura.Bus.Ravendb.Testes
                     }
                     finally
                     {
-                        await CriarSubscriptionsNãoExistentes.RemoverSubscriptionDeEntidadeDeTeste(
-                            fabricaDoRavendb.DocumentStore, default);
+                        await fabricaDoRavendb.DocumentStore.RemoverSubscriptionDeEntidadeDeTeste(default);
                     }
                 });
         }

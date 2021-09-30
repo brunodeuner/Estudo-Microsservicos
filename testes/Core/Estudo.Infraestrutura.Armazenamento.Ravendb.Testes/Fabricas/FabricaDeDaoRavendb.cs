@@ -1,7 +1,8 @@
-﻿using Estudo.Core.Infraestrutura.Geral;
+﻿using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Core.Infraestrutura.Geral;
 using Microsoft.Extensions.Configuration;
 
-namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes.Fabricas
+namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.Fabricas
 {
     internal class FabricaDeDaoRavendb
     {

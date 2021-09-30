@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Core.Infraestrutura.Bus.Memória.Testes
+namespace Estudo.Infraestrutura.Bus.Memória.Testes
 {
     public class TesteDoConsumidorEmMemória
     {

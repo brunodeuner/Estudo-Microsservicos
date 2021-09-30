@@ -1,11 +1,10 @@
-using Estudo.Clientes.Serviço.Api;
 using Estudo.Core.Serviço.Api;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Testes.Clientes.Serviço.Api
+namespace Estudo.Clientes.Serviço.Api.Testes
 {
     public class TesteParaVerificarSeAApiEstáIniciandoSemNenhumaExceção
     {

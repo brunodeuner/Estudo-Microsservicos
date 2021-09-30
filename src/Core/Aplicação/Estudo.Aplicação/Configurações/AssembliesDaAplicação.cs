@@ -1,4 +1,4 @@
-﻿namespace Estudo.Aplicação.Configurações
+﻿namespace Estudo.Core.Aplicação.Configurações
 {
     public class AssembliesDaAplicação
     {

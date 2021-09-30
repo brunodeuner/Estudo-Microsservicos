@@ -1,7 +1,7 @@
 ﻿using Estudo.Clientes.Serviço.Api;
 using Estudo.Core.Api.Testes;
 
-namespace Estudo.Testes.Clientes.DePontaAPonta
+namespace Estudo.Clientes.Testes.DePontaAPonta
 {
     public class TesteDeTodosOsCenários : TesteDeTodosOsCenários<Startup>
     {

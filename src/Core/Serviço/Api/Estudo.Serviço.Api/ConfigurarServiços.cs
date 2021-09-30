@@ -1,4 +1,4 @@
-﻿using Estudo.Aplicação;
+﻿using Estudo.Core.Aplicação;
 using Estudo.Core.Serviço.Api.Filtros;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

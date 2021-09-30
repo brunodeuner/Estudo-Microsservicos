@@ -8,7 +8,7 @@ using Estudo.Core.Infraestrutura.Bus.Memória.Produtor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Estudo.Testes.Cobranças.DePontaAPonta
+namespace Estudo.Cobranças.Testes.DePontaAPonta
 {
     public class WebHostFixtureInjetandoConsumidorEmMemória : WebHostFixture<Startup>
     {

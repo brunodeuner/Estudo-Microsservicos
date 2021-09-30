@@ -1,10 +1,10 @@
-using Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes.Entidades;
-using Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes.Fabricas;
 using Estudo.Core.Infraestrutura.Geral;
+using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.Entidades;
+using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.Fabricas;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes
+namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes
 {
     public class TestesDoDaoRavendb
     {

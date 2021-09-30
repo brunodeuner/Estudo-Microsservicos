@@ -2,7 +2,7 @@
 using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
 using System;
 
-namespace Estudo.Aplicação.Configurações
+namespace Estudo.Core.Aplicação.Configurações
 {
     public class ConfiguraçãoDaConexão
     {

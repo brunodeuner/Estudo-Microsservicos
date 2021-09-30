@@ -1,10 +1,10 @@
 ﻿using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
-using Estudo.Core.Infraestrutura.Bus.Ravendb.Testes.Entidades;
+using Estudo.Infraestrutura.Bus.Ravendb.Testes.Entidades;
 using Raven.Client.Documents;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Estudo.Core.Infraestrutura.Bus.Ravendb.Testes
+namespace Estudo.Infraestrutura.Bus.Ravendb.Testes
 {
     internal static class CriarSubscriptionsNãoExistentes
     {

@@ -1,8 +1,9 @@
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
+using Estudo.Core.Infraestrutura.Armazenamento.Memória;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Core.Infraestrutura.Armazenamento.Memória.Testes
+namespace Estudo.Infraestrutura.Armazenamento.Memória.Testes
 {
     public class TestesDoDaoMemória
     {
