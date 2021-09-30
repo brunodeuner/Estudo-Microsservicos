@@ -11,7 +11,6 @@ Repositório de estudos para microsserviços, reune alguns conceitos como:
 * GoF
 * Unidade de Trabalho
 * Multicamada
-* MVC
 * Eventos
 * Microsserviços
 * Publish-Subscribe
