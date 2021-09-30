@@ -1,0 +1,20 @@
+﻿{
+  "Nome": "Adicionar cliente com falha na validação por nenhum campo ser informado",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes/",
+        "Método": "Post",
+        "Corpo": {}
+      },
+      "Retorno": {
+        "Status": "BadRequest",
+        "Corpo": [
+          "'Nome' deve ser informado.",
+          "'Estado' deve ser informado.",
+          "Cpf inválido"
+        ]
+      }
+    }
+  ]
+}

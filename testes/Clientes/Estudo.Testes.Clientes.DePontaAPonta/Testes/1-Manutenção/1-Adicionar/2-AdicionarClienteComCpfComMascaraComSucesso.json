@@ -1,0 +1,34 @@
+﻿{
+  "Nome": "Adicionar cliente com sucesso com cpf com mascara",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes/",
+        "Método": "Post",
+        "Corpo": {
+          "nome": "Nome do cliente",
+          "estado": "Rio Grande do Sul",
+          "cpf": "679.905.280-45"
+        }
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes?cpf=67990528045",
+        "Método": "Get"
+      },
+      "Retorno": {
+        "Status": "OK",
+        "Corpo": {
+          "nome": "Nome do cliente",
+          "estado": "Rio Grande do Sul",
+          "cpf": "67990528045",
+          "id": "[[Cliente/2]]"
+        }
+      }
+    }
+  ]
+}

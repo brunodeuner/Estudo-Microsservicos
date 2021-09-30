@@ -3,7 +3,14 @@
 
 # IDE's
 .vs
+*.user
+Properties
+.config
 
 # .NET
 bin
 obj
+
+# Saída dos testes
+TestResults
+SonarQube.xml

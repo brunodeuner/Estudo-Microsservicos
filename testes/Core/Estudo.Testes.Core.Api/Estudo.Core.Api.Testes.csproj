@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.TestHost" Version="5.0.10" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+		<PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória\Estudo.Core.Infraestrutura.Bus.Memória.csproj" />
+		<ProjectReference Include="..\..\..\src\Core\Infraestrutura\Geral\Estudo.Infraestrutura.Geral\Estudo.Core.Infraestrutura.Geral.csproj" />
+		<ProjectReference Include="..\Estudo.Testes.Core.Http\Estudo.Core.Http.Testes.csproj" />
+	</ItemGroup>
+
+</Project>

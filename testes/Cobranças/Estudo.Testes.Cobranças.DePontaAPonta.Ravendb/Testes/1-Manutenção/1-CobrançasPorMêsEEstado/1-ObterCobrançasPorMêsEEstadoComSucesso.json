@@ -1,0 +1,36 @@
+﻿{
+  "Nome": "Obter cobranças por mês e estado com sucesso",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/CobrançasPorMêsEEstado/",
+        "Método": "Get"
+      },
+      "Retorno": {
+        "Status": "OK",
+        "Corpo": [
+          {
+            "mês": 1,
+            "estado": "Rio Grande do Sul",
+            "valor": 90.0
+          },
+          {
+            "mês": 2,
+            "estado": "Rio Grande do Sul",
+            "valor": 50.0
+          },
+          {
+            "mês": 1,
+            "estado": "Rio de Janeiro",
+            "valor": 100.0
+          },
+          {
+            "mês": 2,
+            "estado": "Rio de Janeiro",
+            "valor": 60.0
+          }
+        ]
+      }
+    }
+  ]
+}

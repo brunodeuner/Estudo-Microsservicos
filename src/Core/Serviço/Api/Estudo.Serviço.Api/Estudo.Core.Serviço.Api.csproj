@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.1.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.5" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Aplicação\Estudo.Aplicação\Estudo.Core.Aplicação.csproj" />
+		<ProjectReference Include="..\..\..\Domínio\Estudo.Domínio\Estudo.Core.Domínio.csproj" />
+	</ItemGroup>
+
+</Project>

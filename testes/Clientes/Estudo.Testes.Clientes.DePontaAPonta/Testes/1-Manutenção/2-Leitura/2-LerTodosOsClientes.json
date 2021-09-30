@@ -1,0 +1,29 @@
+﻿{
+  "Nome": "Ler todos os clientes",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes/Todos",
+        "Método": "Get",
+        "Corpo": {}
+      },
+      "Retorno": {
+        "Status": "OK",
+        "Corpo": [
+          {
+            "nome": "Nome do cliente",
+            "estado": "Rio Grande do Sul",
+            "cpf": "57251010020",
+            "id": "{{Cliente/1}}"
+          },
+          {
+            "nome": "Nome do cliente",
+            "estado": "Rio Grande do Sul",
+            "cpf": "67990528045",
+            "id": "{{Cliente/2}}"
+          }
+        ]
+      }
+    }
+  ]
+}

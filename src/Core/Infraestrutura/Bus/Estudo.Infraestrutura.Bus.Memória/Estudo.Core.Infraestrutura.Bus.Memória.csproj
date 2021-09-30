@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj" />
+  </ItemGroup>
+</Project>

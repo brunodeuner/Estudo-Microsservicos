@@ -1,0 +1,34 @@
+﻿{
+  "Nome": "Adicionar cliente com sucesso",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes/",
+        "Método": "Post",
+        "Corpo": {
+          "nome": "Nome do cliente",
+          "estado": "Rio Grande do Sul",
+          "cpf": "57251010020"
+        }
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Clientes?cpf=57251010020",
+        "Método": "Get"
+      },
+      "Retorno": {
+        "Status": "OK",
+        "Corpo": {
+          "nome": "Nome do cliente",
+          "estado": "Rio Grande do Sul",
+          "cpf": "57251010020",
+          "id": "[[Cliente/1]]"
+        }
+      }
+    }
+  ]
+}

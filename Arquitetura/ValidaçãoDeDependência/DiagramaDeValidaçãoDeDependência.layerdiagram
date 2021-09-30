@@ -1,0 +1,1253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="439884f8-358d-4a46-8744-4904cc74a71c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="f44f0b5c-1e55-4eb0-ad26-170fca21eb84" name="src">
+      <childLayers>
+        <layer Id="8b6365d6-f002-475a-9484-bc3a08e43fa1" name="CálculoDeConsumo">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="9ecfcfce-cf8d-423a-9b9c-b27f7dcf171f" direction="Forward">
+              <layerMoniker Id="e6efc79c-965e-44c3-9f96-8928420702e6" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="f8b71d26-a07b-41f4-b02e-5b2c8bc3f9e7" name="Estudo.CálculoDeConsumo.Domínio">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="84dc1bf4-9c38-42d5-a9ff-1142acda3491" direction="Forward">
+                  <layerMoniker Id="245c8327-1895-4492-a44b-94b3dfdd96a8" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="a7bac2d3-022f-4aac-825e-6c46e673cac9" name="Estudo.CálculoDeConsumo.Domínio">
+                  <ArtifactNode Label="Estudo.CálculoDeConsumo.Domínio" Category="CodeSchema_Project" Id="(Assembly=../../src/CálculoDeConsumo/Estudo.CálculoDeConsumo.Domínio/Estudo.CálculoDeConsumo.Domínio.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Domínio)" Label="Estudo.CálculoDeConsumo.Domínio.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="245c8327-1895-4492-a44b-94b3dfdd96a8" name="Estudo.CálculoDeConsumo.Infraestrutura">
+              <references>
+                <reference Id="63c8ee0e-c552-4f58-ab23-8830f4482e2e" name="Estudo.CálculoDeConsumo.Infraestrutura">
+                  <ArtifactNode Label="Estudo.CálculoDeConsumo.Infraestrutura" Category="CodeSchema_Project" Id="(Assembly=../../src/CálculoDeConsumo/Estudo.CálculoDeConsumo.Infraestrutura/Estudo.CálculoDeConsumo.Infraestrutura.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Infraestrutura)" Label="Estudo.CálculoDeConsumo.Infraestrutura.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="9332a42b-7a63-4734-b9d5-d542fb407fc4" name="Estudo.CálculoDeConsumo.Serviço.Api">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="6909bb51-4405-4855-95c2-18f72413b378" direction="Forward">
+                  <layerMoniker Id="f8b71d26-a07b-41f4-b02e-5b2c8bc3f9e7" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="82e89502-42e6-4e35-9185-9c3ea4cd86e4" name="Estudo.CálculoDeConsumo.Serviço.Api">
+                  <ArtifactNode Label="Estudo.CálculoDeConsumo.Serviço.Api" Category="CodeSchema_Project" Id="(Assembly=../../src/CálculoDeConsumo/Estudo.CálculoDeConsumo.Serviço.Api/Estudo.CálculoDeConsumo.Serviço.Api.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Serviço.Api)" Label="Estudo.CálculoDeConsumo.Serviço.Api.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="2b2679af-55e2-4ea3-b314-5c605b1dffe7" name="CálculoDeConsumo">
+              <ArtifactNode Label="CálculoDeConsumo" Category="CodeSchema_Project" Id="(Assembly=../../src/CálculoDeConsumo)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Domínio)" Label="Estudo.CálculoDeConsumo.Domínio.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Serviço.Api)" Label="Estudo.CálculoDeConsumo.Serviço.Api.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Infraestrutura)" Label="Estudo.CálculoDeConsumo.Infraestrutura.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="fa359a78-750c-4a76-938d-1d2574ae71ea" name="Clientes">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="0f37cbd0-7eee-4a82-8f2b-8922b9dd0c5b" direction="Forward">
+              <layerMoniker Id="e6efc79c-965e-44c3-9f96-8928420702e6" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="2daab9a5-4e5b-4803-a93e-974ca6248ed1" name="Estudo.Clientes.Serviço.Api">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="43e7bcf7-f33c-4bfe-9e29-5515a909ed16" direction="Forward">
+                  <layerMoniker Id="dc042c19-fb95-4df9-a6a5-a13cab4478e0" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="d29bba12-4768-461f-999e-7ae40cc080ef" name="Estudo.Clientes.Serviço.Api">
+                  <ArtifactNode Label="Estudo.Clientes.Serviço.Api" Category="CodeSchema_Project" Id="(Assembly=../../src/Clientes/Estudo.Clientes.Serviço.Api/Estudo.Clientes.Serviço.Api.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Clientes.Serviço.Api)" Label="Estudo.Clientes.Serviço.Api.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="dc042c19-fb95-4df9-a6a5-a13cab4478e0" name="Estudo.Clientes.Domínio">
+              <references>
+                <reference Id="ed02953c-7fcd-40cd-920d-9ced7cfd12d3" name="Estudo.Clientes.Domínio">
+                  <ArtifactNode Label="Estudo.Clientes.Domínio" Category="CodeSchema_Project" Id="(Assembly=../../src/Clientes/Estudo.Clientes.Domínio/Estudo.Clientes.Domínio.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Clientes.Domínio)" Label="Estudo.Clientes.Domínio.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="6cf7ec46-b6e4-4b1f-bfd0-adb4d722b37d" name="Clientes">
+              <ArtifactNode Label="Clientes" Category="CodeSchema_Project" Id="(Assembly=../../src/Clientes)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Estudo.Clientes.Serviço.Api)" Label="Estudo.Clientes.Serviço.Api.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Clientes.Domínio)" Label="Estudo.Clientes.Domínio.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="8b0be250-58b9-47ce-8d58-7fcb611bfb3b" name="Cobranças">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="a6cd081b-c6bf-464b-9513-ea6fd90727b8" direction="Forward">
+              <layerMoniker Id="e6efc79c-965e-44c3-9f96-8928420702e6" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="d6020850-1474-439f-8757-8e772eac97e9" name="Estudo.Cobranças.Serviço.Api">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="98f025d0-333a-4cb1-bf01-2a1b88867da8" direction="Forward">
+                  <layerMoniker Id="c7adc570-b2e5-4f62-8c2b-93791c90eb78" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="273eeaea-f7e2-4c6f-b143-1aeea22342ac" direction="Forward">
+                  <layerMoniker Id="59eab98d-6952-4c9d-ade3-2ab8cd8fc491" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="c86a3ce3-15d3-4189-8485-e9ed5cccc3a2" direction="Forward">
+                  <layerMoniker Id="583fc5b5-a441-4b3c-b91a-b6887bff3376" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="b89ee2fb-4eb5-447a-919f-783ab8bfb7a4" name="Estudo.Cobranças.Serviço.Api">
+                  <ArtifactNode Label="Estudo.Cobranças.Serviço.Api" Category="CodeSchema_Project" Id="(Assembly=../../src/Cobranças/Estudo.Cobranças.Serviço.Api/Estudo.Cobranças.Serviço.Api.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.Api)" Label="Estudo.Cobranças.Serviço.Api.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="9b563398-0f16-4fea-8ef7-f233f2ed5f50" name="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="fb095bb8-5f03-46f6-a1f0-e154df7ae5e9" direction="Forward">
+                  <layerMoniker Id="c7adc570-b2e5-4f62-8c2b-93791c90eb78" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="bc773458-a386-412d-a272-b4f3a89c7877" name="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados">
+                  <ArtifactNode Label="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados" Category="CodeSchema_Project" Id="(Assembly=../../src/Cobranças/Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados/Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados)" Label="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="c7adc570-b2e5-4f62-8c2b-93791c90eb78" name="Estudo.Cobranças.Aplicação">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="d9c990b0-48e1-4411-86fb-6da759883424" direction="Forward">
+                  <layerMoniker Id="59eab98d-6952-4c9d-ade3-2ab8cd8fc491" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="50e6c720-75f6-4242-bebb-539dbe22572a" direction="Forward">
+                  <layerMoniker Id="583fc5b5-a441-4b3c-b91a-b6887bff3376" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="81be9aa1-7d50-4bef-8158-00012d250d0b" name="Estudo.Cobranças.Aplicação">
+                  <ArtifactNode Label="Estudo.Cobranças.Aplicação" Category="CodeSchema_Project" Id="(Assembly=../../src/Cobranças/Estudo.Cobranças.Aplicação/Estudo.Cobranças.Aplicação.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Cobranças.Aplicação)" Label="Estudo.Cobranças.Aplicação.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="59eab98d-6952-4c9d-ade3-2ab8cd8fc491" name="Estudo.Cobranças.Domínio">
+              <references>
+                <reference Id="8b3d17cf-2d3c-4ca3-9664-e1218fad72a1" name="Estudo.Cobranças.Domínio">
+                  <ArtifactNode Label="Estudo.Cobranças.Domínio" Category="CodeSchema_Project" Id="(Assembly=../../src/Cobranças/Estudo.Cobranças.Domínio/Estudo.Cobranças.Domínio.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Cobranças.Domínio)" Label="Estudo.Cobranças.Domínio.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="583fc5b5-a441-4b3c-b91a-b6887bff3376" name="Estudo.Cobranças.Domínio.Consultas">
+              <references>
+                <reference Id="58128eb3-0b02-42dc-9ad4-8ae5c5f38602" name="Estudo.Cobranças.Domínio.Consultas">
+                  <ArtifactNode Label="Estudo.Cobranças.Domínio.Consultas" Category="CodeSchema_Project" Id="(Assembly=../../src/Cobranças/Estudo.Cobranças.Domínio.Consultas/Estudo.Cobranças.Domínio.Consultas.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Cobranças.Domínio.Consultas)" Label="Estudo.Cobranças.Domínio.Consultas.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="f2385d23-a240-40f7-9383-355f74b24124" name="Cobranças">
+              <ArtifactNode Label="Cobranças" Category="CodeSchema_Project" Id="(Assembly=../../src/Cobranças)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Estudo.Cobranças.Aplicação)" Label="Estudo.Cobranças.Aplicação.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Cobranças.Domínio)" Label="Estudo.Cobranças.Domínio.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Cobranças.Domínio.Consultas)" Label="Estudo.Cobranças.Domínio.Consultas.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.Api)" Label="Estudo.Cobranças.Serviço.Api.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados)" Label="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="e6efc79c-965e-44c3-9f96-8928420702e6" name="Core">
+          <childLayers>
+            <layer Id="1e1076ec-e259-47a6-8d18-befd3cc7f0ef" name="Aplicação">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="d378a142-b41e-4586-ae0a-cb624120684b" direction="Forward">
+                  <layerMoniker Id="d640cb0e-2310-4c8f-aeda-019df09cd7ef" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="243efb97-b842-40c8-8b92-497c22bbee5e" direction="Forward">
+                  <layerMoniker Id="189f0de4-878c-4f2d-b0c8-1e8620c89ef8" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <childLayers>
+                <layer Id="098173c8-4688-4307-b4e8-e913eed2b282" name="Estudo.Core.Aplicação">
+                  <references>
+                    <reference Id="ec0e8e63-598e-4f0e-83ef-6759a2d5d4af" name="Estudo.Core.Aplicação">
+                      <ArtifactNode Label="Estudo.Core.Aplicação" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Aplicação/Estudo.Aplicação/Estudo.Core.Aplicação.csproj)">
+                        <Category Ref="File" />
+                      </ArtifactNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Core.Aplicação)" Label="Estudo.Core.Aplicação.dll" Category="CodeSchema_Assembly">
+                        <LinkCategory Ref="Produces" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
+              </childLayers>
+              <references>
+                <reference Id="99099896-9b1b-4d70-8007-759abac89c26" name="Aplicação">
+                  <ArtifactNode Label="Aplicação" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Aplicação)">
+                    <Category Ref="CodeMap_SolutionFolder" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Aplicação)" Label="Estudo.Core.Aplicação.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="92c7a520-57ff-4613-b619-dab313aac1fa" name="Serviço">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="12637faf-7521-4521-ba8f-349a178ce13f" direction="Forward">
+                  <layerMoniker Id="1e1076ec-e259-47a6-8d18-befd3cc7f0ef" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="7a395d9b-9872-4415-a613-6ea6f4fe36a3" direction="Forward">
+                  <layerMoniker Id="d640cb0e-2310-4c8f-aeda-019df09cd7ef" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="f6ddc090-3f9e-4b95-b744-77e78837ab23" direction="Forward">
+                  <layerMoniker Id="189f0de4-878c-4f2d-b0c8-1e8620c89ef8" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <childLayers>
+                <layer Id="6b98b027-6c84-483c-9bf2-2c53abdd9cc7" name="Estudo.Core.Serviço.Api">
+                  <references>
+                    <reference Id="fcbe9a65-e168-4872-a09f-73a1543afd9b" name="Estudo.Core.Serviço.Api">
+                      <ArtifactNode Label="Estudo.Core.Serviço.Api" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Serviço/Api/Estudo.Serviço.Api/Estudo.Core.Serviço.Api.csproj)">
+                        <Category Ref="File" />
+                      </ArtifactNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Core.Serviço.Api)" Label="Estudo.Core.Serviço.Api.dll" Category="CodeSchema_Assembly">
+                        <LinkCategory Ref="Produces" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
+              </childLayers>
+              <references>
+                <reference Id="8630eaf5-a0d0-49f1-baa8-783b428f9213" name="Serviço">
+                  <ArtifactNode Label="Serviço" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Serviço)">
+                    <Category Ref="CodeMap_SolutionFolder" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Serviço.Api)" Label="Estudo.Core.Serviço.Api.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="d640cb0e-2310-4c8f-aeda-019df09cd7ef" name="Dominio">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="b10e47b2-4668-4f62-8989-10b2d7dc4d76" direction="Forward">
+                  <layerMoniker Id="189f0de4-878c-4f2d-b0c8-1e8620c89ef8" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <childLayers>
+                <layer Id="57499c92-6daf-4fc7-b6fe-cdf99496ea5a" name="Estudo.Core.Domínio">
+                  <references>
+                    <reference Id="d35baa02-db69-49c0-98f3-4bb76d80fa0f" name="Estudo.Core.Domínio">
+                      <ArtifactNode Label="Estudo.Core.Domínio" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Domínio/Estudo.Domínio/Estudo.Core.Domínio.csproj)">
+                        <Category Ref="File" />
+                      </ArtifactNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Core.Domínio)" Label="Estudo.Core.Domínio.dll" Category="CodeSchema_Assembly">
+                        <LinkCategory Ref="Produces" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
+              </childLayers>
+              <references>
+                <reference Id="a434c222-a211-497a-9403-79b7e7275698" name="Dominio">
+                  <ArtifactNode Label="Dominio" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Dominio)">
+                    <Category Ref="CodeMap_SolutionFolder" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Domínio)" Label="Estudo.Core.Domínio.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="189f0de4-878c-4f2d-b0c8-1e8620c89ef8" name="Infraestrutura">
+              <childLayers>
+                <layer Id="2d99398d-b2a6-435b-bcdb-08679aa97910" name="Armazenamento">
+                  <childLayers>
+                    <layer Id="b3ccb26b-ed13-47de-9529-5a829cece5f5" name="Estudo.Core.Infraestrutura.Armazenamento.Abstrações">
+                      <references>
+                        <reference Id="ccc43458-698e-459d-9e01-1e52cd77e14c" name="Estudo.Core.Infraestrutura.Armazenamento.Abstrações">
+                          <ArtifactNode Label="Estudo.Core.Infraestrutura.Armazenamento.Abstrações" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Infraestrutura/Armazenamento/Estudo.Infraestrutura.Armazenamento.Abstrações/Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj)">
+                            <Category Ref="File" />
+                          </ArtifactNode>
+                          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Abstrações)" Label="Estudo.Core.Infraestrutura.Armazenamento.Abstrações.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                    <layer Id="66388018-dab2-438e-ab8a-7884c0fd42f7" name="Estudo.Core.Infraestrutura.Armazenamento.HttpClient">
+                      <dependencyToLayers>
+                        <dependencyFromLayerToLayer Id="36b52df2-c390-4c33-981f-e23f74e7ea73" direction="Forward">
+                          <layerMoniker Id="b3ccb26b-ed13-47de-9529-5a829cece5f5" />
+                        </dependencyFromLayerToLayer>
+                      </dependencyToLayers>
+                      <references>
+                        <reference Id="3dcc41af-aac7-41f8-828e-2e2396885290" name="Estudo.Core.Infraestrutura.Armazenamento.HttpClient">
+                          <ArtifactNode Label="Estudo.Core.Infraestrutura.Armazenamento.HttpClient" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Infraestrutura/Armazenamento/Estudo.Infraestrutura.Armazenamento.HttpClient/Estudo.Core.Infraestrutura.Armazenamento.HttpClient.csproj)">
+                            <Category Ref="File" />
+                          </ArtifactNode>
+                          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.HttpClient)" Label="Estudo.Core.Infraestrutura.Armazenamento.HttpClient.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                    <layer Id="cad0ac1c-eb0c-45a3-b086-07ddc8bfd826" name="Estudo.Core.Infraestrutura.Armazenamento.Memória">
+                      <dependencyToLayers>
+                        <dependencyFromLayerToLayer Id="080df48b-6d0a-4ae4-8925-d21026653719" direction="Forward">
+                          <layerMoniker Id="b3ccb26b-ed13-47de-9529-5a829cece5f5" />
+                        </dependencyFromLayerToLayer>
+                      </dependencyToLayers>
+                      <references>
+                        <reference Id="3d583e72-a267-484c-83e1-599bf961d885" name="Estudo.Core.Infraestrutura.Armazenamento.Memória">
+                          <ArtifactNode Label="Estudo.Core.Infraestrutura.Armazenamento.Memória" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Infraestrutura/Armazenamento/Estudo.Infraestrutura.Armazenamento.Memória/Estudo.Core.Infraestrutura.Armazenamento.Memória.csproj)">
+                            <Category Ref="File" />
+                          </ArtifactNode>
+                          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Memória)" Label="Estudo.Core.Infraestrutura.Armazenamento.Memória.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                    <layer Id="e97ae644-05f0-4cc0-91e0-4227b20ad0dc" name="Estudo.Core.Infraestrutura.Armazenamento.Ravendb">
+                      <dependencyToLayers>
+                        <dependencyFromLayerToLayer Id="8b5ce39c-1a45-43fb-bebd-8f1e37fe27ce" direction="Forward">
+                          <layerMoniker Id="b3ccb26b-ed13-47de-9529-5a829cece5f5" />
+                        </dependencyFromLayerToLayer>
+                      </dependencyToLayers>
+                      <references>
+                        <reference Id="900b47a2-90e4-496e-9128-da12e52c8560" name="Estudo.Core.Infraestrutura.Armazenamento.Ravendb">
+                          <ArtifactNode Label="Estudo.Core.Infraestrutura.Armazenamento.Ravendb" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Infraestrutura/Armazenamento/Estudo.Infraestrutura.Armazenamento.Ravendb/Estudo.Core.Infraestrutura.Armazenamento.Ravendb.csproj)">
+                            <Category Ref="File" />
+                          </ArtifactNode>
+                          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Ravendb)" Label="Estudo.Core.Infraestrutura.Armazenamento.Ravendb.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                  </childLayers>
+                  <references>
+                    <reference Id="723373f2-6122-4952-9c0f-65c7842d5a48" name="Armazenamento">
+                      <ArtifactNode Label="Armazenamento" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Infraestrutura/Armazenamento)">
+                        <Category Ref="CodeMap_SolutionFolder" />
+                      </ArtifactNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Ravendb)" Label="Estudo.Core.Infraestrutura.Armazenamento.Ravendb.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Abstrações)" Label="Estudo.Core.Infraestrutura.Armazenamento.Abstrações.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.HttpClient)" Label="Estudo.Core.Infraestrutura.Armazenamento.HttpClient.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Memória)" Label="Estudo.Core.Infraestrutura.Armazenamento.Memória.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
+              </childLayers>
+              <references>
+                <reference Id="c3cf4436-b30d-4c98-b83b-82a39ce541d4" name="Infraestrutura">
+                  <ArtifactNode Label="Infraestrutura" Category="CodeSchema_Project" Id="(Assembly=../../src/Core/Infraestrutura)">
+                    <Category Ref="CodeMap_SolutionFolder" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Ravendb)" Label="Estudo.Core.Infraestrutura.Armazenamento.Ravendb.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Abstrações)" Label="Estudo.Core.Infraestrutura.Armazenamento.Abstrações.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.HttpClient)" Label="Estudo.Core.Infraestrutura.Armazenamento.HttpClient.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Memória)" Label="Estudo.Core.Infraestrutura.Armazenamento.Memória.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Bus.Abstrações)" Label="Estudo.Core.Infraestrutura.Bus.Abstrações.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Bus.Ravendb)" Label="Estudo.Core.Infraestrutura.Bus.Ravendb.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Bus.Memória)" Label="Estudo.Core.Infraestrutura.Bus.Memória.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Geral)" Label="Estudo.Core.Infraestrutura.Geral.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="fef9c85d-bc48-4291-9473-01988b58741c" name="Core">
+              <ArtifactNode Label="Core" Category="CodeSchema_Project" Id="(Assembly=../../src/Core)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Ravendb)" Label="Estudo.Core.Infraestrutura.Armazenamento.Ravendb.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Abstrações)" Label="Estudo.Core.Infraestrutura.Armazenamento.Abstrações.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.HttpClient)" Label="Estudo.Core.Infraestrutura.Armazenamento.HttpClient.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Memória)" Label="Estudo.Core.Infraestrutura.Armazenamento.Memória.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Bus.Abstrações)" Label="Estudo.Core.Infraestrutura.Bus.Abstrações.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Bus.Ravendb)" Label="Estudo.Core.Infraestrutura.Bus.Ravendb.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Bus.Memória)" Label="Estudo.Core.Infraestrutura.Bus.Memória.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Geral)" Label="Estudo.Core.Infraestrutura.Geral.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Domínio)" Label="Estudo.Core.Domínio.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Serviço.Api)" Label="Estudo.Core.Serviço.Api.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Aplicação)" Label="Estudo.Core.Aplicação.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="8e327d26-adb0-43a5-aa91-6b9cfed1132f" name="src">
+          <ArtifactNode Label="src" Category="CodeSchema_Project" Id="(Assembly=../../src)">
+            <Category Ref="CodeMap_SolutionFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Ravendb)" Label="Estudo.Core.Infraestrutura.Armazenamento.Ravendb.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Abstrações)" Label="Estudo.Core.Infraestrutura.Armazenamento.Abstrações.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.HttpClient)" Label="Estudo.Core.Infraestrutura.Armazenamento.HttpClient.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Armazenamento.Memória)" Label="Estudo.Core.Infraestrutura.Armazenamento.Memória.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Bus.Abstrações)" Label="Estudo.Core.Infraestrutura.Bus.Abstrações.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Bus.Ravendb)" Label="Estudo.Core.Infraestrutura.Bus.Ravendb.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Bus.Memória)" Label="Estudo.Core.Infraestrutura.Bus.Memória.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Infraestrutura.Geral)" Label="Estudo.Core.Infraestrutura.Geral.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Domínio)" Label="Estudo.Core.Domínio.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Serviço.Api)" Label="Estudo.Core.Serviço.Api.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Aplicação)" Label="Estudo.Core.Aplicação.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Clientes.Serviço.Api)" Label="Estudo.Clientes.Serviço.Api.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Clientes.Domínio)" Label="Estudo.Clientes.Domínio.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Cobranças.Aplicação)" Label="Estudo.Cobranças.Aplicação.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Cobranças.Domínio)" Label="Estudo.Cobranças.Domínio.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Cobranças.Domínio.Consultas)" Label="Estudo.Cobranças.Domínio.Consultas.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.Api)" Label="Estudo.Cobranças.Serviço.Api.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados)" Label="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Domínio)" Label="Estudo.CálculoDeConsumo.Domínio.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Serviço.Api)" Label="Estudo.CálculoDeConsumo.Serviço.Api.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Infraestrutura)" Label="Estudo.CálculoDeConsumo.Infraestrutura.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="d7918030-f5ec-477f-b079-d43a014c8d16" name="testes">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d7c08e92-8eb0-475d-a742-1f453c6fc7e0" direction="Forward">
+          <layerMoniker Id="f44f0b5c-1e55-4eb0-ad26-170fca21eb84" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="35119e98-53a4-4f35-a0b5-5a9865c2db33" direction="Forward">
+          <layerMoniker Id="e6efc79c-965e-44c3-9f96-8928420702e6" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="345cdd74-2e38-4a56-9463-5cd10136c08e" name="CálculoDeConsumo">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="e4fb5fb8-abb3-458d-925c-de9e99ce45c2" direction="Forward">
+              <layerMoniker Id="8489b88c-8452-4d1d-b74b-3107521a8273" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="64d6e76b-9f08-47a9-ae12-6ab865edfe4b" name="Estudo.CálculoDeConsumo.Serviço.Api.Testes">
+              <references>
+                <reference Id="21a0afb8-1e3f-4a5e-91e2-04389983d38b" name="Estudo.CálculoDeConsumo.Serviço.Api.Testes">
+                  <ArtifactNode Label="Estudo.CálculoDeConsumo.Serviço.Api.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Consumo/Estudo.Testes.Consumo.Serviço.Api/Estudo.CálculoDeConsumo.Serviço.Api.Testes.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Serviço.Api.Testes)" Label="Estudo.CálculoDeConsumo.Serviço.Api.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="4a1a7a1f-8f09-4a2a-b689-d050a244467d" name="Estudo.CálculoDeConsumo.Testes.DePontaAPonta">
+              <references>
+                <reference Id="f2656b22-cdc3-4d6b-ae57-ec1c534a590f" name="Estudo.CálculoDeConsumo.Testes.DePontaAPonta">
+                  <ArtifactNode Label="Estudo.CálculoDeConsumo.Testes.DePontaAPonta" Category="CodeSchema_Project" Id="(Assembly=../../testes/Consumo/Estudo.Testes.Consumo.DePontaAPonta/Estudo.CálculoDeConsumo.Testes.DePontaAPonta.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Testes.DePontaAPonta)" Label="Estudo.CálculoDeConsumo.Testes.DePontaAPonta.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="5e5535ec-6653-4df1-91c3-90248e60a9ce" name="Estudo.CálculoDeConsumo.Testes.Performance">
+              <references>
+                <reference Id="9f6db442-fcaa-415b-8b21-19147d847eca" name="Estudo.CálculoDeConsumo.Testes.Performance">
+                  <ArtifactNode Label="Estudo.CálculoDeConsumo.Testes.Performance" Category="CodeSchema_Project" Id="(Assembly=../../testes/Consumo/Estudo.Testes.Consumo.Performance/Estudo.CálculoDeConsumo.Testes.Performance.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Testes.Performance)" Label="Estudo.CálculoDeConsumo.Testes.Performance.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="1c95ec38-2655-44ba-9ab1-76022029f052" name="CálculoDeConsumo">
+              <ArtifactNode Label="CálculoDeConsumo" Category="CodeSchema_Project" Id="(Assembly=../../testes/CálculoDeConsumo)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Testes.Performance)" Label="Estudo.CálculoDeConsumo.Testes.Performance.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Testes.DePontaAPonta)" Label="Estudo.CálculoDeConsumo.Testes.DePontaAPonta.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Serviço.Api.Testes)" Label="Estudo.CálculoDeConsumo.Serviço.Api.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="e7b15912-5914-4f73-a0f3-f96f8cc3e09f" name="Clientes">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="61544dc7-eea9-48e7-93ec-832184fda5fb" direction="Forward">
+              <layerMoniker Id="8489b88c-8452-4d1d-b74b-3107521a8273" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="9a611aab-4859-4da3-81be-8aa6ca35e651" name="Estudo.Clientes.Serviço.Api.Testes">
+              <references>
+                <reference Id="bdc6105c-6a2a-4aa0-9f80-8de492a39d58" name="Estudo.Clientes.Serviço.Api.Testes">
+                  <ArtifactNode Label="Estudo.Clientes.Serviço.Api.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Clientes/Estudo.Testes.Clientes.Serviço.Api/Estudo.Clientes.Serviço.Api.Testes.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Clientes.Serviço.Api.Testes)" Label="Estudo.Clientes.Serviço.Api.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="c6231d0d-722c-4e6b-970f-f36e1ea60d4f" name="Estudo.Clientes.Testes.DePontaAPonta">
+              <references>
+                <reference Id="662164b7-1589-4969-8363-6e36cbc1e052" name="Estudo.Clientes.Testes.DePontaAPonta">
+                  <ArtifactNode Label="Estudo.Clientes.Testes.DePontaAPonta" Category="CodeSchema_Project" Id="(Assembly=../../testes/Clientes/Estudo.Testes.Clientes.DePontaAPonta/Estudo.Clientes.Testes.DePontaAPonta.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Clientes.Testes.DePontaAPonta)" Label="Estudo.Clientes.Testes.DePontaAPonta.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="3d463a6d-9ca3-4d76-a985-a7728956ef29" name="Clientes">
+              <ArtifactNode Label="Clientes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Clientes)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Estudo.Clientes.Testes.DePontaAPonta)" Label="Estudo.Clientes.Testes.DePontaAPonta.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Clientes.Serviço.Api.Testes)" Label="Estudo.Clientes.Serviço.Api.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="e474e80a-5d79-418a-be21-f0b3e3846195" name="Cobranças">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="8de66c14-28ca-468d-8328-199329a9978c" direction="Forward">
+              <layerMoniker Id="8489b88c-8452-4d1d-b74b-3107521a8273" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="388193b8-61b2-4c31-bac3-f7c37aa32585" name="Estudo.Cobranças.Serviço.Api.Testes">
+              <references>
+                <reference Id="c223260d-4fc5-4330-b047-a98bd199b368" name="Estudo.Cobranças.Serviço.Api.Testes">
+                  <ArtifactNode Label="Estudo.Cobranças.Serviço.Api.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Cobranças/Estudo.Testes.Cobranças.Serviço.Api/Estudo.Cobranças.Serviço.Api.Testes.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.Api.Testes)" Label="Estudo.Cobranças.Serviço.Api.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="17b26e03-f017-4bbc-bd4c-a8f10eda212f" name="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes">
+              <references>
+                <reference Id="1f292f4f-e576-4795-a67a-8ec0b7254b50" name="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes">
+                  <ArtifactNode Label="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Cobranças/Estudo.Cobranças.Aplicação.Testes/Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes)" Label="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="26841ece-b193-498d-a3a2-5aea7fbeb901" name="Estudo.Cobranças.Testes.DePontaAPonta">
+              <references>
+                <reference Id="577f323d-f088-4fd8-a664-0ac2f0a9f79a" name="Estudo.Cobranças.Testes.DePontaAPonta">
+                  <ArtifactNode Label="Estudo.Cobranças.Testes.DePontaAPonta" Category="CodeSchema_Project" Id="(Assembly=../../testes/Cobranças/Estudo.Testes.Cobranças.DePontaAPonta/Estudo.Cobranças.Testes.DePontaAPonta.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Cobranças.Testes.DePontaAPonta)" Label="Estudo.Cobranças.Testes.DePontaAPonta.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="b122b321-7d2f-4092-ad2d-32f5c8534734" name="Estudo.Cobranças.Testes.DePontaAPonta.Ravendb">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="7aeeee90-c612-474a-b905-fd436db0a130" direction="Forward">
+                  <layerMoniker Id="a5ca3842-f41c-415b-a268-44a7285a1ab6" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="9398bcfd-fbec-4235-907d-785296a1a338" name="Estudo.Cobranças.Testes.DePontaAPonta.Ravendb">
+                  <ArtifactNode Label="Estudo.Cobranças.Testes.DePontaAPonta.Ravendb" Category="CodeSchema_Project" Id="(Assembly=../../testes/Cobranças/Estudo.Testes.Cobranças.DePontaAPonta.Ravendb/Estudo.Cobranças.Testes.DePontaAPonta.Ravendb.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Cobranças.Testes.DePontaAPonta.Ravendb)" Label="Estudo.Cobranças.Testes.DePontaAPonta.Ravendb.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="ed0b88a9-57f1-4bfc-8a49-69c8a6b62d2d" name="Cobranças">
+              <ArtifactNode Label="Cobranças" Category="CodeSchema_Project" Id="(Assembly=../../testes/Cobranças)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Estudo.Cobranças.Testes.DePontaAPonta)" Label="Estudo.Cobranças.Testes.DePontaAPonta.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes)" Label="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Cobranças.Testes.DePontaAPonta.Ravendb)" Label="Estudo.Cobranças.Testes.DePontaAPonta.Ravendb.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.Api.Testes)" Label="Estudo.Cobranças.Serviço.Api.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="241b6e0e-dcda-4da6-8492-12c0dc63e2f0" name="Core">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="ddd8ca07-f9bc-4eac-9010-0087e59a90a4" direction="Forward">
+              <layerMoniker Id="8489b88c-8452-4d1d-b74b-3107521a8273" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="1ae46d4a-d3fb-4ee0-a2b4-7a57f20480e1" name="Domínio">
+              <childLayers>
+                <layer Id="903d97e4-7472-4d49-a261-fe3aafb3ed48" name="Estudo.Core.Domínio.Testes">
+                  <references>
+                    <reference Id="5964d405-a367-43bd-92ff-f1d56fd69745" name="Estudo.Core.Domínio.Testes">
+                      <ArtifactNode Label="Estudo.Core.Domínio.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Domínio/Estudo.Core.Domínio.Testes/Estudo.Core.Domínio.Testes.csproj)">
+                        <Category Ref="File" />
+                      </ArtifactNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Core.Domínio.Testes)" Label="Estudo.Core.Domínio.Testes.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Produces" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
+              </childLayers>
+              <references>
+                <reference Id="bae20b52-0d4a-458c-a3b1-30ce0877b3a9" name="Domínio">
+                  <ArtifactNode Label="Domínio" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Domínio)">
+                    <Category Ref="CodeMap_SolutionFolder" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Core.Domínio.Testes)" Label="Estudo.Core.Domínio.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="96079dce-c8f2-420c-9f44-ce8c60179487" name="Infraestrutura">
+              <childLayers>
+                <layer Id="dd005432-2c43-4fd7-8400-0571b750da0c" name="Armazenamento">
+                  <childLayers>
+                    <layer Id="c499e680-44f3-4595-9b68-b54b8211f70e" name="Estudo.Infraestrutura.Armazenamento.Abstrações.Testes">
+                      <references>
+                        <reference Id="6d33d34b-fa6e-415a-8fec-7778f5c73e31" name="Estudo.Infraestrutura.Armazenamento.Abstrações.Testes">
+                          <ArtifactNode Label="Estudo.Infraestrutura.Armazenamento.Abstrações.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Infraestrutura/Armazenamento/Estudo.Infraestrutura.Armazenamento.Abstrações.Testes/Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.csproj)">
+                            <Category Ref="File" />
+                          </ArtifactNode>
+                          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Abstrações.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                    <layer Id="a840a6fa-ee2c-417b-bc29-f4048fa65271" name="Estudo.Infraestrutura.Armazenamento.HttpClient.Testes">
+                      <references>
+                        <reference Id="647ad57a-eea3-4ae6-81e7-bece44440156" name="Estudo.Infraestrutura.Armazenamento.HttpClient.Testes">
+                          <ArtifactNode Label="Estudo.Infraestrutura.Armazenamento.HttpClient.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Estudo.Infraestrutura.Armazenamento.HttpClient.Testes/Estudo.Infraestrutura.Armazenamento.HttpClient.Testes.csproj)">
+                            <Category Ref="File" />
+                          </ArtifactNode>
+                          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.HttpClient.Testes)" Label="Estudo.Infraestrutura.Armazenamento.HttpClient.Testes.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                    <layer Id="5ab27ba4-db6a-424a-b737-f7608cba0cd9" name="Estudo.Infraestrutura.Armazenamento.Memória.Testes">
+                      <references>
+                        <reference Id="ddf2b0aa-3cad-4255-9929-b00bab2a8a01" name="Estudo.Infraestrutura.Armazenamento.Memória.Testes">
+                          <ArtifactNode Label="Estudo.Infraestrutura.Armazenamento.Memória.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Infraestrutura/Armazenamento/Estudo.Infraestrutura.Armazenamento.Memória.Testes/Estudo.Infraestrutura.Armazenamento.Memória.Testes.csproj)">
+                            <Category Ref="File" />
+                          </ArtifactNode>
+                          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Memória.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Memória.Testes.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                    <layer Id="a5ca3842-f41c-415b-a268-44a7285a1ab6" name="Estudo.Infraestrutura.Armazenamento.Ravendb.Testes">
+                      <references>
+                        <reference Id="90de3d07-02ce-48a1-99d1-aa4d8e278dcd" name="Estudo.Infraestrutura.Armazenamento.Ravendb.Testes">
+                          <ArtifactNode Label="Estudo.Infraestrutura.Armazenamento.Ravendb.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Estudo.Infraestrutura.Armazenamento.Ravendb.Testes/Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.csproj)">
+                            <Category Ref="File" />
+                          </ArtifactNode>
+                          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Ravendb.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                  </childLayers>
+                  <references>
+                    <reference Id="dfd01da5-425d-4f47-bba2-07c20f4737b1" name="Armazenamento">
+                      <ArtifactNode Label="Armazenamento" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Infraestrutura/Armazenamento)">
+                        <Category Ref="CodeMap_SolutionFolder" />
+                      </ArtifactNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.HttpClient.Testes)" Label="Estudo.Infraestrutura.Armazenamento.HttpClient.Testes.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Ravendb.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Abstrações.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Memória.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Memória.Testes.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
+                <layer Id="06b8c008-22fe-4702-affa-f28e0c2b7071" name="Bus">
+                  <childLayers>
+                    <layer Id="25671032-73d3-4259-a75f-8f408199a1f4" name="Estudo.Infraestrutura.Bus.Memória.Testes">
+                      <references>
+                        <reference Id="7c077e98-8d2e-4c84-b4fe-e52bcfa6ca66" name="Estudo.Infraestrutura.Bus.Memória.Testes">
+                          <ArtifactNode Label="Estudo.Infraestrutura.Bus.Memória.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Infraestrutura/Bus/Estudo.Infraestrutura.Bus.Memória.Testes/Estudo.Infraestrutura.Bus.Memória.Testes.csproj)">
+                            <Category Ref="File" />
+                          </ArtifactNode>
+                          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Bus.Memória.Testes)" Label="Estudo.Infraestrutura.Bus.Memória.Testes.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                    <layer Id="15da5cea-6211-4737-b79a-0ce72a4e59c1" name="Estudo.Infraestrutura.Bus.Ravendb.Testes">
+                      <dependencyToLayers>
+                        <dependencyFromLayerToLayer Id="1910749a-05dc-4faf-b8ec-32f64dd76e52" direction="Forward">
+                          <layerMoniker Id="a5ca3842-f41c-415b-a268-44a7285a1ab6" />
+                        </dependencyFromLayerToLayer>
+                      </dependencyToLayers>
+                      <references>
+                        <reference Id="4bb2fd41-8aa9-4108-a7fd-4c25955e88a1" name="Estudo.Infraestrutura.Bus.Ravendb.Testes">
+                          <ArtifactNode Label="Estudo.Infraestrutura.Bus.Ravendb.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Infraestrutura/Bus/Estudo.Infraestrutura.Bus.Ravendb.Testes/Estudo.Infraestrutura.Bus.Ravendb.Testes.csproj)">
+                            <Category Ref="File" />
+                          </ArtifactNode>
+                          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Bus.Ravendb.Testes)" Label="Estudo.Infraestrutura.Bus.Ravendb.Testes.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                  </childLayers>
+                  <references>
+                    <reference Id="09c26322-b61f-4bbc-bff0-ebdb9da324cc" name="Bus">
+                      <ArtifactNode Label="Bus" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Infraestrutura/Bus)">
+                        <Category Ref="CodeMap_SolutionFolder" />
+                      </ArtifactNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Bus.Ravendb.Testes)" Label="Estudo.Infraestrutura.Bus.Ravendb.Testes.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                      <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Bus.Memória.Testes)" Label="Estudo.Infraestrutura.Bus.Memória.Testes.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
+              </childLayers>
+              <references>
+                <reference Id="cd3ed49c-bb9a-476c-97c3-be2feb90e417" name="Infraestrutura">
+                  <ArtifactNode Label="Infraestrutura" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Infraestrutura)">
+                    <Category Ref="CodeMap_SolutionFolder" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.HttpClient.Testes)" Label="Estudo.Infraestrutura.Armazenamento.HttpClient.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Ravendb.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Abstrações.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Memória.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Memória.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Bus.Ravendb.Testes)" Label="Estudo.Infraestrutura.Bus.Ravendb.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Bus.Memória.Testes)" Label="Estudo.Infraestrutura.Bus.Memória.Testes.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="a72c37df-3a09-4dc2-8765-47a0d3b8cc2d" name="Core">
+              <ArtifactNode Label="Core" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.HttpClient.Testes)" Label="Estudo.Infraestrutura.Armazenamento.HttpClient.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Ravendb.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Abstrações.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Memória.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Memória.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Bus.Ravendb.Testes)" Label="Estudo.Infraestrutura.Bus.Ravendb.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Bus.Memória.Testes)" Label="Estudo.Infraestrutura.Bus.Memória.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Domínio.Testes)" Label="Estudo.Core.Domínio.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="8489b88c-8452-4d1d-b74b-3107521a8273" name="Estudo.Core.Api.Testes">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="65ecde5e-fef0-4fda-ab93-45295d13e33f" direction="Forward">
+              <layerMoniker Id="489cb173-cab3-447c-a558-a1229407d3e0" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="cc815194-457d-4c6c-a2dd-459cfa6ac843" name="Estudo.Core.Api.Testes">
+              <ArtifactNode Label="Estudo.Core.Api.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Estudo.Testes.Core.Api/Estudo.Core.Api.Testes.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Api.Testes)" Label="Estudo.Core.Api.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="489cb173-cab3-447c-a558-a1229407d3e0" name="Estudo.Core.Http.Testes">
+          <references>
+            <reference Id="08e7e38f-fad8-415f-9993-b6b3fc252dde" name="Estudo.Core.Http.Testes">
+              <ArtifactNode Label="Estudo.Core.Http.Testes" Category="CodeSchema_Project" Id="(Assembly=../../testes/Core/Estudo.Testes.Core.Http/Estudo.Core.Http.Testes.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Estudo.Core.Http.Testes)" Label="Estudo.Core.Http.Testes.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="15eb0b6e-e6d5-4555-96ee-149c6175d1a3" name="testes">
+          <ArtifactNode Label="testes" Category="CodeSchema_Project" Id="(Assembly=../../testes)">
+            <Category Ref="CodeMap_SolutionFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Estudo.Clientes.Testes.DePontaAPonta)" Label="Estudo.Clientes.Testes.DePontaAPonta.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Clientes.Serviço.Api.Testes)" Label="Estudo.Clientes.Serviço.Api.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.HttpClient.Testes)" Label="Estudo.Infraestrutura.Armazenamento.HttpClient.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Ravendb.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Abstrações.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Armazenamento.Memória.Testes)" Label="Estudo.Infraestrutura.Armazenamento.Memória.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Bus.Ravendb.Testes)" Label="Estudo.Infraestrutura.Bus.Ravendb.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Infraestrutura.Bus.Memória.Testes)" Label="Estudo.Infraestrutura.Bus.Memória.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Domínio.Testes)" Label="Estudo.Core.Domínio.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Http.Testes)" Label="Estudo.Core.Http.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Core.Api.Testes)" Label="Estudo.Core.Api.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Testes.Performance)" Label="Estudo.CálculoDeConsumo.Testes.Performance.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Testes.DePontaAPonta)" Label="Estudo.CálculoDeConsumo.Testes.DePontaAPonta.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.CálculoDeConsumo.Serviço.Api.Testes)" Label="Estudo.CálculoDeConsumo.Serviço.Api.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Cobranças.Testes.DePontaAPonta)" Label="Estudo.Cobranças.Testes.DePontaAPonta.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes)" Label="Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Cobranças.Testes.DePontaAPonta.Ravendb)" Label="Estudo.Cobranças.Testes.DePontaAPonta.Ravendb.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Estudo.Cobranças.Serviço.Api.Testes)" Label="Estudo.Cobranças.Serviço.Api.Testes.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

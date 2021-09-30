@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1eecbe78-84f1-40fd-a61f-bed0271d97f7}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>ValidaçãoDeDependência</Name>
+    <RootNamespace>ValidaçãoDeDependência</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Validate Include="DiagramaDeValidaçãoDeDependência.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="DiagramaDeValidaçãoDeDependência.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramaDeValidaçãoDeDependência.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="DiagramaDeValidaçãoDeDependência.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagramaDeValidaçãoDeDependência.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Clientes\Estudo.Clientes.Domínio\Estudo.Clientes.Domínio.csproj">
+      <Name>Estudo.Clientes.Domínio</Name>
+      <Project>{b40675bc-bdf1-4e05-af8a-b1854d42ba43}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Clientes\Estudo.Clientes.Serviço.Api\Estudo.Clientes.Serviço.Api.csproj">
+      <Name>Estudo.Clientes.Serviço.Api</Name>
+      <Project>{78f413cb-f8ef-44c1-8cc0-e145f28b40be}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Cobranças\Estudo.Cobranças.Aplicação\Estudo.Cobranças.Aplicação.csproj">
+      <Name>Estudo.Cobranças.Aplicação</Name>
+      <Project>{76e7adce-fa28-45b2-8e23-27b5647d94c9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Cobranças\Estudo.Cobranças.Domínio.Consultas\Estudo.Cobranças.Domínio.Consultas.csproj">
+      <Name>Estudo.Cobranças.Domínio.Consultas</Name>
+      <Project>{ccaa299c-7a32-4c49-91fe-425ab0166f9e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Cobranças\Estudo.Cobranças.Domínio\Estudo.Cobranças.Domínio.csproj">
+      <Name>Estudo.Cobranças.Domínio</Name>
+      <Project>{c0007162-6e49-47dc-aaf6-544b00e2643f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Cobranças\Estudo.Cobranças.Serviço.Api\Estudo.Cobranças.Serviço.Api.csproj">
+      <Name>Estudo.Cobranças.Serviço.Api</Name>
+      <Project>{c768fe71-15b6-45c5-9b01-5f4942fa4885}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Cobranças\Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados\Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.csproj">
+      <Name>Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados</Name>
+      <Project>{9fe87f34-5047-4d91-b1de-de438ab4da98}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Aplicação\Estudo.Aplicação\Estudo.Core.Aplicação.csproj">
+      <Name>Estudo.Core.Aplicação</Name>
+      <Project>{c99af900-d35c-4f8f-bfe9-f1ec058d7926}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Domínio\Estudo.Domínio\Estudo.Core.Domínio.csproj">
+      <Name>Estudo.Core.Domínio</Name>
+      <Project>{7a34aea4-309b-4a96-a915-9ebbb76f3b18}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.csproj">
+      <Name>Estudo.Core.Infraestrutura.Armazenamento.Abstrações</Name>
+      <Project>{10782e60-d567-47f3-83da-654e5cf489d3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.HttpClient\Estudo.Core.Infraestrutura.Armazenamento.HttpClient.csproj">
+      <Name>Estudo.Core.Infraestrutura.Armazenamento.HttpClient</Name>
+      <Project>{cb4c0ebf-6053-494f-b5aa-456b56f3d29a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória\Estudo.Core.Infraestrutura.Armazenamento.Memória.csproj">
+      <Name>Estudo.Core.Infraestrutura.Armazenamento.Memória</Name>
+      <Project>{2bfc4868-aaf1-42d9-a23d-d7417512ad9a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Ravendb\Estudo.Core.Infraestrutura.Armazenamento.Ravendb.csproj">
+      <Name>Estudo.Core.Infraestrutura.Armazenamento.Ravendb</Name>
+      <Project>{91ba7529-016f-43c5-9626-8a0e03f1a98f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj">
+      <Name>Estudo.Core.Infraestrutura.Bus.Abstrações</Name>
+      <Project>{a5a93837-638f-4e4a-87fb-2f1ceb20767c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória\Estudo.Core.Infraestrutura.Bus.Memória.csproj">
+      <Name>Estudo.Core.Infraestrutura.Bus.Memória</Name>
+      <Project>{c769b7ca-6080-4dd6-b535-333bfaf474b2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb\Estudo.Core.Infraestrutura.Bus.Ravendb.csproj">
+      <Name>Estudo.Core.Infraestrutura.Bus.Ravendb</Name>
+      <Project>{d1cbc82f-0ce8-4891-9c79-ba07dd4befe3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Geral\Estudo.Infraestrutura.Geral\Estudo.Core.Infraestrutura.Geral.csproj">
+      <Name>Estudo.Core.Infraestrutura.Geral</Name>
+      <Project>{df899aab-7d1d-4772-abfe-cb7e05309b74}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Serviço\Api\Estudo.Serviço.Api\Estudo.Core.Serviço.Api.csproj">
+      <Name>Estudo.Core.Serviço.Api</Name>
+      <Project>{fb87357b-fe0f-4287-a275-f05b41be7287}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\CálculoDeConsumo\Estudo.CálculoDeConsumo.Domínio\Estudo.CálculoDeConsumo.Domínio.csproj">
+      <Name>Estudo.CálculoDeConsumo.Domínio</Name>
+      <Project>{c0b81918-6111-4418-a4b9-a73b853d37dd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\CálculoDeConsumo\Estudo.CálculoDeConsumo.Infraestrutura\Estudo.CálculoDeConsumo.Infraestrutura.csproj">
+      <Name>Estudo.CálculoDeConsumo.Infraestrutura</Name>
+      <Project>{72cbde9c-7e22-4d12-af89-38f3efc8df8e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\CálculoDeConsumo\Estudo.CálculoDeConsumo.Serviço.Api\Estudo.CálculoDeConsumo.Serviço.Api.csproj">
+      <Name>Estudo.CálculoDeConsumo.Serviço.Api</Name>
+      <Project>{6c44e1ee-674d-4ebe-bde4-1582f6e39763}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Clientes\Estudo.Testes.Clientes.DePontaAPonta\Estudo.Clientes.Testes.DePontaAPonta.csproj">
+      <Name>Estudo.Clientes.Testes.DePontaAPonta</Name>
+      <Project>{8a3e3828-af1e-4f8b-a2d2-a9777e74a8fa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Clientes\Estudo.Testes.Clientes.Serviço.Api\Estudo.Clientes.Serviço.Api.Testes.csproj">
+      <Name>Estudo.Clientes.Serviço.Api.Testes</Name>
+      <Project>{fde4f098-3693-4f76-8e55-627f59764b57}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Cobranças\Estudo.Cobranças.Aplicação.Testes\Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes.csproj">
+      <Name>Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes</Name>
+      <Project>{400f974a-9883-4609-9c1b-f3ac34737a4a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Cobranças\Estudo.Testes.Cobranças.DePontaAPonta.Ravendb\Estudo.Cobranças.Testes.DePontaAPonta.Ravendb.csproj">
+      <Name>Estudo.Cobranças.Testes.DePontaAPonta.Ravendb</Name>
+      <Project>{0666eb6d-bf0f-4443-96af-f9d2648b0ceb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Cobranças\Estudo.Testes.Cobranças.DePontaAPonta\Estudo.Cobranças.Testes.DePontaAPonta.csproj">
+      <Name>Estudo.Cobranças.Testes.DePontaAPonta</Name>
+      <Project>{7ef42350-34d4-4abf-9c64-fe153f8fe737}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Cobranças\Estudo.Testes.Cobranças.Serviço.Api\Estudo.Cobranças.Serviço.Api.Testes.csproj">
+      <Name>Estudo.Cobranças.Serviço.Api.Testes</Name>
+      <Project>{bb2503e1-f23e-447f-8f3b-f1aa4f0839dd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Consumo\Estudo.Testes.Consumo.DePontaAPonta\Estudo.CálculoDeConsumo.Testes.DePontaAPonta.csproj">
+      <Name>Estudo.CálculoDeConsumo.Testes.DePontaAPonta</Name>
+      <Project>{9fe0ce86-6ae1-4e7f-a763-a1ed1ccc5d5a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Consumo\Estudo.Testes.Consumo.Performance\Estudo.CálculoDeConsumo.Testes.Performance.csproj">
+      <Name>Estudo.CálculoDeConsumo.Testes.Performance</Name>
+      <Project>{d001a131-86f5-4ca8-b87f-42dfa26d64b7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Consumo\Estudo.Testes.Consumo.Serviço.Api\Estudo.CálculoDeConsumo.Serviço.Api.Testes.csproj">
+      <Name>Estudo.CálculoDeConsumo.Serviço.Api.Testes</Name>
+      <Project>{4a293dd1-5a24-4f78-b09a-baffd281fc14}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Core\Domínio\Estudo.Core.Domínio.Testes\Estudo.Core.Domínio.Testes.csproj">
+      <Name>Estudo.Core.Domínio.Testes</Name>
+      <Project>{cd30d5f0-3d3a-4e12-898b-c42990911e5b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Core\Estudo.Infraestrutura.Armazenamento.HttpClient.Testes\Estudo.Infraestrutura.Armazenamento.HttpClient.Testes.csproj">
+      <Name>Estudo.Infraestrutura.Armazenamento.HttpClient.Testes</Name>
+      <Project>{1f37b8f6-50a6-452d-9b84-fc7353870666}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Core\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.csproj">
+      <Name>Estudo.Infraestrutura.Armazenamento.Ravendb.Testes</Name>
+      <Project>{6d3b0f82-889f-442d-8d2a-bb5d347037d8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Core\Estudo.Testes.Core.Api\Estudo.Core.Api.Testes.csproj">
+      <Name>Estudo.Core.Api.Testes</Name>
+      <Project>{d0c7ebbc-3e66-4ef7-9071-d38bc74bbc1c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Core\Estudo.Testes.Core.Http\Estudo.Core.Http.Testes.csproj">
+      <Name>Estudo.Core.Http.Testes</Name>
+      <Project>{af69f997-430a-429a-af90-20567e74de8f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.csproj">
+      <Name>Estudo.Infraestrutura.Armazenamento.Abstrações.Testes</Name>
+      <Project>{b584bbce-29b9-450b-a891-94d41fff305b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória.Testes\Estudo.Infraestrutura.Armazenamento.Memória.Testes.csproj">
+      <Name>Estudo.Infraestrutura.Armazenamento.Memória.Testes</Name>
+      <Project>{776efee3-5ad7-4ebf-af52-d8c80f0b6db6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória.Testes\Estudo.Infraestrutura.Bus.Memória.Testes.csproj">
+      <Name>Estudo.Infraestrutura.Bus.Memória.Testes</Name>
+      <Project>{b8cff920-80a8-4da8-b3f1-5e8729a12828}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb.Testes\Estudo.Infraestrutura.Bus.Ravendb.Testes.csproj">
+      <Name>Estudo.Infraestrutura.Bus.Ravendb.Testes</Name>
+      <Project>{799477ac-3144-4f2e-914c-24330025c55f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DiagramaDeValidaçãoDeDependência.pdf">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="Exists('$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets')" />
+  <Target Name="Build" Condition="!Exists('$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets')" />
+  <Target Name="VSTest" Condition="!Exists('$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets')" />
+</Project>

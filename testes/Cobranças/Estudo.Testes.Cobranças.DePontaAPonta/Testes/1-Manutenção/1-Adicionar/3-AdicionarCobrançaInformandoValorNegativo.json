@@ -1,0 +1,22 @@
+﻿{
+  "Nome": "Adicionar cobrança sem informar nenhum campo",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças/",
+        "Método": "Post",
+        "Corpo": {
+          "cpf": "57251010020",
+          "dataDeVencimento": "2021-01-01",
+          "valor": -1
+        }
+      },
+      "Retorno": {
+        "Status": "BadRequest",
+        "Corpo": [
+          "'Valor' deve ser superior a '0'."
+        ]
+      }
+    }
+  ]
+}

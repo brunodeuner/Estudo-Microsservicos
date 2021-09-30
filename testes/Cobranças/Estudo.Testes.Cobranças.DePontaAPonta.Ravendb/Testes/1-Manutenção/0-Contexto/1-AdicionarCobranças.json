@@ -1,0 +1,61 @@
+﻿{
+  "Nome": "Adicionar 2 cobranças por cpf em meses diferentes",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças/",
+        "Método": "Post",
+        "Corpo": {
+          "cpf": "57251010020",
+          "dataDeVencimento": "2021-01-01",
+          "valor": "90"
+        }
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças/",
+        "Método": "Post",
+        "Corpo": {
+          "cpf": "57251010020",
+          "dataDeVencimento": "2021-02-01",
+          "valor": "50"
+        }
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças/",
+        "Método": "Post",
+        "Corpo": {
+          "cpf": "27555728095",
+          "dataDeVencimento": "2021-01-01",
+          "valor": "100"
+        }
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças/",
+        "Método": "Post",
+        "Corpo": {
+          "cpf": "27555728095",
+          "dataDeVencimento": "2021-02-01",
+          "valor": "60"
+        }
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+﻿{
+  "Nome": "Adicionar cobrança com sucesso",
+  "Comandos": [
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças/",
+        "Método": "Post",
+        "Corpo": {
+          "cpf": "57251010020",
+          "dataDeVencimento": "2021-01-01",
+          "valor": 123.45
+        }
+      },
+      "Retorno": {
+        "Status": "OK"
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças?cpf=57251010020",
+        "Método": "Get"
+      },
+      "Retorno": {
+        "Status": "OK",
+        "Corpo": [
+          {
+            "pessoa": {
+              "cpf": "57251010020",
+              "estado": "Rio Grande do Sul",
+              "id": "[[Cliente/1]]"
+            },
+            "dataDeVencimento": "2021-01-01T00:00:00",
+            "valor": 123.45,
+            "id": "[[Cobrança/1]]"
+          }
+        ]
+      }
+    },
+    {
+      "Requisição": {
+        "Rota": "{{RotaBase}}/Cobranças?mês=1",
+        "Método": "Get"
+      },
+      "Retorno": {
+        "Status": "OK",
+        "Corpo": [
+          {
+            "pessoa": {
+              "cpf": "57251010020",
+              "estado": "Rio Grande do Sul",
+              "id": "{{Cliente/1}}"
+            },
+            "dataDeVencimento": "2021-01-01T00:00:00",
+            "valor": 123.45,
+            "id": "{{Cobrança/1}}"
+          }
+        ]
+      }
+    }
+  ]
+}
