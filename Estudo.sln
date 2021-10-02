@@ -108,15 +108,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.CálculoDeConsumo.Te
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestrutura", "Infraestrutura", "{BA2DB300-2CE1-431C-8311-BB5C652F3E0B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Armazenamento.Ravendb.Testes", "testes\Core\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.csproj", "{6D3B0F82-889F-442D-8D2A-BB5D347037D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes", "testes\Core\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes\Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes.csproj", "{6D3B0F82-889F-442D-8D2A-BB5D347037D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Armazenamento.HttpClient.Testes", "testes\Core\Estudo.Infraestrutura.Armazenamento.HttpClient.Testes\Estudo.Infraestrutura.Armazenamento.HttpClient.Testes.csproj", "{1F37B8F6-50A6-452D-9B84-FC7353870666}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Testes", "testes\Core\Estudo.Infraestrutura.Armazenamento.HttpClient.Testes\Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Testes.csproj", "{1F37B8F6-50A6-452D-9B84-FC7353870666}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Armazenamento", "Armazenamento", "{229DB5EC-90D3-4CED-84AA-47F544F05EA1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bus", "Bus", "{E0167A21-9E19-4C72-9786-8EB6BCA0EF19}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Bus.Ravendb.Testes", "testes\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb.Testes\Estudo.Infraestrutura.Bus.Ravendb.Testes.csproj", "{799477AC-3144-4F2E-914C-24330025C55F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.Ravendb.Testes", "testes\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb.Testes\Estudo.Core.Infraestrutura.Bus.Ravendb.Testes.csproj", "{799477AC-3144-4F2E-914C-24330025C55F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes", "testes\Cobranças\Estudo.Cobranças.Aplicação.Testes\Estudo.Cobranças.Serviço.InicializaçãoDoBancoDeDados.Testes.csproj", "{400F974A-9883-4609-9C1B-F3AC34737A4A}"
 EndProject
@@ -128,15 +128,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Cobranças.Serviço.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.CálculoDeConsumo.Serviço.Api.Testes", "testes\Consumo\Estudo.Testes.Consumo.Serviço.Api\Estudo.CálculoDeConsumo.Serviço.Api.Testes.csproj", "{4A293DD1-5A24-4F78-B09A-BAFFD281FC14}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Armazenamento.Abstrações.Testes", "testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.csproj", "{B584BBCE-29B9-450B-A891-94D41FFF305B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Testes", "testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Testes.csproj", "{B584BBCE-29B9-450B-A891-94D41FFF305B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domínio", "Domínio", "{50C9F99D-8A80-4F87-B84C-4CD260084CC1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Domínio.Testes", "testes\Core\Domínio\Estudo.Core.Domínio.Testes\Estudo.Core.Domínio.Testes.csproj", "{CD30D5F0-3D3A-4E12-898B-C42990911E5B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Bus.Memória.Testes", "testes\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória.Testes\Estudo.Infraestrutura.Bus.Memória.Testes.csproj", "{B8CFF920-80A8-4DA8-B3F1-5E8729A12828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.Memória.Testes", "testes\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória.Testes\Estudo.Core.Infraestrutura.Bus.Memória.Testes.csproj", "{B8CFF920-80A8-4DA8-B3F1-5E8729A12828}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Infraestrutura.Armazenamento.Memória.Testes", "testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória.Testes\Estudo.Infraestrutura.Armazenamento.Memória.Testes.csproj", "{776EFEE3-5AD7-4EBF-AF52-D8C80F0B6DB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Armazenamento.Memória.Testes", "testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória.Testes\Estudo.Core.Infraestrutura.Armazenamento.Memória.Testes.csproj", "{776EFEE3-5AD7-4EBF-AF52-D8C80F0B6DB6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.CálculoDeConsumo.Infraestrutura", "src\CálculoDeConsumo\Estudo.CálculoDeConsumo.Infraestrutura\Estudo.CálculoDeConsumo.Infraestrutura.csproj", "{72CBDE9C-7E22-4D12-AF89-38F3EFC8DF8E}"
 EndProject
@@ -145,6 +145,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arquitetura", "Arquitetura", "{6482C3CF-448C-42B0-8746-E1B2C5BA4B23}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ValidaçãoDeDependência", "Arquitetura\ValidaçãoDeDependência\ValidaçãoDeDependência.modelproj", "{1EECBE78-84F1-40FD-A61F-BED0271D97F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Geral.Json.Abstrações", "src\Core\Infraestrutura\Geral\Estudo.Core.Infraestrutura.Geral.Json\Estudo.Core.Infraestrutura.Geral.Json.Abstrações.csproj", "{53A66665-F8C7-44B6-8521-F626AF40FD25}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.RabbitMq", "src\Core\Infraestrutura\Bus\Estudo.Core.Infraestrutura.Bus.RabbitMq\Estudo.Core.Infraestrutura.Bus.RabbitMq.csproj", "{91BA9540-CD5D-4889-86A2-F043F2103D00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Json", "Json", "{C6292CCF-0F89-4A7E-A049-322168A4846D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson", "src\Core\Infraestrutura\Geral\Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson\Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson.csproj", "{82FBBD2B-9B6C-4F51-A8BF-5C2BD8A84209}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estudo.Core.Infraestrutura.Bus.RabbitMq.Testes", "testes\Core\Infraestrutura\Bus\Estudo.Core.Infraestrutura.Bus.RabbitMq.Testes\Estudo.Core.Infraestrutura.Bus.RabbitMq.Testes.csproj", "{B058C5B6-283E-40E1-87E4-3904558CC6A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -312,6 +322,22 @@ Global
 		{1EECBE78-84F1-40FD-A61F-BED0271D97F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EECBE78-84F1-40FD-A61F-BED0271D97F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EECBE78-84F1-40FD-A61F-BED0271D97F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53A66665-F8C7-44B6-8521-F626AF40FD25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53A66665-F8C7-44B6-8521-F626AF40FD25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53A66665-F8C7-44B6-8521-F626AF40FD25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53A66665-F8C7-44B6-8521-F626AF40FD25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91BA9540-CD5D-4889-86A2-F043F2103D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91BA9540-CD5D-4889-86A2-F043F2103D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91BA9540-CD5D-4889-86A2-F043F2103D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91BA9540-CD5D-4889-86A2-F043F2103D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82FBBD2B-9B6C-4F51-A8BF-5C2BD8A84209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82FBBD2B-9B6C-4F51-A8BF-5C2BD8A84209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82FBBD2B-9B6C-4F51-A8BF-5C2BD8A84209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82FBBD2B-9B6C-4F51-A8BF-5C2BD8A84209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B058C5B6-283E-40E1-87E4-3904558CC6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B058C5B6-283E-40E1-87E4-3904558CC6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B058C5B6-283E-40E1-87E4-3904558CC6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B058C5B6-283E-40E1-87E4-3904558CC6A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -377,6 +403,11 @@ Global
 		{72CBDE9C-7E22-4D12-AF89-38F3EFC8DF8E} = {8535118E-4ACB-4922-A817-5A000958B933}
 		{B40675BC-BDF1-4E05-AF8A-B1854D42BA43} = {30569255-D8D2-40D1-8487-6883B017D914}
 		{1EECBE78-84F1-40FD-A61F-BED0271D97F7} = {6482C3CF-448C-42B0-8746-E1B2C5BA4B23}
+		{53A66665-F8C7-44B6-8521-F626AF40FD25} = {C6292CCF-0F89-4A7E-A049-322168A4846D}
+		{91BA9540-CD5D-4889-86A2-F043F2103D00} = {F4C44EF6-D1E6-429D-A505-48B3A8CA91BE}
+		{C6292CCF-0F89-4A7E-A049-322168A4846D} = {0FC166C2-B231-43D3-894B-E9BBA0EBA01A}
+		{82FBBD2B-9B6C-4F51-A8BF-5C2BD8A84209} = {C6292CCF-0F89-4A7E-A049-322168A4846D}
+		{B058C5B6-283E-40E1-87E4-3904558CC6A1} = {E0167A21-9E19-4C72-9786-8EB6BCA0EF19}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2618158F-597B-4720-9288-5CACD7FAB9B0}

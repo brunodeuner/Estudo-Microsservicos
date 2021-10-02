@@ -1,8 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -20,7 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória\Estudo.Core.Infraestrutura.Bus.Memória.csproj" />
+    <ProjectReference Include="..\..\..\..\..\src\Core\Infraestrutura\Bus\Estudo.Core.Infraestrutura.Bus.RabbitMq\Estudo.Core.Infraestrutura.Bus.RabbitMq.csproj" />
+    <ProjectReference Include="..\..\..\..\..\src\Core\Infraestrutura\Geral\Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson\Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson.csproj" />
   </ItemGroup>
 
 </Project>

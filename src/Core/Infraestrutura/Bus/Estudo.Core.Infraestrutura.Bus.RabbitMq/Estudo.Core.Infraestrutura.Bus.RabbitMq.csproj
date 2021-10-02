@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="6.2.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Geral\Estudo.Core.Infraestrutura.Geral.Json\Estudo.Core.Infraestrutura.Geral.Json.Abstrações.csproj" />
+    <ProjectReference Include="..\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj" />
+  </ItemGroup>
+</Project>
