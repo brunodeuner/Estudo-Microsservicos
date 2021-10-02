@@ -1,4 +1,4 @@
-using Estudo.Core.Infraestrutura.Bus.RabbitMq.Configurações;
+using Estudo.Core.Infraestrutura.Bus.RabbitMq.ConfiguraÃ§Ãµes;
 using Estudo.Core.Infraestrutura.Bus.RabbitMq.Consumidor;
 using Estudo.Core.Infraestrutura.Bus.RabbitMq.Produtor;
 using Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson;
@@ -13,24 +13,24 @@ namespace Estudo.Core.Infraestrutura.Bus.RabbitMq.Testes
     public class TesteDoConsumidorDoRabbitMq
     {
         [Fact]
-        public async Task ConsumirEventos_TokenComCancelamento_ExceçãoDeOperaçãoCancelada()
+        public async Task ConsumirEventos_TokenComCancelamento_ExceÃ§Ã£oDeOperaÃ§Ã£oCancelada()
         {
             var serializador = new Serializador();
-            var configuraçãoDaFila = new ConfiguraçãoDaFila()
+            var configuraÃ§Ã£oDaFila = new ConfiguraÃ§Ã£oDaFila()
             {
                 ConnectionFactory = new ConnectionFactory()
                 {
                     DispatchConsumersAsync = true,
                     Uri = new Uri("amqps://tputowvs:9pYw6q83tkb8I8RzeExQWYAeIfUU22cB@jackal.rmq.cloudamqp.com/tputowvs")
                 },
-                Durável = true
+                DurÃ¡vel = true
             };
-            var produtor = new ProdutorDoRabbitMq(configuraçãoDaFila, serializador);
+            var produtor = new ProdutorDoRabbitMq(configuraÃ§Ã£oDaFila, serializador);
             var eventoEnviado = new Evento();
-            await produtor.EnviarAsync(nameof(Evento), new Abstrações.EventoEventArgs<Evento>(eventoEnviado), default);
+            await produtor.EnviarAsync(nameof(Evento), new AbstraÃ§Ãµes.EventoEventArgs<Evento>(eventoEnviado), default);
 
             var deserializador = new Deserializador();
-            var consumidor = new ConsumidorDoRabbitMq<Evento>(configuraçãoDaFila, deserializador);
+            var consumidor = new ConsumidorDoRabbitMq<Evento>(configuraÃ§Ã£oDaFila, deserializador);
             var quantidadeDeItensConsumidos = 0;
             consumidor.Consumir += (evento, cancellationToken) =>
             {
