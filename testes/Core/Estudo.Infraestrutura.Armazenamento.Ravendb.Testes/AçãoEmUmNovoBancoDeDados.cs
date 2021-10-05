@@ -1,11 +1,10 @@
-﻿using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
-using Raven.Client.Documents;
+﻿using Raven.Client.Documents;
 using Raven.Client.ServerWide;
 using Raven.Client.ServerWide.Operations;
 using System;
 using System.Threading.Tasks;
 
-namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes
+namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes
 {
     public static class AçãoEmUmNovoBancoDeDados
     {

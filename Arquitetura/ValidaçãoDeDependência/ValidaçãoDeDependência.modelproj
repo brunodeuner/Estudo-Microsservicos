@@ -34,6 +34,10 @@
     </Validate>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Clientes\Estudo.Clientes.Aplicação\Estudo.Clientes.Aplicação.csproj">
+      <Name>Estudo.Clientes.Aplicação</Name>
+      <Project>{0c18a342-6d77-42b6-9eb8-5f70469c1b8f}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\Clientes\Estudo.Clientes.Domínio\Estudo.Clientes.Domínio.csproj">
       <Name>Estudo.Clientes.Domínio</Name>
       <Project>{b40675bc-bdf1-4e05-af8a-b1854d42ba43}</Project>
@@ -86,6 +90,10 @@
       <Name>Estudo.Core.Infraestrutura.Armazenamento.Ravendb</Name>
       <Project>{91ba7529-016f-43c5-9626-8a0e03f1a98f}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Bus\Estudo.Core.Infraestrutura.Bus.RabbitMq\Estudo.Core.Infraestrutura.Bus.RabbitMq.csproj">
+      <Name>Estudo.Core.Infraestrutura.Bus.RabbitMq</Name>
+      <Project>{91ba9540-cd5d-4889-86a2-f043f2103d00}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj">
       <Name>Estudo.Core.Infraestrutura.Bus.Abstrações</Name>
       <Project>{a5a93837-638f-4e4a-87fb-2f1ceb20767c}</Project>
@@ -97,6 +105,14 @@
     <ProjectReference Include="..\..\src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb\Estudo.Core.Infraestrutura.Bus.Ravendb.csproj">
       <Name>Estudo.Core.Infraestrutura.Bus.Ravendb</Name>
       <Project>{d1cbc82f-0ce8-4891-9c79-ba07dd4befe3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Geral\Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson\Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson.csproj">
+      <Name>Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson</Name>
+      <Project>{82fbbd2b-9b6c-4f51-a8bf-5c2bd8a84209}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Core\Infraestrutura\Geral\Estudo.Core.Infraestrutura.Geral.Json\Estudo.Core.Infraestrutura.Geral.Json.Abstrações.csproj">
+      <Name>Estudo.Core.Infraestrutura.Geral.Json.Abstrações</Name>
+      <Project>{53a66665-f8c7-44b6-8521-f626af40fd25}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\src\Core\Infraestrutura\Geral\Estudo.Infraestrutura.Geral\Estudo.Core.Infraestrutura.Geral.csproj">
       <Name>Estudo.Core.Infraestrutura.Geral</Name>
@@ -158,12 +174,12 @@
       <Name>Estudo.Core.Domínio.Testes</Name>
       <Project>{cd30d5f0-3d3a-4e12-898b-c42990911e5b}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\testes\Core\Estudo.Infraestrutura.Armazenamento.HttpClient.Testes\Estudo.Infraestrutura.Armazenamento.HttpClient.Testes.csproj">
-      <Name>Estudo.Infraestrutura.Armazenamento.HttpClient.Testes</Name>
+    <ProjectReference Include="..\..\testes\Core\Estudo.Infraestrutura.Armazenamento.HttpClient.Testes\Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Testes.csproj">
+      <Name>Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Testes</Name>
       <Project>{1f37b8f6-50a6-452d-9b84-fc7353870666}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\testes\Core\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.csproj">
-      <Name>Estudo.Infraestrutura.Armazenamento.Ravendb.Testes</Name>
+    <ProjectReference Include="..\..\testes\Core\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes\Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes.csproj">
+      <Name>Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes</Name>
       <Project>{6d3b0f82-889f-442d-8d2a-bb5d347037d8}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\testes\Core\Estudo.Testes.Core.Api\Estudo.Core.Api.Testes.csproj">
@@ -174,20 +190,24 @@
       <Name>Estudo.Core.Http.Testes</Name>
       <Project>{af69f997-430a-429a-af90-20567e74de8f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes.csproj">
-      <Name>Estudo.Infraestrutura.Armazenamento.Abstrações.Testes</Name>
+    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Abstrações.Testes\Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Testes.csproj">
+      <Name>Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Testes</Name>
       <Project>{b584bbce-29b9-450b-a891-94d41fff305b}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória.Testes\Estudo.Infraestrutura.Armazenamento.Memória.Testes.csproj">
-      <Name>Estudo.Infraestrutura.Armazenamento.Memória.Testes</Name>
+    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Armazenamento\Estudo.Infraestrutura.Armazenamento.Memória.Testes\Estudo.Core.Infraestrutura.Armazenamento.Memória.Testes.csproj">
+      <Name>Estudo.Core.Infraestrutura.Armazenamento.Memória.Testes</Name>
       <Project>{776efee3-5ad7-4ebf-af52-d8c80f0b6db6}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória.Testes\Estudo.Infraestrutura.Bus.Memória.Testes.csproj">
-      <Name>Estudo.Infraestrutura.Bus.Memória.Testes</Name>
+    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Bus\Estudo.Core.Infraestrutura.Bus.RabbitMq.Testes\Estudo.Core.Infraestrutura.Bus.RabbitMq.Testes.csproj">
+      <Name>Estudo.Core.Infraestrutura.Bus.RabbitMq.Testes</Name>
+      <Project>{b058c5b6-283e-40e1-87e4-3904558cc6a1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Memória.Testes\Estudo.Core.Infraestrutura.Bus.Memória.Testes.csproj">
+      <Name>Estudo.Core.Infraestrutura.Bus.Memória.Testes</Name>
       <Project>{b8cff920-80a8-4da8-b3f1-5e8729a12828}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb.Testes\Estudo.Infraestrutura.Bus.Ravendb.Testes.csproj">
-      <Name>Estudo.Infraestrutura.Bus.Ravendb.Testes</Name>
+    <ProjectReference Include="..\..\testes\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb.Testes\Estudo.Core.Infraestrutura.Bus.Ravendb.Testes.csproj">
+      <Name>Estudo.Core.Infraestrutura.Bus.Ravendb.Testes</Name>
       <Project>{799477ac-3144-4f2e-914c-24330025c55f}</Project>
     </ProjectReference>
   </ItemGroup>

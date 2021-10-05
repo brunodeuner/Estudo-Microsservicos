@@ -1,6 +1,5 @@
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
-using Estudo.Core.Infraestrutura.Armazenamento.HttpClient;
 using RichardSzalay.MockHttp;
 using RichardSzalay.MockHttp.Matchers;
 using System;
@@ -10,7 +9,7 @@ using System.Net.Mime;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
+namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Testes
 {
     public class TestesDaLeituraDosDadosPeloIdNoDaoHttpClient
     {

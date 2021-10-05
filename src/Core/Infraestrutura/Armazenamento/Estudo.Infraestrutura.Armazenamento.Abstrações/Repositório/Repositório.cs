@@ -16,6 +16,9 @@ namespace Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Repositório
         public virtual ValueTask Salvar(T entidade, CancellationToken cancellationToken) =>
             dao.Salvar(entidade, cancellationToken);
 
+        public virtual ValueTask Remover(T entidade, CancellationToken cancellationToken) =>
+            dao.Remover(entidade, cancellationToken);
+
         protected IQueryable<T> Selecionar() => dao.Selecionar<T>();
     }
 }

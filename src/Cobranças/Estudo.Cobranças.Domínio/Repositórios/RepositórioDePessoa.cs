@@ -1,6 +1,7 @@
 ﻿using Estudo.Cobranças.Domínio.Entidades;
+using Estudo.Core.Domínio.Repositórios;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
-using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Repositório;
+using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -10,7 +11,7 @@ namespace Estudo.Cobranças.Domínio.Repositórios
     {
         private static readonly string sufixoDoId = $"-{nameof(Pessoa)}";
 
-        public RepositórioDePessoa(IDao dao) : base(dao) { }
+        public RepositórioDePessoa(IDao dao, IMediator mediator) : base(dao, mediator) { }
 
         public override ValueTask Salvar(Pessoa objeto, CancellationToken cancellationToken)
         {

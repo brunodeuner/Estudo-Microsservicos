@@ -4,4 +4,8 @@
 		<ProjectReference Include="..\..\Core\Domínio\Estudo.Domínio\Estudo.Core.Domínio.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Entidades\Dtos\" />
+	</ItemGroup>
+
 </Project>

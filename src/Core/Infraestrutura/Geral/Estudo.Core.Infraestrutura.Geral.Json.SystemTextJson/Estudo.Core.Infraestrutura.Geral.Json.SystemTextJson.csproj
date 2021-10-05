@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<ItemGroup>
+		<ProjectReference Include="..\Estudo.Core.Infraestrutura.Geral.Json\Estudo.Core.Infraestrutura.Geral.Json.Abstrações.csproj" />
+	</ItemGroup>
+
+</Project>

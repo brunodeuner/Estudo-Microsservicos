@@ -1,13 +1,13 @@
 ﻿using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes;
 using Estudo.Core.Infraestrutura.Bus.Ravendb.Consumidor;
+using Estudo.Core.Infraestrutura.Bus.Ravendb.Testes.Entidades;
 using Estudo.Core.Infraestrutura.Geral;
-using Estudo.Infraestrutura.Armazenamento.Ravendb.Testes;
-using Estudo.Infraestrutura.Bus.Ravendb.Testes.Entidades;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Estudo.Infraestrutura.Bus.Ravendb.Testes
+namespace Estudo.Core.Infraestrutura.Bus.Ravendb.Testes
 {
     public class TestesDoConsumidorDoRavendb
     {

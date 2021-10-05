@@ -32,7 +32,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\..\..\src\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Ravendb\Estudo.Core.Infraestrutura.Bus.Ravendb.csproj" />
-		<ProjectReference Include="..\..\..\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.csproj" />
+		<ProjectReference Include="..\..\..\Estudo.Infraestrutura.Armazenamento.Ravendb.Testes\Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

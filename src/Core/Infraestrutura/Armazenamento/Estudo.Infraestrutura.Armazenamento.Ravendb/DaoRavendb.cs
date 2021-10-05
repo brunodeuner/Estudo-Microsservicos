@@ -18,6 +18,12 @@ namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb
         public async ValueTask Salvar<T>(T objeto, CancellationToken cancellationToken) where T : class, new() =>
             await ObterSessão().StoreAsync(objeto, cancellationToken);
 
+        public ValueTask Remover<T>(T objeto, CancellationToken cancellationToken) where T : class, new()
+        {
+            ObterSessão().Delete(objeto);
+            return ValueTask.CompletedTask;
+        }
+
         public async ValueTask<T> ObterPeloId<T>(string id, CancellationToken cancellationToken) =>
             await ObterSessão().LoadAsync<T>(id, cancellationToken);
 

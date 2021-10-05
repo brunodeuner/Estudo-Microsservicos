@@ -1,10 +1,10 @@
-﻿using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
+﻿using Estudo.Core.Infraestrutura.Bus.RabbitMq.Configurações;
 
 namespace Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Configurações
 {
     public class ConfiguraçãoDaAplicaçãoDeCobranças
     {
-        public ConfiguraçãoDoRavendb ConfiguraçãoDoRavendbParaOConsumidorDeClientes { get; set; }
-        public bool InjetarConsumidorDoRavendb { get; set; }
+        public ConfiguraçãoDaFila ConfiguraçãoDaFila { get; set; }
+        public bool InjetarConsumidorDoRabbitMq { get; set; }
     }
 }

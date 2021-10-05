@@ -25,6 +25,10 @@ namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient
             await executorDeRequisições.ExecutarRequisição(
                 new DadosDaRequisição<T>(HttpMethod.Post, objeto), cancellationToken);
 
+        public async ValueTask Remover<T>(T objeto, CancellationToken cancellationToken) where T : class, new() =>
+            await executorDeRequisições.ExecutarRequisição(
+                new DadosDaRequisição<T>(HttpMethod.Delete, objeto), cancellationToken);
+
         public async ValueTask<T> ObterPeloId<T>(string id, CancellationToken cancellationToken) =>
             await executorDeRequisições.ExecutarRequisição<T, T>(
                 new DadosDaRequisição<T>(HttpMethod.Get, id), cancellationToken);
