@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Core\Domínio\Estudo.Domínio\Estudo.Core.Domínio.csproj" />
+		<ProjectReference Include="..\..\Core\Infraestrutura\Bus\Estudo.Core.Infraestrutura.Bus.RabbitMq\Estudo.Core.Infraestrutura.Bus.RabbitMq.csproj" />
+		<ProjectReference Include="..\..\Core\Infraestrutura\Bus\Estudo.Infraestrutura.Bus.Abstrações\Estudo.Core.Infraestrutura.Bus.Abstrações.csproj" />
+		<ProjectReference Include="..\..\Core\Infraestrutura\Geral\Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson\Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson.csproj" />
+		<ProjectReference Include="..\Estudo.Clientes.Domínio\Estudo.Clientes.Domínio.csproj" />
+	</ItemGroup>
+
+</Project>

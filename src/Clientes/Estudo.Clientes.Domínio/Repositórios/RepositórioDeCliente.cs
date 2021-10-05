@@ -1,7 +1,8 @@
 ﻿using Estudo.Clientes.Domínio.Entidades;
+using Estudo.Core.Domínio.Repositórios;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
-using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Repositório;
+using MediatR;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace Estudo.Clientes.Domínio.Repositórios
     {
         private static readonly string sufixoDoId = $"-{nameof(Cliente)}";
 
-        public RepositórioDeCliente(IDao dao) : base(dao) { }
+        public RepositórioDeCliente(IDao dao, IMediator mediator) : base(dao, mediator) { }
 
         public override ValueTask Salvar(Cliente objeto, CancellationToken cancellationToken)
         {

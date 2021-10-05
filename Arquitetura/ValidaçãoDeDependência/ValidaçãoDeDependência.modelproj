@@ -34,6 +34,10 @@
     </Validate>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Clientes\Estudo.Clientes.Aplicação\Estudo.Clientes.Aplicação.csproj">
+      <Name>Estudo.Clientes.Aplicação</Name>
+      <Project>{0c18a342-6d77-42b6-9eb8-5f70469c1b8f}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\Clientes\Estudo.Clientes.Domínio\Estudo.Clientes.Domínio.csproj">
       <Name>Estudo.Clientes.Domínio</Name>
       <Project>{b40675bc-bdf1-4e05-af8a-b1854d42ba43}</Project>

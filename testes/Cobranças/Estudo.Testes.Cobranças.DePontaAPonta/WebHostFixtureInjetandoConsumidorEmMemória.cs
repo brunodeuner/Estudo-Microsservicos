@@ -1,6 +1,7 @@
-﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
+﻿using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Serviço.Api;
 using Estudo.Core.Api.Testes;
+using Estudo.Core.Domínio.Eventos.Manutenção;
 using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor;
 using Estudo.Core.Infraestrutura.Bus.Abstrações.Produtor;
 using Estudo.Core.Infraestrutura.Bus.Memória.Consumidor;
@@ -17,8 +18,12 @@ namespace Estudo.Cobranças.Testes.DePontaAPonta
             base.ConfigurarServiços(configuração, serviços);
             serviços.AddTransient<IProdutor, ProdutorEmMemória>();
             serviços.AddSingleton<EventosPorTipo>();
-            serviços.AddSingleton<IConsumidor<Cliente>>(serviceProvider =>
-                new ConsumidorEmMemória<Cliente>(serviceProvider.GetRequiredService<EventosPorTipo>(), true));
+            serviços.AddSingleton<IConsumidor<EventoDeEntidadeRemovida<Pessoa>>>(serviceProvider =>
+                new ConsumidorEmMemória<EventoDeEntidadeRemovida<Pessoa>>(
+                    serviceProvider.GetRequiredService<EventosPorTipo>(), true));
+            serviços.AddSingleton<IConsumidor<EventoDeEntidadeSalva<Pessoa>>>(serviceProvider =>
+                new ConsumidorEmMemória<EventoDeEntidadeSalva<Pessoa>>(
+                    serviceProvider.GetRequiredService<EventosPorTipo>(), true));
         }
     }
 }

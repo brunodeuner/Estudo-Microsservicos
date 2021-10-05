@@ -1,9 +1,11 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores;
 using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Configurações;
-using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
-using Estudo.Core.Infraestrutura.Armazenamento.Ravendb;
+using Estudo.Cobranças.Domínio.Entidades;
+using Estudo.Core.Domínio.Eventos.Manutenção;
 using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor;
-using Estudo.Core.Infraestrutura.Bus.Ravendb.Consumidor;
+using Estudo.Core.Infraestrutura.Bus.RabbitMq.Consumidor;
+using Estudo.Core.Infraestrutura.Geral.Json.Abstrações;
+using Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -17,15 +19,14 @@ namespace Estudo.Cobranças.Aplicação
             var configuraçãoDaAplicaçãoDeCobranças = configuração
                .GetSection(nameof(ConfiguraçãoDaAplicaçãoDeCobranças))
                .Get<ConfiguraçãoDaAplicaçãoDeCobranças>();
-            if (configuraçãoDaAplicaçãoDeCobranças?.InjetarConsumidorDoRavendb ?? false)
+            if (configuraçãoDaAplicaçãoDeCobranças?.InjetarConsumidorDoRabbitMq ?? false)
             {
-                var configuraçãoDoRavendb = configuraçãoDaAplicaçãoDeCobranças
-                    .ConfiguraçãoDoRavendbParaOConsumidorDeClientes;
-                serviços.AddSingleton(_ => new FabricaDoRavendbParaOConsumidor(
-                    new FabricaDoRavendb(configuraçãoDoRavendb)));
-                serviços.AddTransient<IConsumidor<Cliente>>(serviços => new ConsumidorDoRavendb<Cliente>(
-                    serviços.GetRequiredService<FabricaDoRavendbParaOConsumidor>().ObterDocumentStore(),
-                    configuraçãoDoRavendb));
+                serviços.AddSingleton(configuraçãoDaAplicaçãoDeCobranças.ConfiguraçãoDaFila);
+                serviços.AddTransient<IDeserializador, Deserializador>();
+                serviços.AddTransient<IConsumidor<EventoDeEntidadeRemovida<Pessoa>>,
+                    ConsumidorDoRabbitMq<EventoDeEntidadeRemovida<Pessoa>>>();
+                serviços.AddTransient<IConsumidor<EventoDeEntidadeSalva<Pessoa>>,
+                    ConsumidorDoRabbitMq<EventoDeEntidadeSalva<Pessoa>>>();
             }
             serviços.AddTransient<ConsumidorDeClientes>();
         }

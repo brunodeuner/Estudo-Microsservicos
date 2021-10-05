@@ -25,6 +25,12 @@ namespace Estudo.Core.Infraestrutura.Armazenamento.Memória
             return ValueTask.CompletedTask;
         }
 
+        public ValueTask Remover<T>(T objeto, CancellationToken cancellationToken) where T : class, new()
+        {
+            objetos.Remove(objeto.ObterId());
+            return ValueTask.CompletedTask;
+        }
+
         public ValueTask<T> ObterPeloId<T>(string id, CancellationToken cancellationToken)
         {
             if (objetos.TryGetValue(id, out var objeto))

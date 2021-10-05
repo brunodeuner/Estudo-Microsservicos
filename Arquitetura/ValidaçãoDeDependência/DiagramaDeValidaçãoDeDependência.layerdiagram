@@ -95,6 +95,9 @@
                 <dependencyFromLayerToLayer Id="43e7bcf7-f33c-4bfe-9e29-5515a909ed16" direction="Forward">
                   <layerMoniker Id="dc042c19-fb95-4df9-a6a5-a13cab4478e0" />
                 </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="b975ea8e-f98f-4aed-8661-cdc0132068aa" direction="Forward">
+                  <layerMoniker Id="73d2ea7c-5e97-438f-b3df-921b4265ccb1" />
+                </dependencyFromLayerToLayer>
               </dependencyToLayers>
               <references>
                 <reference Id="d29bba12-4768-461f-999e-7ae40cc080ef" name="Estudo.Clientes.Serviço.Api">
@@ -116,6 +119,25 @@
                     <Category Ref="File" />
                   </ArtifactNode>
                   <ExpandedNode Id="(Assembly=Estudo.Clientes.Domínio)" Label="Estudo.Clientes.Domínio.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="73d2ea7c-5e97-438f-b3df-921b4265ccb1" name="Estudo.Clientes.Aplicação">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="2a39d9e5-52d1-4007-944d-7fc6ec25461f" direction="Forward">
+                  <layerMoniker Id="dc042c19-fb95-4df9-a6a5-a13cab4478e0" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="6ac138f6-8da7-4575-9135-7b7d5f3128a1" name="Estudo.Clientes.Aplicação">
+                  <ArtifactNode Label="Estudo.Clientes.Aplicação" Category="CodeSchema_Project" Id="(Assembly=../../src/Clientes/Estudo.Clientes.Aplicação/Estudo.Clientes.Aplicação.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=Estudo.Clientes.Aplicação)" Label="Estudo.Clientes.Aplicação.dll" Category="CodeSchema_Assembly">
                     <Category Ref="FileSystem.Category.FileOfType.dll" />
                     <LinkCategory Ref="Produces" />
                     <LinkCategory Ref="Represents" />

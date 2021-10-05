@@ -9,9 +9,6 @@
 		<ProjectReference Include="..\Estudo.Cobranças.Domínio\Estudo.Cobranças.Domínio.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<None Update="Estudo.Cobranças.Serviço.Api.Clientes.pfx">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
 		<None Update="Estudo.Cobranças.Serviço.Api.pfx">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
