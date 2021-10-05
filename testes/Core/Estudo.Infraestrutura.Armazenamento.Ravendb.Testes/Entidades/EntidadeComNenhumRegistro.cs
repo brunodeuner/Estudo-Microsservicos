@@ -1,4 +1,4 @@
-﻿namespace Estudo.Infraestrutura.Armazenamento.Ravendb.Testes.Entidades
+﻿namespace Estudo.Core.Infraestrutura.Armazenamento.Ravendb.Testes.Entidades
 {
     internal class EntidadeComNenhumRegistro { }
 }

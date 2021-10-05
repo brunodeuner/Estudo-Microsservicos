@@ -1,9 +1,8 @@
-﻿using Estudo.Core.Infraestrutura.Armazenamento.HttpClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace Estudo.Infraestrutura.Armazenamento.HttpClient.Testes
+namespace Estudo.Core.Infraestrutura.Armazenamento.HttpClient.Testes
 {
     public class TestesDaConfiguraçãoDoDaoHttpClient
     {

@@ -1,8 +1,8 @@
 ﻿using Estudo.Cobranças.Domínio.Entidades;
+using Estudo.Core.Domínio.Repositórios;
 using Estudo.Core.Domínio.Validação;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Queryable;
-using Estudo.Core.Infraestrutura.Armazenamento.Abstrações.Repositório;
 using Estudo.Core.Infraestrutura.Geral;
 using MediatR;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ namespace Estudo.Cobranças.Domínio.Repositórios
     {
         private readonly IMediator mediator;
 
-        public RepositórioDeCobrança(IDao dao, IMediator mediator) : base(dao) => this.mediator = mediator;
+        public RepositórioDeCobrança(IDao dao, IMediator mediator) : base(dao, mediator) => this.mediator = mediator;
 
         public IAsyncEnumerable<Cobrança> ObterCobrançasDoClienteOuDoMês(CancellationToken cancellationToken,
             string cpf = default, int? mês = default)

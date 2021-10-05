@@ -1,6 +1,6 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores;
 using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Configurações;
-using Estudo.Cobranças.Domínio.Entidades;
+using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
 using Estudo.Core.Domínio.Eventos.Manutenção;
 using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor;
 using Estudo.Core.Infraestrutura.Bus.RabbitMq.Consumidor;
@@ -23,10 +23,10 @@ namespace Estudo.Cobranças.Aplicação
             {
                 serviços.AddSingleton(configuraçãoDaAplicaçãoDeCobranças.ConfiguraçãoDaFila);
                 serviços.AddTransient<IDeserializador, Deserializador>();
-                serviços.AddTransient<IConsumidor<EventoDeEntidadeRemovida<Pessoa>>,
-                    ConsumidorDoRabbitMq<EventoDeEntidadeRemovida<Pessoa>>>();
-                serviços.AddTransient<IConsumidor<EventoDeEntidadeSalva<Pessoa>>,
-                    ConsumidorDoRabbitMq<EventoDeEntidadeSalva<Pessoa>>>();
+                serviços.AddTransient<IConsumidor<EventoDeEntidadeRemovida<Cliente>>,
+                    ConsumidorDoRabbitMq<EventoDeEntidadeRemovida<Cliente>>>();
+                serviços.AddTransient<IConsumidor<EventoDeEntidadeSalva<Cliente>>,
+                    ConsumidorDoRabbitMq<EventoDeEntidadeSalva<Cliente>>>();
             }
             serviços.AddTransient<ConsumidorDeClientes>();
         }

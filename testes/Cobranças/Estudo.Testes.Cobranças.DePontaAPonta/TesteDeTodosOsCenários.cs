@@ -1,5 +1,4 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
-using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Cobranças.Domínio.Repositórios;
 using Estudo.Core.Api.Testes;
 using Estudo.Core.Domínio.Eventos.Manutenção;
@@ -33,16 +32,16 @@ namespace Estudo.Cobranças.Testes.DePontaAPonta
         {
             var produtor = testFixture.ServiceProvider.GetRequiredService<IProdutor>();
             return produtor.EnviarAsync(nameof(EventoDeEntidadeSalva<Cliente>),
-                new EventoEventArgs<EventoDeEntidadeSalva<Pessoa>>(
-                new EventoDeEntidadeSalva<Pessoa>(ObterCliente())), default);
+                new EventoEventArgs<EventoDeEntidadeSalva<Cliente>>(
+                new EventoDeEntidadeSalva<Cliente>(ObterCliente())), default);
         }
 
         private Task RemoverCliente()
         {
             var produtor = testFixture.ServiceProvider.GetRequiredService<IProdutor>();
             return produtor.EnviarAsync(nameof(EventoDeEntidadeRemovida<Cliente>),
-                new EventoEventArgs<EventoDeEntidadeRemovida<Pessoa>>(
-                new EventoDeEntidadeRemovida<Pessoa>(ObterCliente())), default);
+                new EventoEventArgs<EventoDeEntidadeRemovida<Cliente>>(
+                new EventoDeEntidadeRemovida<Cliente>(ObterCliente())), default);
         }
 
         private static Cliente ObterCliente() => new()

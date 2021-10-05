@@ -1,5 +1,4 @@
 ﻿using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Eventos;
-using Estudo.Cobranças.Domínio.Entidades;
 using Estudo.Core.Domínio.Eventos.Manutenção;
 using Estudo.Core.Domínio.Validação;
 using Estudo.Core.Infraestrutura.Armazenamento.Abstrações;
@@ -15,12 +14,12 @@ namespace Estudo.Cobranças.Aplicação.Armazenamento.Consumidores
 {
     public class ConsumidorDeClientes
     {
-        private readonly IConsumidor<EventoDeEntidadeRemovida<Pessoa>> consumidorDeClienteRemovido;
-        private readonly IConsumidor<EventoDeEntidadeSalva<Pessoa>> consumidorDeClienteSalvo;
+        private readonly IConsumidor<EventoDeEntidadeRemovida<Cliente>> consumidorDeClienteRemovido;
+        private readonly IConsumidor<EventoDeEntidadeSalva<Cliente>> consumidorDeClienteSalvo;
         private readonly IServiceProvider serviceProvider;
 
-        public ConsumidorDeClientes(IConsumidor<EventoDeEntidadeRemovida<Pessoa>> consumidorDeClienteRemovido,
-            IConsumidor<EventoDeEntidadeSalva<Pessoa>> consumidorDeClienteSalvo, IServiceProvider serviceProvider)
+        public ConsumidorDeClientes(IConsumidor<EventoDeEntidadeRemovida<Cliente>> consumidorDeClienteRemovido,
+            IConsumidor<EventoDeEntidadeSalva<Cliente>> consumidorDeClienteSalvo, IServiceProvider serviceProvider)
         {
             this.consumidorDeClienteRemovido = consumidorDeClienteRemovido;
             this.consumidorDeClienteSalvo = consumidorDeClienteSalvo;

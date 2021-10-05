@@ -5,8 +5,6 @@ namespace Estudo.Clientes.Testes.DePontaAPonta
 {
     public class TesteDeTodosOsCenários : TesteDeTodosOsCenários<Startup>
     {
-        public TesteDeTodosOsCenários(WebHostFixture<Startup> testFixture) : base(testFixture)
-        {
-        }
+        public TesteDeTodosOsCenários(WebHostFixture<Startup> testFixture) : base(testFixture) { }
     }
 }
