@@ -2,7 +2,7 @@
 
 namespace Estudo.Clientes.Aplicação.Configurações
 {
-    internal class ConfiguraçãoDaAplicaçãoDeClientes
+    public class ConfiguraçãoDaAplicaçãoDeClientes
     {
         public ConfiguraçãoDaFila ConfiguraçãoDaFila { get; set; }
     }

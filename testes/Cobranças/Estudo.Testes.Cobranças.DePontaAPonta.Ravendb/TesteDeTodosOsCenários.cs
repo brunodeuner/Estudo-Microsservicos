@@ -46,11 +46,11 @@ namespace Estudo.Cobranças.Testes.DePontaAPonta.Ravendb
             await testFixture.ServiceProvider.GetRequiredService<IDao>().SalvarAlterações(default);
         }
 
-        private static ConfiguraçãoDoRavendb ObterConfiguraçãoDoRavendb()
-        {
-            var configuração = Configuração.CriarConfiguraçãoLendoOAppsettings();
-            return configuração.GetSection(nameof(ConfiguraçãoDaConexão))
-                .GetSection(nameof(ConfiguraçãoDoRavendb)).Get<ConfiguraçãoDoRavendb>();
-        }
+        private static ConfiguraçãoDoRavendb ObterConfiguraçãoDoRavendb() =>
+            Configuração.CriarConfiguraçãoLendoOAppsettings()
+                .GetSection(nameof(ConfiguraçãoDaAplicação))
+                .GetSection(nameof(ConfiguraçãoDaConexão))
+                .GetSection(nameof(ConfiguraçãoDoRavendb))
+                .Get<ConfiguraçãoDoRavendb>();
     }
 }

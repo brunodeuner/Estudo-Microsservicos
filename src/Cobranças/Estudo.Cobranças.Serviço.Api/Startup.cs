@@ -1,5 +1,7 @@
 ﻿using Estudo.Cobranças.Aplicação;
+using Estudo.Cobranças.Aplicação.Armazenamento.Consumidores.Configurações;
 using Estudo.Cobranças.Serviço.Api.Consumidores;
+using Estudo.Core.Aplicação;
 using Estudo.Core.Serviço.Api;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -16,7 +18,8 @@ namespace Estudo.Cobranças.Serviço.Api
         public void ConfigureServices(IServiceCollection serviços)
         {
             serviços.ConfigurarServiçoEAplicação(configuração);
-            serviços.ConfigurarServiçosDaAplicação(configuração);
+            serviços.ConfigurarServiçosDaAplicação(configuração
+                .ObterConfiguração<ConfiguraçãoDaAplicaçãoDeCobranças>());
             serviços.AddHostedService<ServiçoDeConsumidorDeClientes>();
         }
 

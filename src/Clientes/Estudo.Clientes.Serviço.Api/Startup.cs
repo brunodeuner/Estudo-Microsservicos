@@ -1,4 +1,6 @@
 ﻿using Estudo.Clientes.Aplicação;
+using Estudo.Clientes.Aplicação.Configurações;
+using Estudo.Core.Aplicação;
 using Estudo.Core.Serviço.Api;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -14,7 +16,8 @@ namespace Estudo.Clientes.Serviço.Api
 
         public void ConfigureServices(IServiceCollection serviços)
         {
-            serviços.ConfigurarServiçosDaAplicação(configuração);
+            serviços.ConfigurarServiçosDaAplicação(configuração
+                .ObterConfiguração<ConfiguraçãoDaAplicaçãoDeClientes>());
             serviços.ConfigurarServiçoEAplicação(configuração);
         }
 

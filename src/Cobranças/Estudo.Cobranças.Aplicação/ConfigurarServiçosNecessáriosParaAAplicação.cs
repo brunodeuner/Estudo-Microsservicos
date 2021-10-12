@@ -6,7 +6,6 @@ using Estudo.Core.Infraestrutura.Bus.Abstrações.Consumidor;
 using Estudo.Core.Infraestrutura.Bus.RabbitMq.Consumidor;
 using Estudo.Core.Infraestrutura.Geral.Json.Abstrações;
 using Estudo.Core.Infraestrutura.Geral.Json.SystemTextJson;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Estudo.Cobranças.Aplicação
@@ -14,11 +13,8 @@ namespace Estudo.Cobranças.Aplicação
     public static class ConfigurarServiçosNecessáriosParaAAplicação
     {
         public static void ConfigurarServiçosDaAplicação(this IServiceCollection serviços,
-            IConfiguration configuração)
+            ConfiguraçãoDaAplicaçãoDeCobranças configuraçãoDaAplicaçãoDeCobranças)
         {
-            var configuraçãoDaAplicaçãoDeCobranças = configuração
-               .GetSection(nameof(ConfiguraçãoDaAplicaçãoDeCobranças))
-               .Get<ConfiguraçãoDaAplicaçãoDeCobranças>();
             if (configuraçãoDaAplicaçãoDeCobranças?.InjetarConsumidorDoRabbitMq ?? false)
             {
                 serviços.AddSingleton(configuraçãoDaAplicaçãoDeCobranças.ConfiguraçãoDaFila);
